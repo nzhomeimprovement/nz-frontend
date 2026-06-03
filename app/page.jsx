@@ -118,16 +118,18 @@ const features = [
   const services = [
     {
       id: 1,
-      title: "Consulting",
-      subtitle: "Plan together",
-      img: "/img/full/02.jpg",
+      title: "Basement Remodeling",
+      subtitle: "Transform Unused Space",
+      img: "/img/full/21.jpg",
+      href: "/services/basement-remodeling",
       sizeClasses: "w-[180px] lg:w-[240px] xl:w-[280px] h-[340px] lg:h-[440px] xl:h-[480px] hidden md:block rounded-xl lg:rounded-2xl opacity-60 hover:opacity-100 transition-opacity",
     },
     {
       id: 2,
-      title: "Bathroom Remodeling",
-      subtitle: "Elegant upgrade",
+      title: "Bathroom Renovation",
+      subtitle: "Elegant Upgrade",
       img: "/img/portfolio/28.jpg",
+      href: "/services/bathroom-renovation",
       sizeClasses: "w-[240px] lg:w-[300px] xl:w-[340px] h-[400px] lg:h-[500px] xl:h-[540px] hidden sm:block rounded-2xl lg:rounded-3xl shrink-0 z-10",
     },
     {
@@ -135,23 +137,26 @@ const features = [
       title: "Kitchen Remodeling",
       subtitle: "Gather Together",
       img: "/img/portfolio/2.jpg",
+      href: "/services/kitchen-remodeling",
       sizeClasses: "w-[300px] sm:w-[340px] lg:w-[400px] xl:w-[460px] h-[480px] lg:h-[600px] xl:h-[640px] rounded-[32px] lg:rounded-[40px] shrink-0 z-20 shadow-2xl relative bottom-1",
       isCenter: true,
     },
     {
       id: 4,
-      title: "Complete Home Renovation",
+      title: "Home Renovation",
       subtitle: "Full Home Transformation",
-      img: "/img/full/20.jpg",
+      img: "/img/full/11.jpg",
+      href: "/services/home-renovation",
       sizeClasses: "w-[240px] lg:w-[300px] xl:w-[340px] h-[400px] lg:h-[500px] xl:h-[540px] hidden sm:block rounded-2xl lg:rounded-3xl shrink-0 z-10",
     },
     {
       id: 5,
-      title: "3D Design",
-      subtitle: "Plan Together",
+      title: "Home Addition",
+      subtitle: "Custom Expansion",
       img: "/img/full/25.jpg",
+      href: "/services/home-addition",
       sizeClasses: "w-[180px] lg:w-[240px] xl:w-[280px] h-[340px] lg:h-[440px] xl:h-[480px] hidden md:block rounded-xl lg:rounded-2xl opacity-60 hover:opacity-100 transition-opacity",
-    }
+    },
   ];
 
   const avatars = [
@@ -379,12 +384,13 @@ export default function HomePage() {
         Container forces centering, wraps tight gaps, and uses fixed custom sizes 
         per-child element logic from above array to recreate layout arc 
       */}
-      <div className="w-full flex items-center justify-center flex-nowrap gap-3 md:gap-5 xl:gap-6 px-4 pb-4 mx-auto cursor-default">
+      <div className="w-full flex items-center justify-center flex-nowrap gap-3 md:gap-5 xl:gap-6 px-4 pb-4 mx-auto">
         {services.map((item) => (
-          <div 
-            key={item.id} 
+          <Link
+            key={item.id}
+            href={item.href}
             className={`
-              relative group overflow-hidden bg-gray-200 
+              relative group overflow-hidden bg-gray-200 cursor-pointer
               transition-all duration-300 ease-[cubic-bezier(0.25,0.8,0.25,1)]
               hover:-translate-y-2
               ${item.sizeClasses}
@@ -398,10 +404,10 @@ export default function HomePage() {
               sizes="(max-width: 640px) 300px, (max-width: 1024px) 340px, 460px"
               className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
             />
-            
+
             {/* Soft Overlay */}
             <div className="absolute inset-0 bg-black/5" />
-            
+
             {/* Base bottom gradient mask for text visibility */}
             <div className={`absolute bottom-0 inset-x-0 h-[45%] bg-gradient-to-t from-black via-black/80 to-transparent ${item.isCenter ? 'via-black/70 opacity-95' : 'opacity-80'}`} />
 
@@ -414,7 +420,7 @@ export default function HomePage() {
                 {item.subtitle}
               </p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 
