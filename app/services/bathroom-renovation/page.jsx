@@ -105,10 +105,10 @@ export default function BathroomRenovationPage() {
               Bathroom Renovation in Stamford CT – Modern, Stylish & Affordable Solutions
             </h2>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4 lg:w-11/12">
-              If you are looking for bathroom renovation in Stamford CT, NZ Home Improvement provides professional and customized remodeling services designed to upgrade your space with style and functionality. Our experienced team of bathroom remodelers near you specializes in transforming old and outdated bathrooms into modern, comfortable, and visually appealing spaces.
+              If you are looking for <strong className="text-gray-800">bathroom renovation in Stamford CT</strong>, NZ Home Improvement provides professional and customized remodeling services designed to upgrade your space with style and functionality. Our experienced team of <strong className="text-gray-800">bathroom remodelers near you</strong> specializes in transforming old and outdated bathrooms into modern, comfortable, and visually appealing spaces.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-8 lg:w-11/12">
-              Whether you are planning a full renovation or a small bathroom remodel, we focus on delivering high-quality craftsmanship tailored to your needs. A well-designed bathroom not only improves daily comfort but also increases your home's overall value and appeal. From modern fixtures to elegant tile work and smart storage solutions, we ensure every detail is carefully planned and executed to perfection.
+              Whether you are planning a full renovation or a <strong className="text-gray-800">small bathroom remodel</strong>, we focus on delivering high-quality craftsmanship tailored to your needs. A well-designed bathroom not only improves daily comfort but also increases your home&apos;s overall value and appeal. From modern fixtures to elegant tile work and smart storage solutions, we ensure every detail is carefully planned and executed to perfection.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a

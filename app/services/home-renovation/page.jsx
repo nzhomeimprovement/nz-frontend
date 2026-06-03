@@ -105,10 +105,10 @@ export default function HomeRenovationPage() {
               Home Renovation in Stamford CT – Full Service Remodeling Solutions
             </h2>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4 lg:w-11/12">
-              If you are looking for home renovation in Stamford CT, NZ Home Improvement provides complete remodeling solutions designed to upgrade your entire living space. As an experienced home renovation contractor near you, we handle everything from small upgrades to full home transformations with a focus on quality, functionality, and modern design.
+              If you are looking for <strong className="text-gray-800">home renovation in Stamford CT</strong>, NZ Home Improvement provides complete remodeling solutions designed to upgrade your entire living space. As an experienced <strong className="text-gray-800">home renovation contractor near you</strong>, we handle everything from small upgrades to full home transformations with a focus on quality, functionality, and modern design.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-8 lg:w-11/12">
-              Home renovation is not just about improving appearance, it is about creating a more comfortable, efficient, and valuable living environment. Whether you want to update a single room or renovate your whole house, our team ensures every project is completed with precision and care.
+              <strong className="text-gray-800">Home renovation</strong> is not just about improving appearance, it is about creating a more comfortable, efficient, and valuable living environment. Whether you want to update a single room or renovate your whole house, our team ensures every project is completed with precision and care.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a

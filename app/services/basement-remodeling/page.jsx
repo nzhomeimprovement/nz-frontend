@@ -105,10 +105,10 @@ export default function BasementRemodelingPage() {
               Basement Remodeling in Stamford CT – Transform Unused Space into Living Area
             </h2>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4 lg:w-11/12">
-              If you are looking for basement remodeling in Stamford CT, NZ Home Improvement provides expert solutions to transform your unused basement into a functional and beautiful living space. Our experienced team of basement remodel contractors near you specializes in designing and building customized basement areas that match your lifestyle and needs.
+              If you are looking for <strong className="text-gray-800">basement remodeling in Stamford CT</strong>, NZ Home Improvement provides expert solutions to transform your unused basement into a functional and beautiful living space. Our experienced team of <strong className="text-gray-800">basement remodel contractors near you</strong> specializes in designing and building customized basement areas that match your lifestyle and needs.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-8 lg:w-11/12">
-              Whether you want a cozy family room, home office, guest bedroom, gym, or entertainment area, we turn your vision into reality. A well-designed basement not only increases usable space but also adds significant value to your home. From planning to finishing, we ensure every detail is handled professionally with high-quality workmanship and modern design standards.
+              Whether you want a cozy family room, home office, guest bedroom, gym, or entertainment area, we turn your vision into reality. A well-designed <strong className="text-gray-800">basement remodel</strong> not only increases usable space but also adds significant value to your home. From planning to finishing, we ensure every detail is handled professionally with high-quality workmanship and modern design standards.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a

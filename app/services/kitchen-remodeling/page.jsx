@@ -105,10 +105,10 @@ export default function KitchenRemodelingPage() {
               Kitchen Remodeling in Stamford CT – Modern, Affordable & Custom Designs
             </h2>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4 lg:w-11/12">
-              If you are planning kitchen remodeling in Stamford CT, choosing the right contractor is the most important step toward achieving your dream kitchen. At NZ Home Improvement, we provide high-quality and customized kitchen renovation solutions designed to improve both functionality and aesthetics. Our experienced team of kitchen remodelers near you specializes in transforming outdated kitchens into modern, stylish, and highly efficient spaces.
+              If you are planning <strong className="text-gray-800">kitchen remodeling in Stamford CT</strong>, choosing the right contractor is the most important step toward achieving your dream kitchen. At NZ Home Improvement, we provide high-quality and customized <strong className="text-gray-800">kitchen renovation solutions</strong> designed to improve both functionality and aesthetics. Our experienced team of <strong className="text-gray-800">kitchen remodelers near you</strong> specializes in transforming outdated kitchens into modern, stylish, and highly efficient spaces.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-8 lg:w-11/12">
-              Whether you want a complete transformation or a small kitchen remodel, we focus on delivering results that match your vision and budget. From layout redesign to finishing touches, every aspect of your kitchen renovation is handled with precision and care. A well-designed kitchen not only enhances your daily lifestyle but also significantly increases your property value.
+              Whether you want a complete transformation or a <strong className="text-gray-800">small kitchen remodel</strong>, we focus on delivering results that match your vision and budget. From layout redesign to finishing touches, every aspect of your <strong className="text-gray-800">kitchen renovation</strong> is handled with precision and care. A well-designed kitchen not only enhances your daily lifestyle but also significantly increases your property value.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
