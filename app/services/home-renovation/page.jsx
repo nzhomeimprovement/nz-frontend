@@ -207,6 +207,76 @@ export default function HomeRenovationPage() {
         </div>
       </section>
 
+      {/* ── Rich SEO Content ── */}
+      <section className="bg-zinc-50 py-16 lg:py-20 px-4 sm:px-6 lg:px-8 font-sans">
+        <div className="max-w-4xl mx-auto space-y-12">
+
+          <div>
+            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
+              Home Renovation Cost in Stamford CT
+            </h2>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              One of the most important questions homeowners ask is about the <strong className="text-gray-800">home renovation cost in Stamford CT</strong>. The cost depends on the size of the home, materials used, and the level of renovation required.
+            </p>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              On average, a basic renovation may start from $20,000, while a full <strong className="text-gray-800">home renovation project</strong> can go above $100,000 depending on customization and upgrades. We provide clear and detailed <strong className="text-gray-800">home renovation cost estimates</strong> so you can plan your project without confusion or hidden charges.
+            </p>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+              We also offer <strong className="text-gray-800">affordable home renovation options</strong> for homeowners who want to upgrade their space while staying within budget.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
+              Benefits of Home Renovation
+            </h2>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              A well-planned <strong className="text-gray-800">home renovation</strong> improves both lifestyle and property value. Upgrading old interiors, improving energy efficiency, and redesigning layouts can make your home more comfortable and modern.
+            </p>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+              A professional renovation also increases resale value, making it a smart long-term investment. Many homeowners choose renovation instead of moving because it allows them to stay in their preferred location while enjoying a fully updated home.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
+              Home Renovation Ideas and Trends
+            </h2>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              Modern <strong className="text-gray-800">home renovation</strong> focuses on open spaces, natural lighting, energy efficiency, and smart storage solutions. Popular <strong className="text-gray-800">home renovation ideas</strong> include open-concept living rooms, modern kitchens, upgraded bathrooms, and finished basements.
+            </p>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+              We also follow the latest design trends to ensure your home looks modern and stylish while remaining practical for everyday use. Whether you prefer a luxury design or a simple modern upgrade, we tailor everything to your vision.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
+              Why Choose Our Home Renovation Services?
+            </h2>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              Choosing the right contractor is essential for a successful renovation. We are trusted experts in <strong className="text-gray-800">home renovation in Stamford CT</strong> with years of experience in delivering high-quality residential projects.
+            </p>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+              We focus on quality workmanship, transparent pricing, and customer satisfaction. Our team uses durable materials and modern techniques to ensure long-lasting results. Every project is handled professionally from start to finish.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
+              Home Renovation ROI and Value Increase
+            </h2>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              <strong className="text-gray-800">Home renovation</strong> is one of the best ways to increase property value. Updated kitchens, modern bathrooms, and improved layouts significantly increase resale potential. Even small upgrades can make a big difference in market appeal.
+            </p>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+              If you are planning to sell your home in the future, renovation is a smart investment that can deliver strong returns.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
       {/* ── FAQ ── */}
       <section className="bg-white py-16 lg:py-24 px-4 sm:px-6 lg:px-8 font-sans">
         <div className="max-w-4xl mx-auto">

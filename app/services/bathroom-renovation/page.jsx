@@ -207,6 +207,79 @@ export default function BathroomRenovationPage() {
         </div>
       </section>
 
+      {/* ── Rich SEO Content ── */}
+      <section className="bg-zinc-50 py-16 lg:py-20 px-4 sm:px-6 lg:px-8 font-sans">
+        <div className="max-w-4xl mx-auto space-y-12">
+
+          <div>
+            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
+              Bathroom Renovation Cost in Stamford CT
+            </h2>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              One of the most important factors homeowners consider is the <strong className="text-gray-800">bathroom renovation cost</strong>. If you are wondering, <strong className="text-gray-800">how much does it cost to renovate a bathroom in Stamford CT?</strong> the answer depends on several factors such as bathroom size, materials, layout changes, and design complexity.
+            </p>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              On average, the <strong className="text-gray-800">cost of bathroom renovation in Stamford CT</strong> ranges from $8,000 to $25,000 or more for luxury upgrades. A basic <strong className="text-gray-800">small bathroom renovation cost</strong> may be lower, while high-end remodels with premium finishes can cost significantly more.
+            </p>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+              We also provide <strong className="text-gray-800">affordable bathroom renovation services</strong> that are designed for homeowners who want quality upgrades within a reasonable budget. Our team provides transparent <strong className="text-gray-800">bathroom renovation cost estimates</strong> so you can plan your project without surprises.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
+              Modern Bathroom Design Ideas &amp; Trends
+            </h2>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              Design plays a key role in any successful renovation. We help homeowners explore the latest <strong className="text-gray-800">bathroom renovation ideas</strong> that combine style, comfort, and functionality. Popular trends include walk-in showers, floating vanities, LED mirrors, and minimalist designs.
+            </p>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              For compact spaces, we offer creative <strong className="text-gray-800">small bathroom renovation ideas on a budget</strong> that maximize space efficiency without compromising on style. Smart storage solutions, light color schemes, and modern fittings can completely transform even the smallest bathrooms.
+            </p>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+              Whether you prefer a luxury spa-like bathroom or a simple and modern design, our team ensures your vision becomes a reality.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
+              How Long Does a Bathroom Renovation Take?
+            </h2>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              A common question homeowners ask is, <strong className="text-gray-800">how long does a bathroom renovation take?</strong> The timeline depends on the size and complexity of the project. On average, a <strong className="text-gray-800">bathroom remodel in Stamford CT</strong> takes between 2 to 4 weeks.
+            </p>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+              Smaller projects may be completed faster, while larger renovations involving plumbing or structural changes may take longer. We always focus on efficient project management to minimize disruption in your home.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
+              Why Choose Our Bathroom Renovation Services?
+            </h2>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              Choosing the right contractor for <strong className="text-gray-800">bathroom renovation in Stamford CT</strong> is essential for achieving long-lasting results. At NZ Home Improvement, we are committed to delivering top-quality workmanship, reliable service, and customer satisfaction.
+            </p>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+              We use high-quality materials, modern techniques, and expert craftsmanship to ensure your bathroom is not only beautiful but also durable. Whether you are searching for <strong className="text-gray-800">bathroom remodel near you</strong> or a complete renovation solution, we are your trusted local experts.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
+              Increase Your Home Value with Bathroom Remodeling
+            </h2>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              A professionally renovated bathroom is one of the best investments you can make in your home. A modern and functional bathroom significantly increases property value and improves buyer interest.
+            </p>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+              Even small upgrades such as new tiles, updated fixtures, or improved lighting can make a big difference. Our <strong className="text-gray-800">bathroom renovation services</strong> are designed to deliver maximum value and long-term benefits.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
       {/* ── FAQ ── */}
       <section className="bg-white py-16 lg:py-24 px-4 sm:px-6 lg:px-8 font-sans">
         <div className="max-w-4xl mx-auto">

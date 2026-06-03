@@ -207,6 +207,91 @@ export default function BasementRemodelingPage() {
         </div>
       </section>
 
+      {/* ── Rich SEO Content ── */}
+      <section className="bg-zinc-50 py-16 lg:py-20 px-4 sm:px-6 lg:px-8 font-sans">
+        <div className="max-w-4xl mx-auto space-y-12">
+
+          <div>
+            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
+              Basement Remodel Cost in Stamford CT
+            </h2>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              One of the most important factors homeowners consider is the <strong className="text-gray-800">basement remodel cost</strong>. If you are wondering, <strong className="text-gray-800">how much does it cost to remodel a basement in Stamford CT?</strong> the answer depends on size, layout, materials, and required structural work.
+            </p>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              On average, the <strong className="text-gray-800">basement remodeling cost in Stamford CT</strong> ranges between $10,000 and $40,000 or more. A basic finishing project may cost less, while a fully customized basement with bathrooms, kitchens, or entertainment setups may cost more.
+            </p>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+              We also provide <strong className="text-gray-800">affordable basement remodeling services</strong> and transparent <strong className="text-gray-800">basement remodeling cost estimates near you</strong>, helping you plan your project with confidence and no hidden charges.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
+              Basement Remodeling Ideas for Modern Homes
+            </h2>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              Design plays a key role in basement transformation. We help homeowners explore creative <strong className="text-gray-800">basement remodeling ideas</strong> that maximize space and functionality.
+            </p>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              Popular options include home theaters, guest suites, playrooms, fitness areas, and home offices. For smaller spaces, we offer <strong className="text-gray-800">small basement remodel ideas</strong> that focus on smart storage, lighting, and layout optimization.
+            </p>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+              Whether you prefer a luxury setup or a budget-friendly upgrade, we customize the design based on your goals and budget.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
+              Benefits of Basement Remodeling
+            </h2>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              Investing in <strong className="text-gray-800">basement remodeling in Stamford CT</strong> provides multiple benefits. It increases your home&apos;s usable space without the need for expansion, improves property value, and enhances lifestyle comfort.
+            </p>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+              A finished basement can also generate extra income if converted into a rental unit or guest suite. Additionally, it improves energy efficiency and overall home organization.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
+              How Long Does a Basement Remodel Take?
+            </h2>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              A common question is, <strong className="text-gray-800">how long does a basement remodel take?</strong> The timeline depends on the size and complexity of the project. On average, a <strong className="text-gray-800">basement remodeling project in Stamford CT</strong> takes 3 to 8 weeks.
+            </p>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+              Smaller finishing projects may take less time, while full renovations with additional rooms or bathrooms may take longer. We ensure efficient project management to complete work on schedule.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
+              Why Choose Our Basement Remodeling Services?
+            </h2>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              Choosing the right contractor is important for a successful renovation. At NZ Home Improvement, we are trusted experts in <strong className="text-gray-800">basement remodeling Stamford CT</strong>, known for quality work, reliable service, and customer satisfaction.
+            </p>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+              We use high-quality materials, modern techniques, and skilled craftsmanship to ensure long-lasting results. Whether you are searching for <strong className="text-gray-800">basement remodelers near you</strong> or a complete renovation solution, we are your trusted local experts.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
+              Increase Your Home Value with Basement Remodeling
+            </h2>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              A finished basement is one of the best ways to increase property value. It adds functional square footage and makes your home more attractive to buyers.
+            </p>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+              Even small improvements like better lighting, flooring, and layout changes can significantly enhance the space. Our <strong className="text-gray-800">basement remodeling services</strong> are designed to deliver maximum return on investment.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
       {/* ── FAQ ── */}
       <section className="bg-white py-16 lg:py-24 px-4 sm:px-6 lg:px-8 font-sans">
         <div className="max-w-4xl mx-auto">

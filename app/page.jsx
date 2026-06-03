@@ -9,13 +9,13 @@ import FAQSection from "@/components/FAQSection";
 import { ArrowLeft, ArrowRight, ClipboardList, Headset, ImageIcon, Lightbulb, Share2, ShoppingBag, Star } from "lucide-react";
 
 export const metadata = {
-  title: "NZ Home Improvement | Renovation & Remodeling Stamford CT",
+  title: "Home Renovation Contractor in Stamford CT | Kitchen, Bathroom & Basement Experts",
   description:
-    "NZ Home Improvement offers professional home renovation and remodeling services in Stamford, CT. Kitchen, bathroom, basement remodeling. Get free estimates.",
+    "Trusted home renovation contractor in Stamford CT offering kitchen remodeling, bathroom renovation, basement finishing & home additions. Get free estimate today.",
   alternates: { canonical: "https://nzhomeimprovement.com" },
   openGraph: {
     url: "https://nzhomeimprovement.com",
-    title: "NZ Home Improvement | Renovation & Remodeling Stamford CT",
+    title: "Home Renovation Contractor in Stamford CT | Kitchen, Bathroom & Basement Experts",
   },
 };
 
@@ -209,13 +209,16 @@ export default function HomePage() {
         <div className="flex flex-col md:pl-4">
           
           {/* Heading */}
-          <h2 className="text-[28px] leading-tight md:text-4xl lg:text-[2.75rem] font-bold text-black tracking-[-0.02em] mb-6">
-            Full Service Home Remodeling in Stamford, CT – Book Now
-          </h2>
+          <h1 className="text-[28px] leading-tight md:text-4xl lg:text-[2.75rem] font-bold text-black tracking-[-0.02em] mb-6">
+            <strong className="text-black">Home Renovation Contractor in Stamford CT</strong> – Complete Remodeling Solutions for Your Home
+          </h1>
 
           {/* Main Description */}
+          <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4 lg:w-11/12 pr-4">
+            If you are searching for a trusted and experienced <strong className="text-gray-800">home renovation contractor in Stamford CT</strong>, NZ Home Improvement is your reliable partner for high-quality remodeling services. We specialize in transforming outdated homes into modern, functional, and beautiful living spaces through expert craftsmanship and customized design solutions.
+          </p>
           <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-6 lg:w-11/12 pr-4">
-            NZ Home Improvement handles every phase of your project — from free consultation and 3D design to permitting, construction, and final walkthrough. From kitchen and bathroom remodeling to basement finishing, home additions, and whole-home renovations in Stamford, CT.
+            Whether you need a full <strong className="text-gray-800">home renovation</strong>, a modern kitchen upgrade, bathroom remodeling, basement finishing, or a complete <strong className="text-gray-800">home addition</strong>, our team delivers results that improve comfort, functionality, and property value.
           </p>
 
           {/* Value Propositions / List Box */}
@@ -227,21 +230,21 @@ export default function HomePage() {
                 NZ Home Improvement
               </span>
               <p className="text-gray-500 text-[13px] md:text-sm leading-[1.6]">
-                Expert remodeling contractor serving Stamford, CT — quality craftsmanship, transparent pricing, and on-time project completion.
+                Providing complete <strong className="text-gray-800">home renovation solutions in Stamford CT</strong> — quality craftsmanship, transparent pricing, and on-time project completion.
               </p>
             </div>
 
             {/* Inactive Line 1 */}
             <div className="border-l-2 border-gray-300 pl-4 lg:pl-5 py-0.5 ml-[1px]">
                <span className="font-semibold text-sm md:text-[15px] text-gray-800">
-                 Kitchen, Bathroom & Basement Remodeling
+                 <strong>Kitchen Remodeling in Stamford CT</strong> &amp; Bathroom Renovation
                </span>
             </div>
 
             {/* Inactive Line 2 */}
             <div className="border-l-2 border-gray-300 pl-4 lg:pl-5 py-0.5 ml-[1px]">
                <span className="font-semibold text-sm md:text-[15px] text-gray-800">
-                 Home Additions & Full Home Renovations
+                 Basement Finishing, <strong>Home Addition</strong> &amp; Full Home Renovations
                </span>
             </div>
             
@@ -502,6 +505,158 @@ export default function HomePage() {
 
 
     
+
+      {/* ── SEO Rich Content ── */}
+      <section className="bg-white py-16 lg:py-20 px-4 sm:px-6 lg:px-8 font-sans">
+        <div className="max-w-5xl mx-auto">
+
+          {/* Complete Services */}
+          <div className="mb-14">
+            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-5">
+              Complete Home Remodeling Services in Stamford CT
+            </h2>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              At NZ Home Improvement, we provide full-service <strong className="text-gray-800">home renovation solutions in Stamford CT</strong>. Our services cover every major area of your home, ensuring a complete transformation from inside out.
+            </p>
+            <ul className="space-y-2 mb-4">
+              <li className="text-gray-500 text-sm md:text-base leading-relaxed flex gap-2"><span className="text-[#D0956B] font-bold shrink-0">–</span><span><strong className="text-gray-800">Kitchen Remodeling in Stamford CT</strong> – Modern designs, cabinets, countertops, and full kitchen upgrades</span></li>
+              <li className="text-gray-500 text-sm md:text-base leading-relaxed flex gap-2"><span className="text-[#D0956B] font-bold shrink-0">–</span><span><strong className="text-gray-800">Bathroom Renovation in Stamford CT</strong> – Stylish, functional, and space-efficient bathroom transformations</span></li>
+              <li className="text-gray-500 text-sm md:text-base leading-relaxed flex gap-2"><span className="text-[#D0956B] font-bold shrink-0">–</span><span>Basement Remodeling in <strong className="text-gray-800">Stamford CT</strong> – Convert unused basements into living spaces, offices, or entertainment rooms</span></li>
+              <li className="text-gray-500 text-sm md:text-base leading-relaxed flex gap-2"><span className="text-[#D0956B] font-bold shrink-0">–</span><span><strong className="text-gray-800">Home Addition</strong> Services in <strong className="text-gray-800">Stamford CT</strong> – Expand your home with custom room additions or second-story builds</span></li>
+              <li className="text-gray-500 text-sm md:text-base leading-relaxed flex gap-2"><span className="text-[#D0956B] font-bold shrink-0">–</span><span>Whole <strong className="text-gray-800">Home Renovation</strong> Projects – Complete house remodeling from layout to finishing</span></li>
+            </ul>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+              Each project is handled with attention to detail, ensuring long-lasting quality and modern design appeal.
+            </p>
+          </div>
+
+          {/* Why Choose */}
+          <div className="mb-14">
+            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-5">
+              Why Choose NZ Home Improvement?
+            </h2>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              Choosing the right contractor is the most important decision for any renovation project. Homeowners trust us because we deliver consistent quality, transparency, and professional service. When you choose our <strong className="text-gray-800">home renovation</strong> services in <strong className="text-gray-800">Stamford CT</strong>, you get:
+            </p>
+            <ul className="space-y-2 mb-4">
+              {["Experienced and licensed remodeling professionals","High-quality materials and modern construction techniques","Transparent pricing with no hidden costs","Customized designs based on your needs and lifestyle","On-time project completion with proper communication","Affordable solutions for all budget levels"].map((item) => (
+                <li key={item} className="text-gray-500 text-sm md:text-base leading-relaxed flex gap-2"><span className="text-[#D0956B] font-bold shrink-0">–</span><span>{item}</span></li>
+              ))}
+            </ul>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+              We believe every home deserves a unique design that reflects the personality and needs of its owner.
+            </p>
+          </div>
+
+          {/* 2-col grid: Kitchen + Bathroom */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-14">
+            <div>
+              <h2 className="text-xl md:text-2xl font-bold text-black tracking-tight leading-tight mb-4">
+                Kitchen Remodeling Services in Stamford CT
+              </h2>
+              <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-3">
+                Your kitchen is the heart of your home, and our <strong className="text-gray-800">Kitchen Remodeling in Stamford CT</strong> services are designed to make it more beautiful and functional. We specialize in modern kitchen layouts, cabinet installation, countertop replacement, lighting improvements, and smart storage solutions.
+              </p>
+              <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+                If you are looking for kitchen remodelers near you, we offer both luxury and budget kitchen remodeling options tailored to your requirements. Our team ensures transparent pricing and detailed estimates before starting any project.
+              </p>
+            </div>
+            <div>
+              <h2 className="text-xl md:text-2xl font-bold text-black tracking-tight leading-tight mb-4">
+                Bathroom Renovation in Stamford CT
+              </h2>
+              <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-3">
+                We provide complete <strong className="text-gray-800">Bathroom Renovation in Stamford CT</strong> services that transform old bathrooms into modern and relaxing spaces. Our services include walk-in showers, bathtub installations, modern vanity solutions, tile work, waterproofing, and lighting upgrades.
+              </p>
+              <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+                Whether you need a small bathroom renovation or a luxury spa-style upgrade, we deliver designs that improve both comfort and home value.
+              </p>
+            </div>
+          </div>
+
+          {/* 2-col grid: Basement + Home Addition */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-14">
+            <div>
+              <h2 className="text-xl md:text-2xl font-bold text-black tracking-tight leading-tight mb-4">
+                Basement Remodeling in Stamford CT
+              </h2>
+              <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-3">
+                A basement is often unused space, but with professional remodeling, it can become one of the most valuable parts of your home. We specialize in converting unused basements into home theaters, guest bedrooms, home offices, fitness rooms, and entertainment spaces.
+              </p>
+              <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+                We also provide affordable basement remodel cost options depending on your budget and design needs.
+              </p>
+            </div>
+            <div>
+              <h2 className="text-xl md:text-2xl font-bold text-black tracking-tight leading-tight mb-4">
+                Home Addition Services in Stamford CT
+              </h2>
+              <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-3">
+                If your home feels small, our <strong className="text-gray-800">home addition</strong> services in <strong className="text-gray-800">Stamford CT</strong> are the perfect solution. We design and build room additions, second-story expansions, garage conversions, and extended kitchens and living rooms.
+              </p>
+              <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+                A <strong className="text-gray-800">home addition</strong> allows you to increase your living space without moving to a new house. We also provide detailed home addition cost per square foot estimates for better planning.
+              </p>
+            </div>
+          </div>
+
+          {/* Cost + Process */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-14">
+            <div>
+              <h2 className="text-xl md:text-2xl font-bold text-black tracking-tight leading-tight mb-4">
+                Home Renovation Cost in Stamford CT
+              </h2>
+              <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-3">
+                The <strong className="text-gray-800">home renovation</strong> cost in <strong className="text-gray-800">Stamford CT</strong> depends on project size, materials, and design complexity. Small upgrades may cost a few thousand dollars, while full home renovations can go much higher.
+              </p>
+              <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+                We provide transparent pricing and detailed estimates for every project. Whether you are planning a budget <strong className="text-gray-800">home renovation</strong> or a luxury remodel, we ensure the best value for your investment.
+              </p>
+            </div>
+            <div>
+              <h2 className="text-xl md:text-2xl font-bold text-black tracking-tight leading-tight mb-4">
+                Our Home Renovation Process
+              </h2>
+              <ul className="space-y-2">
+                {[
+                  "Consultation to understand your goals and requirements",
+                  "Custom renovation plan based on your budget and preferences",
+                  "Construction using high-quality materials and modern techniques",
+                  "Finishing touches and delivery of your fully transformed home",
+                ].map((step, i) => (
+                  <li key={i} className="text-gray-500 text-sm md:text-base leading-relaxed flex gap-2">
+                    <span className="text-[#D0956B] font-bold shrink-0">{i + 1}.</span><span>{step}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Value + Serving Area */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div>
+              <h2 className="text-xl md:text-2xl font-bold text-black tracking-tight leading-tight mb-4">
+                Increase Your Home Value with Renovation
+              </h2>
+              <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-3">
+                Investing in <strong className="text-gray-800">home renovation in Stamford CT</strong> is one of the best ways to increase property value. Upgraded kitchens, modern bathrooms, finished basements, and <strong className="text-gray-800">home additions</strong> significantly improve resale value and buyer interest.
+              </p>
+              <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+                Even small improvements can make a big difference in appearance, comfort, and functionality.
+              </p>
+            </div>
+            <div>
+              <h2 className="text-xl md:text-2xl font-bold text-black tracking-tight leading-tight mb-4">
+                Serving Stamford CT and Nearby Areas
+              </h2>
+              <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+                We proudly serve homeowners in <strong className="text-gray-800">Stamford CT</strong> and surrounding locations. Our local experience as a trusted <strong className="text-gray-800">home renovation contractor</strong> helps us understand building codes, design trends, and customer expectations in the area. Contact us today for a free estimate.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
 
       {/* ── FAQ ── */}
       <FAQSection />

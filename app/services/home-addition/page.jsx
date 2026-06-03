@@ -290,6 +290,37 @@ export default function HomeAdditionPage() {
         </div>
       </section>
 
+      {/* ── Rich SEO Content ── */}
+      <section className="bg-white py-16 lg:py-20 px-4 sm:px-6 lg:px-8 font-sans">
+        <div className="max-w-4xl mx-auto space-y-12">
+
+          <div>
+            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
+              Why Choose Our Home Addition Services?
+            </h2>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              Choosing the right contractor is essential for a successful project. We are trusted specialists in <strong className="text-gray-800">home addition services in Stamford CT</strong>, known for quality work, transparent pricing, and reliable service.
+            </p>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+              Our team uses high-quality materials and modern construction techniques to ensure durability and long-lasting results. Every project is customized to meet the unique needs of each homeowner, ensuring complete satisfaction from start to finish.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
+              Home Addition Value and ROI
+            </h2>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+              A professionally built <strong className="text-gray-800">home addition</strong> significantly increases property value. Extra rooms, larger living spaces, and improved layouts make your home more attractive to future buyers.
+            </p>
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+              Even a small addition can deliver a strong return on investment, especially in high-demand areas like <strong className="text-gray-800">Stamford CT</strong>. Whether you plan to sell in the future or stay long-term, a <strong className="text-gray-800">home addition</strong> is a smart financial decision.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
       {/* ── FAQ ── */}
       <section className="bg-zinc-50 py-16 lg:py-24 px-4 sm:px-6 lg:px-8 font-sans">
         <div className="max-w-4xl mx-auto">
