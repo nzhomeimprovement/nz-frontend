@@ -205,38 +205,38 @@ export default function HomePage() {
           
           {/* Heading */}
           <h2 className="text-[28px] leading-tight md:text-4xl lg:text-[2.75rem] font-bold text-black tracking-[-0.02em] mb-6">
-            Full Service Home Remodeling in USA - Book Now
+            Full Service Home Remodeling in Stamford, CT – Book Now
           </h2>
-          
+
           {/* Main Description */}
           <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-6 lg:w-11/12 pr-4">
-            USA Home Remodeling handles every phase of your project-from consultation 3D design to permitting, construction and final walkthrough. From kitchen and bathrooms to room additions, ADUs, and whole-home renovations,.
+            NZ Home Improvement handles every phase of your project — from free consultation and 3D design to permitting, construction, and final walkthrough. From kitchen and bathroom remodeling to basement finishing, home additions, and whole-home renovations in Stamford, CT.
           </p>
 
           {/* Value Propositions / List Box */}
           <div className="flex flex-col space-y-4 mb-10 pl-0">
-            
+
             {/* Active Item Block */}
             <div className="border-l-[3.5px] border-black pl-4 lg:pl-5 py-1 flex flex-col gap-1.5 lg:w-[95%]">
               <span className="font-bold text-sm md:text-[15px] text-gray-900 tracking-tight">
-                USA Home Remodeling
+                NZ Home Improvement
               </span>
               <p className="text-gray-500 text-[13px] md:text-sm leading-[1.6]">
-                handles every phase of your project-from consultation 3D design to permitting, construction and final walkthrough.
+                Expert remodeling contractor serving Stamford, CT — quality craftsmanship, transparent pricing, and on-time project completion.
               </p>
             </div>
 
             {/* Inactive Line 1 */}
             <div className="border-l-2 border-gray-300 pl-4 lg:pl-5 py-0.5 ml-[1px]">
                <span className="font-semibold text-sm md:text-[15px] text-gray-800">
-                 ADUs, and whole-home renovations,.
+                 Kitchen, Bathroom & Basement Remodeling
                </span>
             </div>
 
             {/* Inactive Line 2 */}
             <div className="border-l-2 border-gray-300 pl-4 lg:pl-5 py-0.5 ml-[1px]">
                <span className="font-semibold text-sm md:text-[15px] text-gray-800">
-                 3D design to permitting,
+                 Home Additions & Full Home Renovations
                </span>
             </div>
             
@@ -244,7 +244,7 @@ export default function HomePage() {
 
           {/* CTA Button */}
           <div>
-            <a href="#consultation" className="inline-flex justify-center items-center px-8 py-[14px] bg-[#e3fb4b] hover:bg-[#d6ec3d] text-black text-[15px] font-medium rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.06)] transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#e3fb4b] focus:ring-offset-2">
+            <a href="#consultation" className="inline-flex justify-center items-center px-8 py-[14px] bg-[#D0956B] hover:bg-[#C4845A] text-black text-[15px] font-medium rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.06)] transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#D0956B] focus:ring-offset-2">
               Schedule a Free Consultation
             </a>
           </div>
@@ -288,21 +288,18 @@ export default function HomePage() {
               <div
                 key={i}
                 className={`p-8 md:p-10 flex flex-col justify-start transition-colors duration-300 ${
-                  feature.isLime 
-                  ? "bg-[#EEFE6D] hover:bg-[#E5F559]"  // Exact neon-lime from design
-                  : "bg-zinc-50 hover:bg-white" // Standard off-white panel 
+                  feature.isLime
+                  ? "bg-zinc-900 hover:bg-black"
+                  : "bg-zinc-50 hover:bg-white"
                 }`}
               >
-                {/* Custom subtle background behind the icon */}
-                <div className={`w-[52px] h-[52px] rounded-full flex items-center justify-center mb-6 text-zinc-900 ${feature.isLime ? 'bg-black/5' : 'bg-zinc-200/50'}`}>
+                <div className={`w-[52px] h-[52px] rounded-full flex items-center justify-center mb-6 ${feature.isLime ? 'bg-white/10 text-white' : 'bg-zinc-200/50 text-zinc-900'}`}>
                   <feature.Icon />
                 </div>
-                
-                {/* Copy Text */}
-                <h5 className="text-[17px] font-bold text-zinc-900 mb-4 tracking-tight leading-snug">
+                <h5 className={`text-[17px] font-bold mb-4 tracking-tight leading-snug ${feature.isLime ? 'text-white' : 'text-zinc-900'}`}>
                   {feature.title}
                 </h5>
-                <p className="text-sm font-medium text-zinc-600/90 leading-[1.8] opacity-90 pr-2">
+                <p className={`text-sm font-medium leading-[1.8] opacity-90 pr-2 ${feature.isLime ? 'text-zinc-400' : 'text-zinc-600/90'}`}>
                   {feature.desc}
                 </p>
               </div>
@@ -337,7 +334,7 @@ export default function HomePage() {
                 key={index}
                 className={`
                   rounded-[32px] p-10 flex flex-col items-center text-center
-                  ${step.isHighlighted ? 'bg-[#d2f95b]' : 'bg-[#FAFAFA]'}
+                  ${step.isHighlighted ? 'bg-black' : 'bg-[#FAFAFA]'}
                 `}
               >
                 {/* Icon Box */}
@@ -349,7 +346,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                <h3 className="text-lg font-semibold text-gray-400 mb-4">
                   {step.title}
                 </h3>
                 <p className="text-[14px] leading-[1.6] text-gray-600 font-normal">
@@ -424,26 +421,26 @@ export default function HomePage() {
     </section>
 
       {/* ── Satisfied Clients (dark section) ── */}
-     <section className="py-24 bg-[#dbfa51]">
+     <section className="py-24 bg-zinc-900">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col items-center text-center">
-        
+
         {/* Headings */}
         <div className="mb-14">
-          <h2 className="text-[32px] md:text-[44px] font-semibold text-gray-900 tracking-tight mb-5">
+          <h2 className="text-[32px] md:text-[44px] font-semibold text-white tracking-tight mb-5">
             Our Satisfied Clients
           </h2>
-          <p className="text-[13px] md:text-[14px] leading-relaxed text-gray-700 max-w-2xl mx-auto font-medium">
-            Our satisfied clients trust us for our quality craftsmanship, reliable service, and 
+          <p className="text-[13px] md:text-[14px] leading-relaxed text-zinc-400 max-w-2xl mx-auto font-medium">
+            Our satisfied clients trust us for our quality craftsmanship, reliable service, and
             commitment to bringing their remodeling vision to life.
           </p>
         </div>
 
         {/* Large Main Quote */}
         <div className="mb-14">
-          <p className="text-[22px] md:text-[34px] lg:text-[40px] font-medium leading-[1.3] text-gray-900 max-w-[65rem] mx-auto tracking-tight">
-            We had the pleasure of working with Isaac to remodel our 
-            kitchen and we couldn't be happier. Thank you USA Home 
-            Remodeling for exceeding our expectations!
+          <p className="text-[22px] md:text-[34px] lg:text-[40px] font-medium leading-[1.3] text-zinc-100 max-w-[65rem] mx-auto tracking-tight">
+            We had the pleasure of working with the NZ Home Improvement
+            team to remodel our kitchen and we couldn't be happier.
+            Thank you for exceeding our expectations!
           </p>
         </div>
 
@@ -451,7 +448,7 @@ export default function HomePage() {
         <div className="flex items-center justify-center mb-8 gap-2 sm:gap-4 md:gap-10 w-full max-w-full px-2">
 
           {/* Previous Arrow */}
-          <button className="w-9 h-9 sm:w-10.5 sm:h-10.5 shrink-0 flex items-center justify-center rounded-full border-[1.5px] border-gray-900/20 text-gray-800 hover:border-gray-900 hover:bg-gray-900 hover:text-white transition-all">
+          <button className="w-9 h-9 sm:w-10.5 sm:h-10.5 shrink-0 flex items-center justify-center rounded-full border-[1.5px] border-white/20 text-white hover:border-white hover:bg-white hover:text-zinc-900 transition-all">
             <ArrowLeft strokeWidth={1.5} size={16} />
           </button>
 
@@ -471,7 +468,7 @@ export default function HomePage() {
           </div>
 
           {/* Next Arrow */}
-          <button className="w-9 h-9 sm:w-10.5 sm:h-10.5 shrink-0 flex items-center justify-center rounded-full border-[1.5px] border-gray-900/20 text-gray-800 hover:border-gray-900 hover:bg-gray-900 hover:text-white transition-all">
+          <button className="w-9 h-9 sm:w-10.5 sm:h-10.5 shrink-0 flex items-center justify-center rounded-full border-[1.5px] border-white/20 text-white hover:border-white hover:bg-white hover:text-zinc-900 transition-all">
             <ArrowRight strokeWidth={1.5} size={16} />
           </button>
 
@@ -479,8 +476,8 @@ export default function HomePage() {
 
         {/* Author info and Star Rating */}
         <div className="flex flex-col items-center">
-          <p className="text-[15px] font-medium text-gray-900 tracking-wider mb-2">
-            DONALD W <span className="font-normal capitalize text-gray-800 ml-1">Houzz</span>
+          <p className="text-[15px] font-medium text-zinc-200 tracking-wider mb-2">
+            DONALD W <span className="font-normal capitalize text-zinc-400 ml-1">Houzz</span>
           </p>
           <div className="flex gap-1.5 text-[#fcb612]">
             {[1, 2, 3, 4, 5].map((star) => (

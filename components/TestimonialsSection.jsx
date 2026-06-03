@@ -62,7 +62,7 @@ export default function TestimonialsSection() {
         {/* Author Avatar & Detail grouping */}
         <div className="flex items-center justify-center gap-4 mb-10">
           {/* Lime highlight mapping directly to the primary action color of the design language */}
-          <div className="w-[50px] h-[50px] rounded-full bg-[#e3fb4b] shadow-sm flex items-center justify-center text-black font-bold text-[15px] shrink-0">
+          <div className="w-[50px] h-[50px] rounded-full bg-[#D0956B] shadow-sm flex items-center justify-center text-black font-bold text-[15px] shrink-0">
             {t.initials}
           </div>
           <div className="flex flex-col text-left gap-1">
@@ -80,7 +80,7 @@ export default function TestimonialsSection() {
               key={i}
               onClick={() => setCurrent(i)}
               aria-label={`Testimonial ${i + 1}`}
-              className={`rounded-full border-none cursor-pointer transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#e3fb4b] ${
+              className={`rounded-full border-none cursor-pointer transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D0956B] ${
                 i === current 
                 ? "bg-black w-8 h-[10px]"  /* Active dot becomes a sleek elongated pill */
                 : "bg-gray-300 hover:bg-gray-400 w-[10px] h-[10px]"

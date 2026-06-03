@@ -56,7 +56,7 @@ export default function HomeVideoSection() {
                 {/* Play Button Overlay overlay */}
                 <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {/* Styling play button with the same Lime accent color as the CTA */}
-                  <div className="w-[72px] h-[72px] rounded-full bg-[#e3fb4b] flex items-center justify-center shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <div className="w-[72px] h-[72px] rounded-full bg-[#D0956B] flex items-center justify-center shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     <Play size={28} className="text-black ml-1.5" fill="currentColor" />
                   </div>
                 </div>

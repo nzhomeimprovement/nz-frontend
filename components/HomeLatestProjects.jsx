@@ -72,7 +72,7 @@ export default function HomeLatestProjects() {
                 
                 {/* Unified clean lime-overlay effect mapping perfectly to previous component logic */}
                 <div className="absolute inset-0 bg-black/15 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                   <div className="w-[60px] h-[60px] rounded-full bg-[#e3fb4b] shadow-lg flex items-center justify-center transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                   <div className="w-[60px] h-[60px] rounded-full bg-[#D0956B] shadow-lg flex items-center justify-center transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300 delay-75">
                     <Play size={24} className="text-black ml-1 flex-shrink-0" fill="currentColor" />
                   </div>
                 </div>

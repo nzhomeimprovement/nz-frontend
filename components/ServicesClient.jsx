@@ -131,7 +131,7 @@ export default function ServicesClient() {
               />
               {/* Hover overlay */}
               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-2 p-3">
-                <div className="w-9 h-9 rounded-full bg-[#e3fb4b] flex items-center justify-center">
+                <div className="w-9 h-9 rounded-full bg-[#D0956B] flex items-center justify-center">
                   <Search size={14} className="text-black" />
                 </div>
                 <p className="text-white text-xs font-semibold text-center leading-tight">

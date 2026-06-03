@@ -91,7 +91,7 @@ export default function AboutPage() {
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-3 mb-10">
               {["FREE Initial Consultation", "Licensed & Fully Insured", "We Handle Permits & Approvals"].map((item) => (
                 <div key={item} className="flex items-center gap-2">
-                  <div className="w-5 h-5 rounded-full bg-[#e3fb4b] shrink-0 flex items-center justify-center">
+                  <div className="w-5 h-5 rounded-full bg-[#D0956B] shrink-0 flex items-center justify-center">
                     <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none">
                       <path d="M2 6l2.5 2.5L10 3.5" stroke="black" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
@@ -104,7 +104,7 @@ export default function AboutPage() {
             <div>
               <Link
                 href="/contact"
-                className="inline-flex items-center px-8 py-[14px] bg-[#e3fb4b] hover:bg-[#d6ec3d] text-black text-[15px] font-medium rounded-full shadow-sm transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center px-8 py-[14px] bg-[#D0956B] hover:bg-[#C4845A] text-black text-[15px] font-medium rounded-full shadow-sm transition-all duration-300 hover:scale-105"
               >
                 Get a Free Estimate
               </Link>
@@ -117,7 +117,7 @@ export default function AboutPage() {
       <section className="py-16 lg:py-24 bg-zinc-900 px-4 sm:px-6 lg:px-8 font-sans">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-[#e3fb4b] font-semibold uppercase tracking-[0.2em] text-[11px] mb-3">
+            <p className="text-[#D0956B] font-semibold uppercase tracking-[0.2em] text-[11px] mb-3">
               Our Foundation
             </p>
             <h2 className="text-[28px] md:text-4xl lg:text-[2.75rem] font-bold text-white tracking-[-0.02em] leading-tight">
@@ -129,7 +129,7 @@ export default function AboutPage() {
             {mvv.map((item, i) => (
               <div
                 key={item.title}
-                className={`rounded-[2rem] p-8 md:p-10 flex flex-col ${i === 0 ? "bg-[#e3fb4b]" : "bg-zinc-800"}`}
+                className={`rounded-[2rem] p-8 md:p-10 flex flex-col ${i === 0 ? "bg-[#D0956B]" : "bg-zinc-800"}`}
               >
                 <h3 className={`text-xl font-bold mb-4 tracking-tight ${i === 0 ? "text-black" : "text-white"}`}>
                   {item.title}
@@ -159,7 +159,7 @@ export default function AboutPage() {
             {whyUsItems.map((item) => (
               <div
                 key={item.label}
-                className="bg-zinc-50 rounded-[2rem] p-8 flex flex-col items-center text-center hover:bg-[#e3fb4b] transition-colors duration-300 group"
+                className="bg-zinc-50 rounded-[2rem] p-8 flex flex-col items-center text-center hover:bg-[#D0956B] transition-colors duration-300 group"
               >
                 <div className="w-16 h-16 relative mb-5">
                   <Image src={item.img} alt={item.label} fill className="object-contain" />

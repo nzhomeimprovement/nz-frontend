@@ -68,7 +68,7 @@ export default function PortfolioClient() {
                 />
                 {/* Dark overlay + play button */}
                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/45 transition-colors duration-300 flex items-center justify-center">
-                  <div className="w-14 h-14 rounded-full bg-[#e3fb4b] flex items-center justify-center shadow-lg transform scale-90 group-hover:scale-100 transition-transform duration-300">
+                  <div className="w-14 h-14 rounded-full bg-[#D0956B] flex items-center justify-center shadow-lg transform scale-90 group-hover:scale-100 transition-transform duration-300">
                     <Play size={22} className="text-black ml-1" fill="currentColor" />
                   </div>
                 </div>
@@ -114,7 +114,7 @@ export default function PortfolioClient() {
                 onError={(e) => { e.currentTarget.style.display = "none"; }}
               />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <div className="w-9 h-9 rounded-full bg-[#e3fb4b] flex items-center justify-center">
+                <div className="w-9 h-9 rounded-full bg-[#D0956B] flex items-center justify-center">
                   <Search size={14} className="text-black" />
                 </div>
               </div>

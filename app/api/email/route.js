@@ -28,14 +28,14 @@ function buildEmailHtml({ type, title, fields }) {
 
   const ctaButton = emailField
     ? `<a href="mailto:${emailField}"
-          style="display:inline-block;background-color:#111111;color:#e3fb4b;text-decoration:none;
+          style="display:inline-block;background-color:#111111;color:#D0956B;text-decoration:none;
                  font-size:13px;font-weight:700;padding:13px 30px;border-radius:50px;
                  letter-spacing:0.05em;font-family:Helvetica,Arial,sans-serif;">
          Reply to Client
        </a>`
     : phoneField
     ? `<a href="tel:${phoneField.replace(/\D/g, "").replace(/^/, "+")}"
-          style="display:inline-block;background-color:#111111;color:#e3fb4b;text-decoration:none;
+          style="display:inline-block;background-color:#111111;color:#D0956B;text-decoration:none;
                  font-size:13px;font-weight:700;padding:13px 30px;border-radius:50px;
                  letter-spacing:0.05em;font-family:Helvetica,Arial,sans-serif;">
          Call Client
@@ -63,7 +63,7 @@ function buildEmailHtml({ type, title, fields }) {
           <tr>
             <td style="background-color:#111111;padding:38px 44px 34px;
                        border-radius:20px 20px 0 0;text-align:center;">
-              <p style="margin:0 0 10px;color:#e3fb4b;font-size:10px;font-weight:700;
+              <p style="margin:0 0 10px;color:#D0956B;font-size:10px;font-weight:700;
                          letter-spacing:0.3em;text-transform:uppercase;">
                 NZ Home Improvement
               </p>
@@ -81,7 +81,7 @@ function buildEmailHtml({ type, title, fields }) {
 
           <!-- ── Lime accent bar ── -->
           <tr>
-            <td style="background-color:#e3fb4b;height:4px;font-size:1px;line-height:1px;">&nbsp;</td>
+            <td style="background-color:#D0956B;height:4px;font-size:1px;line-height:1px;">&nbsp;</td>
           </tr>
 
           <!-- ── Body ── -->
@@ -111,12 +111,12 @@ function buildEmailHtml({ type, title, fields }) {
               </p>
               <p style="margin:0;font-size:11px;line-height:1.7;">
                 <a href="mailto:build@nzhomeimprovement.net"
-                   style="color:#e3fb4b;text-decoration:none;">
+                   style="color:#D0956B;text-decoration:none;">
                   build@nzhomeimprovement.net
                 </a>
                 &nbsp;&nbsp;·&nbsp;&nbsp;
                 <a href="tel:+12035247974"
-                   style="color:#e3fb4b;text-decoration:none;">
+                   style="color:#D0956B;text-decoration:none;">
                   +1 203-524-7974
                 </a>
               </p>

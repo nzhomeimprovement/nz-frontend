@@ -58,7 +58,7 @@ export default function ContactPage() {
             <div className="flex flex-col gap-5">
 
               <div className="bg-zinc-50 rounded-[2rem] p-7 flex gap-5 items-start">
-                <div className="w-11 h-11 rounded-full bg-[#e3fb4b] shrink-0 flex items-center justify-center">
+                <div className="w-11 h-11 rounded-full bg-[#D0956B] shrink-0 flex items-center justify-center">
                   <MapPin size={18} className="text-black" />
                 </div>
                 <div>
@@ -82,7 +82,7 @@ export default function ContactPage() {
               </div>
 
               <div className="bg-zinc-50 rounded-[2rem] p-7 flex gap-5 items-start">
-                <div className="w-11 h-11 rounded-full bg-[#e3fb4b] shrink-0 flex items-center justify-center">
+                <div className="w-11 h-11 rounded-full bg-[#D0956B] shrink-0 flex items-center justify-center">
                   <Clock size={18} className="text-black" />
                 </div>
                 <div>
@@ -100,7 +100,7 @@ export default function ContactPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
-                    className="w-10 h-10 rounded-full bg-zinc-900 text-white flex items-center justify-center hover:bg-[#e3fb4b] hover:text-black transition-colors duration-300"
+                    className="w-10 h-10 rounded-full bg-zinc-900 text-white flex items-center justify-center hover:bg-[#D0956B] hover:text-black transition-colors duration-300"
                   >
                     <IconInstagram />
                   </a>
@@ -109,7 +109,7 @@ export default function ContactPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Facebook"
-                    className="w-10 h-10 rounded-full bg-zinc-900 text-white flex items-center justify-center hover:bg-[#e3fb4b] hover:text-black transition-colors duration-300"
+                    className="w-10 h-10 rounded-full bg-zinc-900 text-white flex items-center justify-center hover:bg-[#D0956B] hover:text-black transition-colors duration-300"
                   >
                     <IconFacebook />
                   </a>

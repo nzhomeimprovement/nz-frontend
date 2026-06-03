@@ -72,7 +72,7 @@ export default function HeroSection() {
           {/* Success overlay */}
           {status === "success" && (
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-white rounded-4xl z-10">
-              <div className="w-14 h-14 rounded-full bg-[#e3fb4b] flex items-center justify-center">
+              <div className="w-14 h-14 rounded-full bg-[#D0956B] flex items-center justify-center">
                 <CheckCircle size={28} className="text-black" />
               </div>
               <p className="text-zinc-900 font-bold text-lg tracking-tight">Thank you!</p>
@@ -101,7 +101,7 @@ export default function HeroSection() {
                 required
                 value={form.name}
                 onChange={handleChange}
-                className="w-full bg-zinc-50 border-none rounded-full px-4 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#DFFF40]/50"
+                className="w-full bg-zinc-50 border-none rounded-full px-4 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#D0956B]/50"
               />
             </div>
 
@@ -118,7 +118,7 @@ export default function HeroSection() {
                 required
                 value={form.phone}
                 onChange={handleChange}
-                className="w-full bg-zinc-50 border-none rounded-full px-4 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#DFFF40]/50"
+                className="w-full bg-zinc-50 border-none rounded-full px-4 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#D0956B]/50"
               />
             </div>
 
@@ -134,7 +134,7 @@ export default function HeroSection() {
                 placeholder="06905"
                 value={form.zip}
                 onChange={handleChange}
-                className="w-full bg-zinc-50 border-none rounded-full px-4 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#DFFF40]/50"
+                className="w-full bg-zinc-50 border-none rounded-full px-4 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#D0956B]/50"
               />
             </div>
 
@@ -149,7 +149,7 @@ export default function HeroSection() {
                 required
                 value={form.interest}
                 onChange={handleChange}
-                className="w-full bg-zinc-50 border-none rounded-full px-4 py-3.5 text-sm text-zinc-500 appearance-none focus:outline-none focus:ring-2 focus:ring-[#DFFF40]/50 cursor-pointer"
+                className="w-full bg-zinc-50 border-none rounded-full px-4 py-3.5 text-sm text-zinc-500 appearance-none focus:outline-none focus:ring-2 focus:ring-[#D0956B]/50 cursor-pointer"
               >
                 <option value="">Select Interest</option>
                 <option value="Kitchen Remodeling">Kitchen Remodeling</option>
@@ -168,7 +168,7 @@ export default function HeroSection() {
                 name="referral"
                 value={form.referral}
                 onChange={handleChange}
-                className="w-full bg-zinc-50 border-none rounded-full px-4 py-3.5 text-sm text-zinc-500 appearance-none focus:outline-none focus:ring-2 focus:ring-[#DFFF40]/50 cursor-pointer"
+                className="w-full bg-zinc-50 border-none rounded-full px-4 py-3.5 text-sm text-zinc-500 appearance-none focus:outline-none focus:ring-2 focus:ring-[#D0956B]/50 cursor-pointer"
               >
                 <option value="">How did you hear about us?</option>
                 <option value="Google Search">Google Search</option>
@@ -182,7 +182,7 @@ export default function HeroSection() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="w-full lg:w-auto bg-[#DFFF40] hover:bg-[#cdee36] disabled:opacity-70 text-zinc-900 font-semibold px-8 py-3.5 rounded-full text-sm transition-all hover:scale-105 whitespace-nowrap shadow-sm flex items-center justify-center gap-2"
+                className="w-full lg:w-auto bg-[#D0956B] hover:bg-[#C4845A] disabled:opacity-70 text-zinc-900 font-semibold px-8 py-3.5 rounded-full text-sm transition-all hover:scale-105 whitespace-nowrap shadow-sm flex items-center justify-center gap-2"
               >
                 {status === "loading" ? (
                   <>

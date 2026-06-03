@@ -80,7 +80,7 @@ export default function FeedbackPage() {
           {reviews.map((r, i) => (
             <div
               key={r.author}
-              className={`rounded-4xl p-8 flex flex-col ${i === 0 ? "bg-[#e3fb4b]" : "bg-zinc-50"}`}
+              className={`rounded-4xl p-8 flex flex-col ${i === 0 ? "bg-[#D0956B]" : "bg-zinc-50"}`}
             >
               {/* Stars */}
               <div className="flex gap-1 mb-5">
@@ -109,7 +109,7 @@ export default function FeedbackPage() {
 
               {/* Author */}
               <div className="flex items-center gap-3 pt-4 border-t border-black/10">
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ${i === 0 ? "bg-black text-[#e3fb4b]" : "bg-zinc-900 text-white"}`}>
+                <div className={`w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ${i === 0 ? "bg-black text-[#D0956B]" : "bg-zinc-900 text-white"}`}>
                   {r.initials}
                 </div>
                 <div>
