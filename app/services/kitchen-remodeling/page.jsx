@@ -3,7 +3,7 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 
 export const metadata = {
-  title: "Kitchen Remodeling in Stamford CT | Affordable Kitchen Remodel Experts",
+  title: "Kitchen Remodeling Stamford CT | Affordable Kitchen Remodel Experts",
   description:
     "Looking for kitchen remodeling in Stamford CT? Get expert remodelers, modern design ideas, and accurate kitchen remodel cost estimates. Free consultation available.",
   alternates: { canonical: "https://nzhomeimprovement.com/services/kitchen-remodeling-stamford-ct" },
@@ -67,7 +67,7 @@ export default function KitchenRemodelingPage() {
   return (
     <>
       <PageHero
-        title="Kitchen Remodeling in Stamford CT"
+        title="Kitchen Remodeling Stamford CT"
         bgImage="/img/full/09.jpg"
         crumb="Kitchen Remodeling"
       />
@@ -105,10 +105,10 @@ export default function KitchenRemodelingPage() {
               Kitchen Remodeling in Stamford CT – Modern, Affordable & Custom Designs
             </h2>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4 lg:w-11/12">
-              If you are planning <strong className="text-gray-800">kitchen remodeling in Stamford CT</strong>, choosing the right contractor is the most important step toward achieving your dream kitchen. At NZ Home Improvement, we provide high-quality and customized <strong className="text-gray-800">kitchen renovation solutions</strong> designed to improve both functionality and aesthetics. Our experienced team of <strong className="text-gray-800">kitchen remodelers near you</strong> specializes in transforming outdated kitchens into modern, stylish, and highly efficient spaces.
+              If you are planning <strong className="text-gray-800"><a href="https://nzhomeimprovement.com/services">kitchen remodeling Stamford CT</a></strong>, choosing the right contractor is the most important step toward achieving your dream kitchen. At <strong className="text-gray-800">NZ Home Improvement</strong>, we provide high-quality and customized kitchen renovation solutions designed to improve both functionality and aesthetics. Our experienced team ofkitchen remodelers near you specializes in transforming outdated kitchens into modern, stylish, and highly efficient spaces.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-8 lg:w-11/12">
-              Whether you want a complete transformation or a <strong className="text-gray-800">small kitchen remodel</strong>, we focus on delivering results that match your vision and budget. From layout redesign to finishing touches, every aspect of your <strong className="text-gray-800">kitchen renovation</strong> is handled with precision and care. A well-designed kitchen not only enhances your daily lifestyle but also significantly increases your property value.
+              Whether you want a complete transformation or a small kitchen remodel, we focus on delivering results that match your vision and budget. From layout redesign to finishing touches, every aspect of your <strong className="text-gray-800">kitchen renovation</strong> is handled with precision and care. A well-designed kitchen not only enhances your daily lifestyle but also significantly increases your property value.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
@@ -216,10 +216,10 @@ export default function KitchenRemodelingPage() {
               Kitchen Remodel Cost in Stamford CT
             </h2>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
-              One of the most common questions homeowners ask is, how much does a <strong className="text-gray-800">kitchen remodel cost in Stamford CT</strong>? The answer depends on several factors, including the size of your kitchen, the materials you choose, and the complexity of the design. On average, the <strong className="text-gray-800">kitchen remodel cost in Stamford CT</strong> ranges between $15,000 and $50,000 or more for high-end projects.
+              One of the most common questions homeowners ask is, how much does a kitchen remodel cost in Stamford CT? The answer depends on several factors, including the size of your kitchen, the materials you choose, and the complexity of the design. On average, the <strong className="text-gray-800">kitchen remodel cost in Stamford CT</strong> ranges between $15,000 and $50,000 or more for high-end projects.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-              For homeowners looking for cost-effective solutions, we offer <strong className="text-gray-800">kitchen remodel on a budget</strong> options that deliver great results without overspending. Our team provides a detailed and transparent <strong className="text-gray-800">kitchen remodel cost estimate</strong> so you can plan your project with confidence. Whether you are upgrading cabinets, replacing countertops, or doing a full renovation, we ensure you get the best value for your investment.
+              For homeowners looking for cost-effective solutions, we offer kitchen remodel on a budget options that deliver great results without overspending. Our team provides a detailed and transparent <strong className="text-gray-800">kitchen remodel cost estimate</strong> so you can plan your project with confidence. Whether you are upgrading cabinets, replacing countertops, or doing a full renovation, we ensure you get the best value for your investment.
             </p>
           </div>
 
@@ -231,7 +231,7 @@ export default function KitchenRemodelingPage() {
               A successful renovation starts with the right design. We help homeowners explore the latest <strong className="text-gray-800">kitchen remodel ideas 2025</strong> to create spaces that are both functional and visually appealing. Popular trends include open-concept layouts, smart storage solutions, quartz countertops, and energy-efficient appliances.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-              If you have limited space, we also specialize in <strong className="text-gray-800">small kitchen remodel ideas</strong> that maximize every inch of your kitchen. From clever cabinet designs to space-saving layouts, we ensure your kitchen feels larger and more organized. Whether you are interested in a luxury upgrade or a <strong className="text-gray-800">cheap kitchen remodel</strong>, our team works closely with you to bring your ideas to life.
+              If you have limited space, we also specialize in <strong className="text-gray-800"><a href="http://localhost:3000/portfolio">small kitchen remodel ideas</a></strong> that maximize every inch of your kitchen. From clever cabinet designs to space-saving layouts, we ensure your kitchen feels larger and more organized. Whether you are interested in a luxury upgrade or a <strong className="text-gray-800">cheap kitchen remodel</strong>, our team works closely with you to bring your ideas to life.
             </p>
           </div>
 
@@ -252,7 +252,7 @@ export default function KitchenRemodelingPage() {
               Why Choose Our Kitchen Remodeling Services?
             </h2>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
-              When it comes to <strong className="text-gray-800">kitchen remodeling Stamford CT</strong>, experience and reliability matter. At NZ Home Improvement, we are committed to providing top-quality services that exceed customer expectations. Our team uses high-quality materials, modern techniques, and proven strategies to deliver long-lasting results.
+              When it comes to <strong className="text-gray-800">kitchen remodeling Stamford CT</strong>, experience and reliability matter. At <strong className="text-gray-800"><a href="https://nzhomeimprovement.com/">NZ Home Improvement</a></strong>, we are committed to providing top-quality services that exceed customer expectations. Our team uses high-quality materials, modern techniques, and proven strategies to deliver long-lasting results.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed">
               We understand that every homeowner has unique needs, which is why we offer personalized solutions tailored to your lifestyle and budget. Whether you are looking for a high-end renovation or an affordable upgrade, we are your trusted partner for <strong className="text-gray-800">kitchen remodeling near you</strong>.

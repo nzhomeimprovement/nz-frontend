@@ -67,7 +67,7 @@ export default function HomeAdditionPage() {
   return (
     <>
       <PageHero
-        title="Home Addition in Stamford CT"
+        title="Home Addition Stamford CT"
         bgImage="/img/full/25.jpg"
         crumb="Home Addition"
       />
@@ -105,7 +105,7 @@ export default function HomeAdditionPage() {
               Home Addition in Stamford CT – Custom Expansion Solutions
             </h2>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4 lg:w-11/12">
-              If you are planning a <strong className="text-gray-800">home addition in Stamford CT</strong>, NZ Home Improvement provides complete design and construction services to expand your living space with high-quality workmanship. As an experienced <strong className="text-gray-800">home addition contractor near you</strong>, we specialize in creating seamless extensions that blend perfectly with your existing home structure.
+              If you are planning a home addition in Stamford CT, <strong className="text-gray-800"><a href="https://nzhomeimprovement.com/">NZ Home Improvement</a></strong> provides complete design and construction services to expand your living space with high-quality workmanship. As an experienced <strong className="text-gray-800">home addition contractor near you</strong>, we specialize in creating seamless extensions that blend perfectly with your existing home structure.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-8 lg:w-11/12">
               A home addition is one of the most effective ways to increase space without moving to a new house. Whether you need an extra bedroom, larger living area, home office, or second-story expansion, our team delivers custom solutions based on your needs, budget, and property layout.
@@ -187,7 +187,7 @@ export default function HomeAdditionPage() {
                 A home addition provides several long-term benefits. It increases living space, improves functionality, and significantly raises property value. Instead of buying a new house, adding space to your current home allows you to stay in your preferred location while upgrading your lifestyle.
               </p>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-                A well-planned <strong className="text-gray-800">home addition project</strong> can also improve comfort by creating dedicated spaces such as offices, guest rooms, or entertainment areas. It is one of the best investments for growing families or homeowners needing extra space.
+                A well-planned <strong className="text-gray-800"><a href="https://nzhomeimprovement.com/portfolio">home addition project</a></strong> can also improve comfort by creating dedicated spaces such as offices, guest rooms, or entertainment areas. It is one of the best investments for growing families or homeowners needing extra space.
               </p>
             </div>
 
@@ -265,7 +265,7 @@ export default function HomeAdditionPage() {
                 How Long Does a Home Addition Take?
               </h2>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
-                The timeline for a <strong className="text-gray-800">home addition in Stamford CT</strong> depends on the size and complexity of the project. On average, most additions take between 6 to 12 weeks. Smaller room additions may take less time, while larger projects such as second-story expansions can take longer.
+                The timeline for a <strong className="text-gray-800">home addition Stamford CT</strong> depends on the size and complexity of the project. On average, most additions take between 6 to 12 weeks. Smaller room additions may take less time, while larger projects such as second-story expansions can take longer.
               </p>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed">
                 We always aim for efficient project management while maintaining high construction standards. Our team ensures minimal disruption to your daily life during the construction process.
@@ -299,7 +299,7 @@ export default function HomeAdditionPage() {
               Why Choose Our Home Addition Services?
             </h2>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
-              Choosing the right contractor is essential for a successful project. We are trusted specialists in <strong className="text-gray-800">home addition services in Stamford CT</strong>, known for quality work, transparent pricing, and reliable service.
+              Choosing the right contractor is essential for a successful project. We are trusted specialists in <strong className="text-gray-800"><a href="https://nzhomeimprovement.com/services">home addition services in Stamford CT</a></strong>, known for quality work, transparent pricing, and reliable service.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed">
               Our team uses high-quality materials and modern construction techniques to ensure durability and long-lasting results. Every project is customized to meet the unique needs of each homeowner, ensuring complete satisfaction from start to finish.
@@ -314,7 +314,7 @@ export default function HomeAdditionPage() {
               A professionally built <strong className="text-gray-800">home addition</strong> significantly increases property value. Extra rooms, larger living spaces, and improved layouts make your home more attractive to future buyers.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-              Even a small addition can deliver a strong return on investment, especially in high-demand areas like <strong className="text-gray-800">Stamford CT</strong>. Whether you plan to sell in the future or stay long-term, a <strong className="text-gray-800">home addition</strong> is a smart financial decision.
+              Even a small addition can deliver a strong return on investment, especially in high-demand areas like Stamford CT. Whether you plan to sell in the future or stay long-term, a home addition is a smart financial decision.
             </p>
           </div>
 
