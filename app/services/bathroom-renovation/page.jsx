@@ -1,14 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
+import PortfolioCarousel from "@/components/PortfolioCarousel";
 
 export const metadata = {
   title: "Bathroom Renovation in Stamford CT | Affordable Bathroom Remodel Experts",
   description:
     "Get expert bathroom renovation in Stamford CT with modern designs, cost estimates, and affordable remodeling services. Free consultation available.",
-  alternates: { canonical: "https://nzhomeimprovement.com/services/bathroom-renovation-stamford-ct" },
+  alternates: { canonical: "https://nzhomeimprovement.com/services/bathroom-renovation" },
   openGraph: {
-    url: "https://nzhomeimprovement.com/services/bathroom-renovation-stamford-ct",
+    url: "https://nzhomeimprovement.com/services/bathroom-renovation",
     title: "Bathroom Renovation in Stamford CT | Affordable Bathroom Remodel Experts",
     description:
       "Get expert bathroom renovation in Stamford CT with modern designs, cost estimates, and affordable remodeling services. Free consultation available.",
@@ -127,6 +128,9 @@ export default function BathroomRenovationPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Portfolio Carousel ── */}
+      <PortfolioCarousel heading="Bathroom Renovation Projects" />
 
       {/* ── Services Detail ── */}
       <section className="py-16 lg:py-24 bg-zinc-900 px-4 sm:px-6 lg:px-8 font-sans">

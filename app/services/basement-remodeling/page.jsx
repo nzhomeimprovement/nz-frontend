@@ -1,14 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
+import PortfolioCarousel from "@/components/PortfolioCarousel";
 
 export const metadata = {
   title: "Basement Remodeling in Stamford CT | Expert Basement Finishing Services",
   description:
     "Get professional basement remodeling in Stamford CT with cost estimates, modern ideas, and affordable renovation services near you.",
-  alternates: { canonical: "https://nzhomeimprovement.com/services/basement-remodeling-stamford-ct" },
+  alternates: { canonical: "https://nzhomeimprovement.com/services/basement-remodeling" },
   openGraph: {
-    url: "https://nzhomeimprovement.com/services/basement-remodeling-stamford-ct",
+    url: "https://nzhomeimprovement.com/services/basement-remodeling",
     title: "Basement Remodeling in Stamford CT | Expert Basement Finishing Services",
     description:
       "Get professional basement remodeling in Stamford CT with cost estimates, modern ideas, and affordable renovation services near you.",
@@ -127,6 +128,9 @@ export default function BasementRemodelingPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Portfolio Carousel ── */}
+      <PortfolioCarousel heading="Basement Remodeling Projects" />
 
       {/* ── Services Detail ── */}
       <section className="py-16 lg:py-24 bg-zinc-900 px-4 sm:px-6 lg:px-8 font-sans">

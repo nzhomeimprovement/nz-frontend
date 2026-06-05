@@ -1,14 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
+import PortfolioCarousel from "@/components/PortfolioCarousel";
 
 export const metadata = {
   title: "Home Renovation in Stamford CT | Trusted Home Remodeling Contractor",
   description:
     "Get professional home renovation in Stamford CT with expert contractors, modern designs, and affordable remodeling services. Free estimate available.",
-  alternates: { canonical: "https://nzhomeimprovement.com/services/home-renovation-stamford-ct" },
+  alternates: { canonical: "https://nzhomeimprovement.com/services/home-renovation" },
   openGraph: {
-    url: "https://nzhomeimprovement.com/services/home-renovation-stamford-ct",
+    url: "https://nzhomeimprovement.com/services/home-renovation",
     title: "Home Renovation in Stamford CT | Trusted Home Remodeling Contractor",
     description:
       "Get professional home renovation in Stamford CT with expert contractors, modern designs, and affordable remodeling services. Free estimate available.",
@@ -127,6 +128,9 @@ export default function HomeRenovationPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Portfolio Carousel ── */}
+      <PortfolioCarousel heading="Home Renovation Projects" />
 
       {/* ── Services Detail ── */}
       <section className="py-16 lg:py-24 bg-zinc-900 px-4 sm:px-6 lg:px-8 font-sans">

@@ -1,14 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
+import PortfolioCarousel from "@/components/PortfolioCarousel";
 
 export const metadata = {
   title: "Kitchen Remodeling in Stamford CT | Affordable Kitchen Remodel Experts",
   description:
     "Looking for kitchen remodeling in Stamford CT? Get expert remodelers, modern design ideas, and accurate kitchen remodel cost estimates. Free consultation available.",
-  alternates: { canonical: "https://nzhomeimprovement.com/services/kitchen-remodeling-stamford-ct" },
+  alternates: { canonical: "https://nzhomeimprovement.com/services/kitchen-remodeling" },
   openGraph: {
-    url: "https://nzhomeimprovement.com/services/kitchen-remodeling-stamford-ct",
+    url: "https://nzhomeimprovement.com/services/kitchen-remodeling",
     title: "Kitchen Remodeling in Stamford CT | Affordable Kitchen Remodel Experts",
     description:
       "Looking for kitchen remodeling in Stamford CT? Get expert remodelers, modern design ideas, and accurate kitchen remodel cost estimates. Free consultation available.",
@@ -127,6 +128,9 @@ export default function KitchenRemodelingPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Portfolio Carousel ── */}
+      <PortfolioCarousel heading="Kitchen Remodeling Projects" />
 
       {/* ── Services Detail ── */}
       <section className="py-16 lg:py-24 bg-zinc-900 px-4 sm:px-6 lg:px-8 font-sans">

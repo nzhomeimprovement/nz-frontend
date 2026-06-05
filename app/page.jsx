@@ -209,9 +209,9 @@ export default function HomePage() {
         <div className="flex flex-col md:pl-4">
           
           {/* Heading */}
-          <h1 className="text-[28px] leading-tight md:text-4xl lg:text-[2.75rem] font-bold text-black tracking-[-0.02em] mb-6">
+          <h2 className="text-[28px] leading-tight md:text-4xl lg:text-[2.75rem] font-bold text-black tracking-[-0.02em] mb-6">
             <strong className="text-black">Home Renovation Contractor in Stamford CT</strong> – Complete Remodeling Solutions for Your Home
-          </h1>
+          </h2>
 
           {/* Main Description */}
           <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4 lg:w-11/12 pr-4">
