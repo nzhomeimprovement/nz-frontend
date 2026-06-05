@@ -16,7 +16,7 @@ export default function VideoModal({ title, src, onClose }) {
 
   return (
     <div
-      className="fixed inset-0 bg-black/88 z-2000 flex items-center justify-center p-5"
+      className="fixed inset-0 bg-black/80 z-10000 flex items-center justify-center p-5"
       onClick={onClose}
     >
       <div
@@ -26,7 +26,7 @@ export default function VideoModal({ title, src, onClose }) {
         <div className="flex justify-between items-center px-5 py-3.5 border-b border-gray-100">
           <h5 className="m-0 text-sm font-semibold">{title}</h5>
           <button
-            className="text-dark cursor-pointer bg-transparent border-none hover:text-brand transition-colors duration-200 flex items-center"
+            className="text-gray-800 cursor-pointer bg-transparent border-none hover:text-brand transition-colors duration-200 flex items-center"
             onClick={onClose}
             aria-label="Close"
           >
@@ -42,7 +42,7 @@ export default function VideoModal({ title, src, onClose }) {
         <div className="px-5 py-3 border-t border-gray-100 text-right">
           <button
             onClick={onClose}
-            className="px-5 py-2.5 text-xs font-semibold uppercase tracking-wider bg-dark text-white hover:bg-brand transition-colors duration-300 cursor-pointer border-none rounded-sm"
+            className="px-5 py-2.5 text-xs font-semibold uppercase tracking-wider bg-gray-900 text-white hover:bg-brand transition-colors duration-300 cursor-pointer border-none rounded-sm"
           >
             Close
           </button>
