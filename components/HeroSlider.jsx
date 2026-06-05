@@ -57,10 +57,12 @@ export default function HeroSection() {
             Dream &bull; Design &bull; Build
           </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-white tracking-tight leading-tight mb-8">
-            Luxury Home Remodeling <br className="hidden md:block" /> Services in USA
+            Home Renovation Contractor in Stamford CT |<br className="hidden md:block" /> Complete Remodeling Solutions for Your Home
           </h1>
           <p className="text-zinc-200 text-sm md:text-base lg:text-lg max-w-3xl mx-auto leading-relaxed font-light">
-            Luxury home remodeling in USA transforms high-end residences with bespoke design, premium materials, and refined craftsmanship that elevate both lifestyle and property value.
+            If you are searching for a trusted and experienced home renovation contractor in Stamford CT, NZ Home Improvement is your reliable partner for high-quality remodeling services. We specialize in transforming outdated homes into modern, functional, and beautiful living spaces through expert craftsmanship and customized design solutions. Whether you need a full home renovation, a modern kitchen upgrade, bathroom remodeling, basement finishing, or a complete home addition, our team delivers results that improve comfort, functionality, and property value.
+
+
           </p>
         </div>
       </div>
