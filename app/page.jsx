@@ -205,7 +205,7 @@ export default function HomePage() {
 
         </div>
 
-        {/* Right Content - Text & Information */}
+        {/* Right Content - Text & Information */} 
         <div className="flex flex-col md:pl-4">
           
           {/* Heading */}
