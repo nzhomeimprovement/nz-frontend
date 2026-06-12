@@ -1,5 +1,6 @@
 ﻿
 const nextConfig = {
+  trailingSlash: true,
   reactCompiler: true,
   async redirects() {
     return [
