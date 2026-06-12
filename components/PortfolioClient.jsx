@@ -88,13 +88,6 @@ const photos = [
 
 const TYPE_FILTERS = ["All", "Kitchen", "Bathroom", "Exterior", "Basement", "Full Renovation"];
 
-const typeBadge = {
-  Kitchen:          "bg-blue-100 text-blue-700",
-  Bathroom:         "bg-purple-100 text-purple-700",
-  Exterior:         "bg-green-100 text-green-700",
-  Basement:         "bg-amber-100 text-amber-700",
-  "Full Renovation": "bg-orange-100 text-orange-600",
-};
 
 export default function PortfolioClient() {
   const [videoModal, setVideoModal]     = useState(null);
@@ -192,14 +185,13 @@ export default function PortfolioClient() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
-          {filtered.map((p, i) => (
+          {filtered.map((p) => (
             <div
               key={p.src}
-              className="group cursor-pointer flex flex-col"
+              className="group cursor-pointer"
               onClick={() => setLightboxIndex(photos.indexOf(p))}
             >
-              {/* Image */}
-              <div className="relative overflow-hidden rounded-xl bg-gray-100 aspect-video mb-2.5 shadow-sm">
+              <div className="relative overflow-hidden rounded-xl bg-gray-100 aspect-video shadow-sm">
                 <Image
                   src={p.src}
                   alt={p.title}
@@ -214,16 +206,6 @@ export default function PortfolioClient() {
                   </div>
                 </div>
               </div>
-
-              {/* Type badge */}
-              <span className={`text-[10px] font-bold uppercase tracking-[0.12em] px-2 py-0.5 rounded-full w-fit mb-1 ${typeBadge[p.type]}`}>
-                {p.type}
-              </span>
-
-              {/* Title */}
-              <p className="text-[12px] font-semibold text-gray-900 group-hover:text-gray-500 transition-colors leading-tight">
-                {p.title}
-              </p>
             </div>
           ))}
         </div>

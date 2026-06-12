@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
+import GoogleReviews from "@/components/GoogleReviews";
 
 export const metadata = {
   title: "About Us - NZ Home Improvement | Stamford, CT Renovation",
@@ -172,6 +173,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Google Reviews ── */}
+      <GoogleReviews />
     </>
   );
 }

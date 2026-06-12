@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import PortfolioCarousel from "@/components/PortfolioCarousel";
+import GoogleReviews from "@/components/GoogleReviews";
 
 export const metadata = {
   title: "Home Renovation in Stamford CT | Trusted Home Remodeling Contractor",
@@ -339,6 +340,9 @@ export default function HomeRenovationPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Google Reviews ── */}
+      <GoogleReviews />
     </>
   );
 }

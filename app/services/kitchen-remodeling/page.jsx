@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import PortfolioCarousel from "@/components/PortfolioCarousel";
+import GoogleReviews from "@/components/GoogleReviews";
 
 export const metadata = {
   title: "Kitchen Remodeling Stamford CT | Affordable Kitchen Remodel Experts",
@@ -336,6 +337,9 @@ export default function KitchenRemodelingPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Google Reviews ── */}
+      <GoogleReviews />
     </>
   );
 }

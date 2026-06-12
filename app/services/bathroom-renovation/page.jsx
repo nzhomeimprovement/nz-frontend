@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import PortfolioCarousel from "@/components/PortfolioCarousel";
+import GoogleReviews from "@/components/GoogleReviews";
 
 export const metadata = {
   title: "Bathroom Renovation in Stamford CT | Affordable Bathroom Remodel Experts",
@@ -342,6 +343,9 @@ export default function BathroomRenovationPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Google Reviews ── */}
+      <GoogleReviews />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import TestimonialsSection from "@/components/TestimonialsSection";
+import GoogleReviews from "@/components/GoogleReviews";
 import PageHero from "@/components/PageHero";
 import { Quote, Star } from "lucide-react";
 
@@ -128,6 +129,9 @@ export default function FeedbackPage() {
 
       {/* ── Testimonials Carousel ── */}
       <TestimonialsSection />
+
+      {/* ── Google Reviews ── */}
+      <GoogleReviews />
     </>
   );
 }

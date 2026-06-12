@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import PortfolioCarousel from "@/components/PortfolioCarousel";
+import GoogleReviews from "@/components/GoogleReviews";
 
 export const metadata = {
   title: "Basement Remodeling in Stamford CT | Expert Basement Finishing Services",
@@ -354,6 +355,9 @@ export default function BasementRemodelingPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Google Reviews ── */}
+      <GoogleReviews />
     </>
   );
 }

@@ -6,6 +6,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import HomeVideoSection from "@/components/HomeVideoSection";
 import HomeLatestProjects from "@/components/HomeLatestProjects";
 import FAQSection from "@/components/FAQSection";
+import GoogleReviews from "@/components/GoogleReviews";
 import { ArrowLeft, ArrowRight, ClipboardList, Headset, ImageIcon, Lightbulb, Share2, ShoppingBag, Star } from "lucide-react";
 
 export const metadata = {
@@ -258,7 +259,10 @@ export default function HomePage() {
       <HomeVideoSection />
 
       {/* ── Testimonials ── */}
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
+
+      {/* ── Google Reviews ── */}
+      <GoogleReviews />
 
       {/* ── Why Choose Us ── */}
      <section id="why-choose" className="py-20 lg:py-28 bg-white">
