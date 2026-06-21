@@ -5,10 +5,10 @@ export const metadata = {
   title: "Services - NZ Home Improvement | Renovation & Remodeling CT",
   description:
     "NZ Home Improvement provides home renovation, kitchen remodeling, bathroom renovation, basement remodeling, and general contracting services in Stamford, CT.",
-  alternates: { canonical: "https://nzhomeimprovement.com/services" },
+  alternates: { canonical: "https://nzhomeimprovement.com/services/" },
   openGraph: {
     type: "website",
-    url: "https://nzhomeimprovement.com/services",
+    url: "https://nzhomeimprovement.com/services/",
     title: "Services - NZ Home Improvement | Renovation & Remodeling CT",
     description:
       "NZ Home Improvement provides home renovation, kitchen remodeling, bathroom renovation, basement remodeling, and general contracting services in Stamford, CT.",

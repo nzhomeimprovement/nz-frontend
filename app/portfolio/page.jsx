@@ -5,9 +5,9 @@ export const metadata = {
   title: "Our Portfolio - NZ Home Improvement | Renovation Projects CT",
   description:
     "Browse NZ Home Improvement's portfolio of kitchen, bathroom, basement, and home renovation projects in Stamford, CT.",
-  alternates: { canonical: "https://nzhomeimprovement.com/portfolio" },
+  alternates: { canonical: "https://nzhomeimprovement.com/portfolio/" },
   openGraph: {
-    url: "https://nzhomeimprovement.com/portfolio",
+    url: "https://nzhomeimprovement.com/portfolio/",
     title: "Our Portfolio - NZ Home Improvement | Renovation Projects CT",
     description:
       "Browse the full NZ Home Improvement portfolio of kitchen, bathroom, basement, and home renovation projects across Stamford, CT and Fairfield County.",

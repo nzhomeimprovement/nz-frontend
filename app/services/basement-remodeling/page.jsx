@@ -8,9 +8,9 @@ export const metadata = {
   title: "Basement Remodeling in Stamford CT | Expert Basement Finishing Services",
   description:
     "Get professional basement remodeling in Stamford CT with cost estimates, modern ideas, and affordable renovation services near you.",
-  alternates: { canonical: "https://nzhomeimprovement.com/services/basement-remodeling" },
+  alternates: { canonical: "https://nzhomeimprovement.com/services/basement-remodeling/" },
   openGraph: {
-    url: "https://nzhomeimprovement.com/services/basement-remodeling",
+    url: "https://nzhomeimprovement.com/services/basement-remodeling/",
     title: "Basement Remodeling in Stamford CT | Expert Basement Finishing Services",
     description:
       "Get professional basement remodeling in Stamford CT with cost estimates, modern ideas, and affordable renovation services near you.",

@@ -7,9 +7,9 @@ export const metadata = {
   title: "Testimonials - NZ Home Improvement | Client Feedback Stamford CT",
   description:
     "Read client testimonials for NZ Home Improvement in Stamford, CT. We deliver quality home renovations and guarantee customer satisfaction.",
-  alternates: { canonical: "https://nzhomeimprovement.com/feedback" },
+  alternates: { canonical: "https://nzhomeimprovement.com/feedback/" },
   openGraph: {
-    url: "https://nzhomeimprovement.com/feedback",
+    url: "https://nzhomeimprovement.com/feedback/",
     title: "Testimonials - NZ Home Improvement | Client Feedback Stamford CT",
     description:
       "Read client testimonials for NZ Home Improvement in Stamford, CT. We deliver quality home renovations and guarantee customer satisfaction.",

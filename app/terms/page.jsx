@@ -4,7 +4,7 @@ export const metadata = {
   title: "Terms of Service | NZ Home Improvement Stamford CT",
   description:
     "Read the Terms of Service for NZ Home Improvement. Learn about our service agreements, responsibilities, and policies for home renovation projects in Stamford, CT.",
-  alternates: { canonical: "https://nzhomeimprovement.com/terms" },
+  alternates: { canonical: "https://nzhomeimprovement.com/terms/" },
 };
 
 const sections = [

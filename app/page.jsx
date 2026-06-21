@@ -13,9 +13,9 @@ export const metadata = {
   title: "Home Renovation Contractor in Stamford CT | Kitchen, Bathroom & Basement Experts",
   description:
     "Trusted home renovation contractor in Stamford CT offering kitchen remodeling, bathroom renovation, basement finishing & home additions. Get free estimate today.",
-  alternates: { canonical: "https://nzhomeimprovement.com" },
+  alternates: { canonical: "https://nzhomeimprovement.com/" },
   openGraph: {
-    url: "https://nzhomeimprovement.com",
+    url: "https://nzhomeimprovement.com/",
     title: "Home Renovation Contractor in Stamford CT | Kitchen, Bathroom & Basement Experts",
   },
 };

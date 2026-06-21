@@ -8,9 +8,9 @@ export const metadata = {
   title: "Home Addition in Stamford CT | Room Addition & Expansion Experts",
   description:
     "Get professional home addition in Stamford CT with custom design, cost estimates, and trusted contractors near you. Expand your home affordably.",
-  alternates: { canonical: "https://nzhomeimprovement.com/services/home-addition" },
+  alternates: { canonical: "https://nzhomeimprovement.com/services/home-addition/" },
   openGraph: {
-    url: "https://nzhomeimprovement.com/services/home-addition",
+    url: "https://nzhomeimprovement.com/services/home-addition/",
     title: "Home Addition in Stamford CT | Room Addition & Expansion Experts",
     description:
       "Get professional home addition in Stamford CT with custom design, cost estimates, and trusted contractors near you. Expand your home affordably.",

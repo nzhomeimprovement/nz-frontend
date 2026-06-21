@@ -8,9 +8,9 @@ export const metadata = {
   title: "Home Renovation in Stamford CT | Trusted Home Remodeling Contractor",
   description:
     "Get professional home renovation in Stamford CT with expert contractors, modern designs, and affordable remodeling services. Free estimate available.",
-  alternates: { canonical: "https://nzhomeimprovement.com/services/home-renovation" },
+  alternates: { canonical: "https://nzhomeimprovement.com/services/home-renovation/" },
   openGraph: {
-    url: "https://nzhomeimprovement.com/services/home-renovation",
+    url: "https://nzhomeimprovement.com/services/home-renovation/",
     title: "Home Renovation in Stamford CT | Trusted Home Remodeling Contractor",
     description:
       "Get professional home renovation in Stamford CT with expert contractors, modern designs, and affordable remodeling services. Free estimate available.",

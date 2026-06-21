@@ -8,9 +8,9 @@ export const metadata = {
   title: "Bathroom Renovation in Stamford CT | Affordable Bathroom Remodel Experts",
   description:
     "Get expert bathroom renovation in Stamford CT with modern designs, cost estimates, and affordable remodeling services. Free consultation available.",
-  alternates: { canonical: "https://nzhomeimprovement.com/services/bathroom-renovation" },
+  alternates: { canonical: "https://nzhomeimprovement.com/services/bathroom-renovation/" },
   openGraph: {
-    url: "https://nzhomeimprovement.com/services/bathroom-renovation",
+    url: "https://nzhomeimprovement.com/services/bathroom-renovation/",
     title: "Bathroom Renovation in Stamford CT | Affordable Bathroom Remodel Experts",
     description:
       "Get expert bathroom renovation in Stamford CT with modern designs, cost estimates, and affordable remodeling services. Free consultation available.",

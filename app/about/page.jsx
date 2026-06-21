@@ -7,9 +7,9 @@ export const metadata = {
   title: "About Us - NZ Home Improvement | Stamford, CT Renovation",
   description:
     "NZ Home Improvement is a trusted home renovation and remodeling contractor in Stamford, CT serving Fairfield and Westchester counties.",
-  alternates: { canonical: "https://nzhomeimprovement.com/about" },
+  alternates: { canonical: "https://nzhomeimprovement.com/about/" },
   openGraph: {
-    url: "https://nzhomeimprovement.com/about",
+    url: "https://nzhomeimprovement.com/about/",
     title: "About Us - NZ Home Improvement | Stamford, CT Renovation",
     description:
       "NZ Home Improvement is a trusted home renovation and remodeling contractor in Stamford, CT serving Fairfield and Westchester counties.",

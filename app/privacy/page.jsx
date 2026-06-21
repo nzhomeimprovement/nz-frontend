@@ -4,7 +4,7 @@ export const metadata = {
   title: "Privacy Policy | NZ Home Improvement Stamford CT",
   description:
     "Read the Privacy Policy of NZ Home Improvement. Learn how we collect, use, and protect your personal information when you use our home renovation services.",
-  alternates: { canonical: "https://nzhomeimprovement.com/privacy" },
+  alternates: { canonical: "https://nzhomeimprovement.com/privacy/" },
 };
 
 const sections = [

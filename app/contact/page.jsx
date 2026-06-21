@@ -20,9 +20,9 @@ export const metadata = {
   title: "Contact Us - NZ Home Improvement | Free Estimates Stamford CT",
   description:
     "Contact NZ Home Improvement in Stamford, CT. Free estimates on home renovation, kitchen and bathroom remodeling, basement finishing, and construction.",
-  alternates: { canonical: "https://nzhomeimprovement.com/contact" },
+  alternates: { canonical: "https://nzhomeimprovement.com/contact/" },
   openGraph: {
-    url: "https://nzhomeimprovement.com/contact",
+    url: "https://nzhomeimprovement.com/contact/",
     title: "Contact Us - NZ Home Improvement | Free Estimates Stamford CT",
     description:
       "Contact NZ Home Improvement in Stamford, CT. Free estimates on home renovation, kitchen and bathroom remodeling, basement finishing.",

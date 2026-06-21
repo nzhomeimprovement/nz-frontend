@@ -8,9 +8,9 @@ export const metadata = {
   title: "Kitchen Remodeling Stamford CT | Affordable Kitchen Remodel Experts",
   description:
     "Looking for kitchen remodeling in Stamford CT? Get expert remodelers, modern design ideas, and accurate kitchen remodel cost estimates. Free consultation available.",
-  alternates: { canonical: "https://nzhomeimprovement.com/services/kitchen-remodeling" },
+  alternates: { canonical: "https://nzhomeimprovement.com/services/kitchen-remodeling/" },
   openGraph: {
-    url: "https://nzhomeimprovement.com/services/kitchen-remodeling",
+    url: "https://nzhomeimprovement.com/services/kitchen-remodeling/",
     title: "Kitchen Remodeling in Stamford CT | Affordable Kitchen Remodel Experts",
     description:
       "Looking for kitchen remodeling in Stamford CT? Get expert remodelers, modern design ideas, and accurate kitchen remodel cost estimates. Free consultation available.",
