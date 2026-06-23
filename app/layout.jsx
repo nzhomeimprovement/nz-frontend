@@ -12,6 +12,46 @@ const raleway = Raleway({
   display: "swap",
 });
 
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://nzhomeimprovement.com/#business",
+  "name": "NZ Home Improvement",
+  "url": "https://nzhomeimprovement.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://nzhomeimprovement.com/img/logo-color.png"
+  },
+  "image": "https://nzhomeimprovement.com/img/full/09.jpg",
+  "description": "NZ Home Improvement is a trusted general contractor in Stamford CT offering kitchen remodeling, bathroom renovation, basement finishing, home additions, and commercial construction services.",
+  "telephone": "+12035247974",
+  "email": "build@nzhomeimprovement.net",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1372 Summer St",
+    "addressLocality": "Stamford",
+    "addressRegion": "CT",
+    "postalCode": "06905",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.0534,
+    "longitude": -73.5387
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Stamford", "addressRegion": "CT" },
+    { "@type": "City", "name": "Greenwich", "addressRegion": "CT" },
+    { "@type": "City", "name": "Norwalk", "addressRegion": "CT" },
+    { "@type": "City", "name": "Darien", "addressRegion": "CT" }
+  ],
+  "priceRange": "$$",
+  "sameAs": [
+    "https://www.instagram.com/n.z_homeimprovement",
+    "https://www.facebook.com/NZHOMEIMPROVEMENT"
+  ]
+};
+
 export const metadata = {
   metadataBase: new URL("https://nzhomeimprovement.com"),
   title: {
@@ -58,6 +98,10 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" href="/img/favicon.png" />
         <link rel="apple-touch-icon" href="/img/favicon.png" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
       </head>
       <body>
         <Header />

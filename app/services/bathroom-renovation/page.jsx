@@ -3,6 +3,7 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import PortfolioCarousel from "@/components/PortfolioCarousel";
 import GoogleReviews from "@/components/GoogleReviews";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata = {
   title: "Bathroom Renovation in Stamford CT | Affordable Bathroom Remodel Experts",
@@ -65,9 +66,37 @@ const faqs = [
   },
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Bathroom Renovation",
+  "name": "Bathroom Renovation Stamford CT",
+  "description": "Professional bathroom renovation services in Stamford CT. Modern designs, tile work, fixtures, and full bathroom remodels.",
+  "url": "https://nzhomeimprovement.com/services/bathroom-renovation/",
+  "provider": {
+    "@type": "HomeAndConstructionBusiness",
+    "@id": "https://nzhomeimprovement.com/#business",
+    "name": "NZ Home Improvement"
+  },
+  "areaServed": { "@type": "City", "name": "Stamford", "addressRegion": "CT" },
+  "image": "https://nzhomeimprovement.com/img/full/20.jpg"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+  }))
+};
+
 export default function BathroomRenovationPage() {
   return (
     <>
+      <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
       <PageHero
         title="Bathroom Renovation Stamford CT"
         bgImage="/img/full/20.jpg"

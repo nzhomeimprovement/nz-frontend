@@ -3,6 +3,7 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import PortfolioCarousel from "@/components/PortfolioCarousel";
 import GoogleReviews from "@/components/GoogleReviews";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata = {
   title: "Kitchen Remodeling Stamford CT | Affordable Kitchen Remodel Experts",
@@ -65,9 +66,37 @@ const faqs = [
   },
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Kitchen Remodeling",
+  "name": "Kitchen Remodeling Stamford CT",
+  "description": "Professional kitchen remodeling services in Stamford CT. Modern designs, custom cabinets, countertops, and full kitchen renovations.",
+  "url": "https://nzhomeimprovement.com/services/kitchen-remodeling/",
+  "provider": {
+    "@type": "HomeAndConstructionBusiness",
+    "@id": "https://nzhomeimprovement.com/#business",
+    "name": "NZ Home Improvement"
+  },
+  "areaServed": { "@type": "City", "name": "Stamford", "addressRegion": "CT" },
+  "image": "https://nzhomeimprovement.com/img/full/09.jpg"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+  }))
+};
+
 export default function KitchenRemodelingPage() {
   return (
     <>
+      <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
       <PageHero
         title="Kitchen Remodeling Stamford CT"
         bgImage="/img/full/09.jpg"

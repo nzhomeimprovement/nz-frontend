@@ -3,6 +3,7 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import PortfolioCarousel from "@/components/PortfolioCarousel";
 import GoogleReviews from "@/components/GoogleReviews";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata = {
   title: "Basement Remodeling in Stamford CT | Expert Basement Finishing Services",
@@ -65,9 +66,37 @@ const faqs = [
   },
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Basement Remodeling",
+  "name": "Basement Remodeling Stamford CT",
+  "description": "Professional basement remodeling and finishing services in Stamford CT. Transform your basement into a living space, home office, gym, or entertainment area.",
+  "url": "https://nzhomeimprovement.com/services/basement-remodeling/",
+  "provider": {
+    "@type": "HomeAndConstructionBusiness",
+    "@id": "https://nzhomeimprovement.com/#business",
+    "name": "NZ Home Improvement"
+  },
+  "areaServed": { "@type": "City", "name": "Stamford", "addressRegion": "CT" },
+  "image": "https://nzhomeimprovement.com/img/full/21.jpg"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+  }))
+};
+
 export default function BasementRemodelingPage() {
   return (
     <>
+      <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
       <PageHero
         title="Basement Remodeling Stamford CT"
         bgImage="/img/full/21.jpg"

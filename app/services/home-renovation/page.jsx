@@ -3,6 +3,7 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import PortfolioCarousel from "@/components/PortfolioCarousel";
 import GoogleReviews from "@/components/GoogleReviews";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata = {
   title: "Home Renovation in Stamford CT | Trusted Home Remodeling Contractor",
@@ -65,9 +66,37 @@ const faqs = [
   },
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Home Renovation",
+  "name": "Home Renovation Stamford CT",
+  "description": "Professional home renovation services in Stamford CT. Full home remodels, interior upgrades, structural improvements, and custom renovations.",
+  "url": "https://nzhomeimprovement.com/services/home-renovation/",
+  "provider": {
+    "@type": "HomeAndConstructionBusiness",
+    "@id": "https://nzhomeimprovement.com/#business",
+    "name": "NZ Home Improvement"
+  },
+  "areaServed": { "@type": "City", "name": "Stamford", "addressRegion": "CT" },
+  "image": "https://nzhomeimprovement.com/img/full/11.jpg"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+  }))
+};
+
 export default function HomeRenovationPage() {
   return (
     <>
+      <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
       <PageHero
         title="Home Renovation Stamford CT"
         bgImage="/img/full/11.jpg"

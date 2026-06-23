@@ -4,6 +4,7 @@ import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import GoogleReviews from "@/components/GoogleReviews";
 import { blogs, getBlogBySlug } from "@/data/blogs";
+import JsonLd from "@/components/JsonLd";
 
 export async function generateStaticParams() {
   return blogs.map((post) => ({ slug: post.slug }));
@@ -35,8 +36,49 @@ export default async function BlogPostPage({ params }) {
 
   const otherPosts = blogs.filter((b) => b.slug !== post.slug);
 
+  const isoDate = new Date(post.date).toISOString().split("T")[0];
+
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "description": post.metaDescription,
+    "image": `https://nzhomeimprovement.com${post.image}`,
+    "datePublished": isoDate,
+    "dateModified": isoDate,
+    "author": {
+      "@type": "Organization",
+      "name": "NZ Home Improvement",
+      "url": "https://nzhomeimprovement.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "NZ Home Improvement",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://nzhomeimprovement.com/img/logo-color.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://nzhomeimprovement.com/blog/${post.slug}/`
+    }
+  };
+
+  const faqSchema = post.faqs?.length ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": post.faqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+    }))
+  } : null;
+
   return (
     <>
+      <JsonLd data={blogSchema} />
+      {faqSchema && <JsonLd data={faqSchema} />}
       <PageHero title={post.title} bgImage={post.image} crumb={post.category} />
 
       <div className="bg-white font-sans">

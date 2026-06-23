@@ -8,15 +8,29 @@ import HomeLatestProjects from "@/components/HomeLatestProjects";
 import FAQSection from "@/components/FAQSection";
 import GoogleReviews from "@/components/GoogleReviews";
 import { ArrowLeft, ArrowRight, ClipboardList, Headset, ImageIcon, Lightbulb, Share2, ShoppingBag, Star } from "lucide-react";
+import JsonLd from "@/components/JsonLd";
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://nzhomeimprovement.com/#website",
+  "name": "NZ Home Improvement",
+  "url": "https://nzhomeimprovement.com",
+  "description": "NZ Home Improvements is a trusted general contractor Stamford CT offering kitchen remodeling, bathroom renovation, basement finishing & commercial construction services.",
+  "publisher": {
+    "@type": "HomeAndConstructionBusiness",
+    "@id": "https://nzhomeimprovement.com/#business"
+  }
+};
 
 export const metadata = {
-  title: "Home Renovation Contractor in Stamford CT | Kitchen, Bathroom & Basement Experts",
+  title: "General Contractor Stamford CT | Home Remodeling & Commercial Experts",
   description:
-    "Trusted home renovation contractor in Stamford CT offering kitchen remodeling, bathroom renovation, basement finishing & home additions. Get free estimate today.",
+    "NZ Home Improvements is a trusted general contractor Stamford CT offering kitchen remodeling, bathroom renovation, basement finishing & commercial construction services.",
   alternates: { canonical: "https://nzhomeimprovement.com/" },
   openGraph: {
     url: "https://nzhomeimprovement.com/",
-    title: "Home Renovation Contractor in Stamford CT | Kitchen, Bathroom & Basement Experts",
+    title: "General Contractor Stamford CT | Home Remodeling & Commercial Experts",
   },
 };
 
@@ -172,6 +186,7 @@ const features = [
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={websiteSchema} />
       {/* ── Hero ── */}
       <HeroSlider />
 
@@ -507,33 +522,34 @@ export default function HomePage() {
       <section className="bg-white py-16 lg:py-20 px-4 sm:px-6 lg:px-8 font-sans">
         <div className="max-w-5xl mx-auto">
 
-          {/* Complete Services */}
+          {/* General Contractor Intro */}
           <div className="mb-14">
             <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-5">
-              Complete Home Remodeling Services in Stamford CT
+              General Contractor Stamford CT for Reliable Home Remodeling and Construction Services
             </h2>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
-              At NZ Home Improvement, we provide full-service <strong className="text-gray-800">home renovation solutions in Stamford CT</strong>. Our services cover every major area of your home, ensuring a complete transformation from inside out.
+              If you are searching for a dependable <strong className="text-gray-800">general contractor Stamford CT</strong>, NZ Home Improvements is your trusted partner for high-quality residential and commercial construction services. We specialize in delivering customized solutions for homeowners and businesses looking to upgrade, expand, or completely transform their spaces.
             </p>
             <ul className="space-y-2 mb-4">
-              <li className="text-gray-500 text-sm md:text-base leading-relaxed flex gap-2"><span className="text-[#D0956B] font-bold shrink-0">–</span><span><strong className="text-gray-800">Kitchen Remodeling in Stamford CT</strong> – Modern designs, cabinets, countertops, and full kitchen upgrades</span></li>
-              <li className="text-gray-500 text-sm md:text-base leading-relaxed flex gap-2"><span className="text-[#D0956B] font-bold shrink-0">–</span><span><strong className="text-gray-800">Bathroom Renovation in Stamford CT</strong> – Stylish, functional, and space-efficient bathroom transformations</span></li>
-              <li className="text-gray-500 text-sm md:text-base leading-relaxed flex gap-2"><span className="text-[#D0956B] font-bold shrink-0">–</span><span>Basement Remodeling in <strong className="text-gray-800">Stamford CT</strong> – Convert unused basements into living spaces, offices, or entertainment rooms</span></li>
-              <li className="text-gray-500 text-sm md:text-base leading-relaxed flex gap-2"><span className="text-[#D0956B] font-bold shrink-0">–</span><span><strong className="text-gray-800">Home Addition</strong> Services in <strong className="text-gray-800">Stamford CT</strong> – Expand your home with custom room additions or second-story builds</span></li>
-              <li className="text-gray-500 text-sm md:text-base leading-relaxed flex gap-2"><span className="text-[#D0956B] font-bold shrink-0">–</span><span>Whole <strong className="text-gray-800">Home Renovation</strong> Projects – Complete house remodeling from layout to finishing</span></li>
+              <li className="text-gray-500 text-sm md:text-base leading-relaxed flex gap-2"><span className="text-[#D0956B] font-bold shrink-0">–</span><span><strong className="text-gray-800">General Contractor Services Near Me</strong> – Full home remodeling, kitchen, bathroom, basement &amp; commercial construction</span></li>
+              <li className="text-gray-500 text-sm md:text-base leading-relaxed flex gap-2"><span className="text-[#D0956B] font-bold shrink-0">–</span><span><strong className="text-gray-800">General Contractor Home Remodel</strong> – Modern living spaces tailored to your lifestyle and budget</span></li>
+              <li className="text-gray-500 text-sm md:text-base leading-relaxed flex gap-2"><span className="text-[#D0956B] font-bold shrink-0">–</span><span><strong className="text-gray-800">General Contractor Kitchen Remodel</strong> – Custom kitchens with cabinetry, countertops, and lighting</span></li>
+              <li className="text-gray-500 text-sm md:text-base leading-relaxed flex gap-2"><span className="text-[#D0956B] font-bold shrink-0">–</span><span><strong className="text-gray-800">Best Bathroom Renovation General Contractors</strong> – Modern, functional, and luxury bathroom upgrades</span></li>
+              <li className="text-gray-500 text-sm md:text-base leading-relaxed flex gap-2"><span className="text-[#D0956B] font-bold shrink-0">–</span><span><strong className="text-gray-800">General Contractors for Home Additions Near Me</strong> – Custom room additions and second-story builds</span></li>
+              <li className="text-gray-500 text-sm md:text-base leading-relaxed flex gap-2"><span className="text-[#D0956B] font-bold shrink-0">–</span><span><strong className="text-gray-800">Commercial General Contractor</strong> – Office and retail construction for Stamford CT businesses</span></li>
             </ul>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-              Each project is handled with attention to detail, ensuring long-lasting quality and modern design appeal.
+              As one of the <strong className="text-gray-800">best home renovation general contractors</strong>, we understand that every project requires attention to detail, proper planning, and expert execution.
             </p>
           </div>
 
           {/* Why Choose */}
           <div className="mb-14">
             <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-5">
-              Why Choose NZ Home Improvement?
+              Why NZ Home Improvements is Among the Best Home Renovation General Contractors
             </h2>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
-              Choosing the right contractor is the most important decision for any renovation project. Homeowners trust us because we deliver consistent quality, transparency, and professional service. When you choose our <strong className="text-gray-800">home renovation</strong> services in <strong className="text-gray-800">Stamford CT</strong>, you get:
+              Choosing the right contractor is essential for the success of your project. NZ Home Improvements stands out as one of the <strong className="text-gray-800">best home renovation general contractors</strong> due to our commitment to quality, reliability, and customer satisfaction. When you choose our <strong className="text-gray-800">general contractor services near me</strong>, you get:
             </p>
             <ul className="space-y-2 mb-4">
               {["Experienced and licensed remodeling professionals","High-quality materials and modern construction techniques","Transparent pricing with no hidden costs","Customized designs based on your needs and lifestyle","On-time project completion with proper communication","Affordable solutions for all budget levels"].map((item) => (
@@ -541,7 +557,7 @@ export default function HomePage() {
               ))}
             </ul>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-              We believe every home deserves a unique design that reflects the personality and needs of its owner.
+              We take a personalized approach to every project, ensuring that your vision is fully realized. Our team combines experience, innovation, and attention to detail to deliver exceptional results.
             </p>
           </div>
 
@@ -549,24 +565,24 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-14">
             <div>
               <h2 className="text-xl md:text-2xl font-bold text-black tracking-tight leading-tight mb-4">
-                Kitchen Remodeling Services in Stamford CT
+                Professional General Contractor Kitchen Remodel Services
               </h2>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-3">
-                Your kitchen is the heart of your home, and our <strong className="text-gray-800">Kitchen Remodeling in Stamford CT</strong> services are designed to make it more beautiful and functional. We specialize in modern kitchen layouts, cabinet installation, countertop replacement, lighting improvements, and smart storage solutions.
+                The kitchen is the heart of any home, and upgrading it requires expertise and careful planning. Our <strong className="text-gray-800">general contractor kitchen remodel</strong> services transform kitchens into stylish and functional spaces with custom cabinetry, countertop installation, flooring upgrades, and smart lighting solutions.
               </p>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-                If you are looking for kitchen remodelers near you, we offer both luxury and budget kitchen remodeling options tailored to your requirements. Our team ensures transparent pricing and detailed estimates before starting any project.
+                As a dedicated <strong className="text-gray-800">kitchen general contractor</strong>, we handle everything from layout planning to final installation, creating kitchens that are not only beautiful but also practical for everyday use.
               </p>
             </div>
             <div>
               <h2 className="text-xl md:text-2xl font-bold text-black tracking-tight leading-tight mb-4">
-                Bathroom Renovation in Stamford CT
+                Best Bathroom Renovation General Contractors
               </h2>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-3">
-                We provide complete <strong className="text-gray-800">Bathroom Renovation in Stamford CT</strong> services that transform old bathrooms into modern and relaxing spaces. Our services include walk-in showers, bathtub installations, modern vanity solutions, tile work, waterproofing, and lighting upgrades.
+                Bathrooms play a vital role in daily comfort, and upgrading them can significantly improve your home&apos;s value. NZ Home Improvements is proud to be among the <strong className="text-gray-800">best Bathroom Renovation general contractors</strong>, delivering high-quality remodeling solutions.
               </p>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-                Whether you need a small bathroom renovation or a luxury spa-style upgrade, we deliver designs that improve both comfort and home value.
+                Our team focuses on creating modern and functional bathrooms with efficient layouts, stylish fixtures, and high-quality finishes. Whether you want a simple update or a complete transformation, we ensure every detail is handled professionally.
               </p>
             </div>
           </div>
@@ -575,24 +591,24 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-14">
             <div>
               <h2 className="text-xl md:text-2xl font-bold text-black tracking-tight leading-tight mb-4">
-                Basement Remodeling in Stamford CT
+                Best Basement Remodeling General Contractors
               </h2>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-3">
-                A basement is often unused space, but with professional remodeling, it can become one of the most valuable parts of your home. We specialize in converting unused basements into home theaters, guest bedrooms, home offices, fitness rooms, and entertainment spaces.
+                Basements are often underutilized, but with the right design, they can become one of the most valuable areas of your home. NZ Home Improvements is recognized as one of the <strong className="text-gray-800">best Basement Remodeling general contractors</strong>, offering innovative solutions for basement transformation.
               </p>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-                We also provide affordable basement remodel cost options depending on your budget and design needs.
+                Our services include converting basements into home offices, entertainment rooms, gyms, or guest suites. We focus on proper insulation, lighting, and ventilation to create comfortable and usable spaces.
               </p>
             </div>
             <div>
               <h2 className="text-xl md:text-2xl font-bold text-black tracking-tight leading-tight mb-4">
-                Home Addition Services in Stamford CT
+                General Contractors for Home Additions Near Me
               </h2>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-3">
-                If your home feels small, our <strong className="text-gray-800">home addition</strong> services in <strong className="text-gray-800">Stamford CT</strong> are the perfect solution. We design and build room additions, second-story expansions, garage conversions, and extended kitchens and living rooms.
+                If your current home no longer meets your needs, expanding it can be a practical solution. NZ Home Improvements is among the most trusted <strong className="text-gray-800">general contractors for home additions near me</strong>, providing customized solutions for homeowners in Stamford CT.
               </p>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-                A <strong className="text-gray-800">home addition</strong> allows you to increase your living space without moving to a new house. We also provide detailed home addition cost per square foot estimates for better planning.
+                We specialize in building additional rooms, second-story extensions, and other structural upgrades that blend seamlessly with your existing home, increasing both functionality and property value.
               </p>
             </div>
           </div>
@@ -601,25 +617,25 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-14">
             <div>
               <h2 className="text-xl md:text-2xl font-bold text-black tracking-tight leading-tight mb-4">
-                Home Renovation Cost in Stamford CT
+                Understanding General Contractor Cost
               </h2>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-3">
-                The <strong className="text-gray-800">home renovation</strong> cost in <strong className="text-gray-800">Stamford CT</strong> depends on project size, materials, and design complexity. Small upgrades may cost a few thousand dollars, while full home renovations can go much higher.
+                One of the most common questions homeowners have is about the <strong className="text-gray-800">general contractor cost</strong>. At NZ Home Improvements, we believe in transparency and provide detailed estimates to help clients understand their investment.
               </p>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-                We provide transparent pricing and detailed estimates for every project. Whether you are planning a budget <strong className="text-gray-800">home renovation</strong> or a luxury remodel, we ensure the best value for your investment.
+                The cost varies depending on project size, materials used, and design complexity. While it may be tempting to choose the lowest-cost option, working with experienced professionals ensures better quality and long-term value for your property.
               </p>
             </div>
             <div>
               <h2 className="text-xl md:text-2xl font-bold text-black tracking-tight leading-tight mb-4">
-                Our Home Renovation Process
+                Step-by-Step Process by a Trusted General Contractor Stamford CT
               </h2>
               <ul className="space-y-2">
                 {[
-                  "Consultation to understand your goals and requirements",
-                  "Custom renovation plan based on your budget and preferences",
-                  "Construction using high-quality materials and modern techniques",
-                  "Finishing touches and delivery of your fully transformed home",
+                  "Initial consultation to understand your requirements, goals, and budget",
+                  "Detailed design and plan tailored to your vision and needs",
+                  "Permit acquisition and material sourcing handled by our team",
+                  "Professional construction with consistent quality oversight throughout",
                 ].map((step, i) => (
                   <li key={i} className="text-gray-500 text-sm md:text-base leading-relaxed flex gap-2">
                     <span className="text-[#D0956B] font-bold shrink-0">{i + 1}.</span><span>{step}</span>
@@ -629,25 +645,25 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Value + Serving Area */}
+          {/* Commercial + Contact */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div>
               <h2 className="text-xl md:text-2xl font-bold text-black tracking-tight leading-tight mb-4">
-                Increase Your Home Value with Renovation
+                Commercial General Contractor Services
               </h2>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-3">
-                Investing in <strong className="text-gray-800">home renovation in Stamford CT</strong> is one of the best ways to increase property value. Upgraded kitchens, modern bathrooms, finished basements, and <strong className="text-gray-800">home additions</strong> significantly improve resale value and buyer interest.
+                In addition to residential projects, NZ Home Improvements is a reliable <strong className="text-gray-800">commercial general contractor</strong> offering construction services for businesses in Stamford CT. We understand the unique requirements of commercial projects and deliver solutions aligned with your business goals.
               </p>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-                Even small improvements can make a big difference in appearance, comfort, and functionality.
+                Our expertise includes office renovations, retail construction, and property upgrades. As professionals in <strong className="text-gray-800">general contractors near me commercial</strong>, we focus on efficiency, quality, and minimal disruption to your operations.
               </p>
             </div>
             <div>
               <h2 className="text-xl md:text-2xl font-bold text-black tracking-tight leading-tight mb-4">
-                Serving Stamford CT and Nearby Areas
+                Contact NZ Home Improvements for General Contractor Services Near Me
               </h2>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-                We proudly serve homeowners in <strong className="text-gray-800">Stamford CT</strong> and surrounding locations. Our local experience as a trusted <strong className="text-gray-800">home renovation contractor</strong> helps us understand building codes, design trends, and customer expectations in the area. Contact us today for a free estimate.
+                If you are looking for a professional <strong className="text-gray-800">general contractor Stamford CT</strong> offering reliable <strong className="text-gray-800">general contractor services near me</strong>, NZ Home Improvements is here to help. Whether you need home remodeling, kitchen renovation, basement finishing, or commercial construction, our experienced team is ready to deliver high-quality results. Contact us today to discuss your project and take the first step toward transforming your space.
               </p>
             </div>
           </div>
