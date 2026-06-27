@@ -18,83 +18,15 @@ const videoItems = [
   { title: "Exterior Remodel",           src: "/media/exterior.mp4",  thumb: "/img/portfolio/18.jpg" },
 ];
 
-const photos = [
-  { src: "/img/portfolio/1.jpg",    type: "Kitchen",          title: "Kitchen Remodel" },
-  { src: "/img/portfolio/2.jpg",    type: "Bathroom",         title: "Bathroom Renovation" },
-  { src: "/img/portfolio/2a.jpg",   type: "Bathroom",         title: "Bathroom Detail" },
-  { src: "/img/portfolio/3.jpg",    type: "Kitchen",          title: "Kitchen Transformation" },
-  { src: "/img/portfolio/4.jpg",    type: "Exterior",         title: "Exterior Renovation" },
-  { src: "/img/portfolio/5.jpg",    type: "Kitchen",          title: "Custom Kitchen" },
-  { src: "/img/portfolio/6.jpg",    type: "Bathroom",         title: "Bathroom Makeover" },
-  { src: "/img/portfolio/7.jpg",    type: "Basement",         title: "Basement Remodel" },
-  { src: "/img/portfolio/8.jpg",    type: "Kitchen",          title: "Kitchen Upgrade" },
-  { src: "/img/portfolio/9.jpg",    type: "Exterior",         title: "Exterior Facelift" },
-  { src: "/img/portfolio/10.jpg",   type: "Bathroom",         title: "Bathroom Remodel" },
-  { src: "/img/portfolio/11.jpg",   type: "Kitchen",          title: "Kitchen Renovation" },
-  { src: "/img/portfolio/12.jpg",   type: "Full Renovation",  title: "Living Room Update" },
-  { src: "/img/portfolio/13.jpg",   type: "Bathroom",         title: "Master Bathroom" },
-  { src: "/img/portfolio/14.jpg",   type: "Kitchen",          title: "Kitchen Redesign" },
-  { src: "/img/portfolio/14b.jpg",  type: "Kitchen",          title: "Kitchen Detail" },
-  { src: "/img/portfolio/15.jpg",   type: "Exterior",         title: "Home Exterior" },
-  { src: "/img/portfolio/16.jpg",   type: "Bathroom",         title: "Bathroom Overhaul" },
-  { src: "/img/portfolio/17.jpg",   type: "Exterior",         title: "Exterior Remodel" },
-  { src: "/img/portfolio/18.jpg",   type: "Exterior",         title: "Home Exterior" },
-  { src: "/img/portfolio/19.jpg",   type: "Kitchen",          title: "Kitchen Project" },
-  { src: "/img/portfolio/20.jpg",   type: "Full Renovation",  title: "Complete Home Renovation" },
-  { src: "/img/portfolio/21.jpg",   type: "Bathroom",         title: "Bathroom Renovation" },
-  { src: "/img/portfolio/22.jpg",   type: "Kitchen",          title: "Kitchen Upgrade" },
-  { src: "/img/portfolio/23.jpg",   type: "Full Renovation",  title: "Home Renovation" },
-  { src: "/img/portfolio/24.jpg",   type: "Bathroom",         title: "Bathroom Makeover" },
-  { src: "/img/portfolio/24b.jpg",  type: "Bathroom",         title: "Bathroom Detail" },
-  { src: "/img/portfolio/25.jpg",   type: "Kitchen",          title: "Kitchen Transformation" },
-  { src: "/img/portfolio/26.jpg",   type: "Basement",         title: "Basement Renovation" },
-  { src: "/img/portfolio/27.jpg",   type: "Exterior",         title: "Exterior Work" },
-  { src: "/img/portfolio/28.jpg",   type: "Bathroom",         title: "Master Bathroom Remodel" },
-  { src: "/img/portfolio/29.jpg",   type: "Kitchen",          title: "Kitchen Project" },
-  { src: "/img/portfolio/29a.jpg",  type: "Kitchen",          title: "Kitchen Detail" },
-  { src: "/img/portfolio/30.jpg",   type: "Full Renovation",  title: "Full Home Renovation" },
-  { src: "/img/portfolio/31.jpg",   type: "Bathroom",         title: "Bathroom Update" },
-  { src: "/img/portfolio/32.jpg",   type: "Kitchen",          title: "Kitchen Remodel" },
-  { src: "/img/portfolio/33.jpg",   type: "Exterior",         title: "Home Exterior" },
-  { src: "/img/portfolio/34.jpg",   type: "Bathroom",         title: "Bathroom Renovation" },
-  { src: "/img/portfolio/35.jpg",   type: "Kitchen",          title: "Kitchen Makeover" },
-  { src: "/img/portfolio/40.jpg",   type: "Full Renovation",  title: "Complete Renovation" },
-  { src: "/img/portfolio/41.jpeg",  type: "Kitchen",          title: "Kitchen Project" },
-  { src: "/img/portfolio/42.jpeg",  type: "Bathroom",         title: "Bathroom Project" },
-  { src: "/img/portfolio/43.jpeg",  type: "Exterior",         title: "Exterior Project" },
-  { src: "/img/portfolio/44.jpeg",  type: "Kitchen",          title: "Kitchen Renovation" },
-  { src: "/img/portfolio/45.jpeg",  type: "Bathroom",         title: "Bathroom Remodel" },
-  { src: "/img/portfolio/46.jpeg",  type: "Full Renovation",  title: "Home Renovation" },
-  { src: "/img/portfolio/47.jpeg",  type: "Kitchen",          title: "Kitchen Upgrade" },
-  { src: "/img/portfolio/48.jpeg",  type: "Bathroom",         title: "Bathroom Update" },
-  { src: "/img/portfolio/49.jpeg",  type: "Exterior",         title: "Exterior Renovation" },
-  { src: "/img/portfolio/50.jpeg",  type: "Kitchen",          title: "Kitchen Transformation" },
-  { src: "/img/portfolio/51.jpeg",  type: "Bathroom",         title: "Bathroom Makeover" },
-  { src: "/img/portfolio/52.jpeg",  type: "Full Renovation",  title: "Complete Home Makeover" },
-  { src: "/img/portfolio/55.jpeg",  type: "Kitchen",          title: "Kitchen Remodel" },
-  { src: "/img/portfolio/56.jpeg",  type: "Bathroom",         title: "Bathroom Renovation" },
-  { src: "/img/portfolio/121.jpg",  type: "Kitchen",          title: "Kitchen Project" },
-  { src: "/img/portfolio/123.jpg",  type: "Bathroom",         title: "Bathroom Renovation" },
-  { src: "/img/portfolio/123a.jpg", type: "Bathroom",         title: "Bathroom Detail" },
-  { src: "/img/portfolio/123b.jpg", type: "Bathroom",         title: "Bathroom Finish" },
-  { src: "/img/portfolio/124.jpg",  type: "Kitchen",          title: "Kitchen Remodel" },
-  { src: "/img/portfolio/132.jpg",  type: "Exterior",         title: "Exterior Renovation" },
-  { src: "/img/portfolio/134.jpg",  type: "Full Renovation",  title: "Full Home Renovation" },
-  { src: "/img/portfolio/141.jpg",  type: "Kitchen",          title: "Kitchen Renovation" },
-  { src: "/img/portfolio/151.jpeg", type: "Bathroom",         title: "Bathroom Renovation" },
-  { src: "/img/portfolio/181.jpg",  type: "Exterior",         title: "Exterior Renovation" },
-  { src: "/img/portfolio/301.jpg",  type: "Full Renovation",  title: "Complete Renovation" },
-];
+const TYPE_FILTERS = ["All", "Kitchen", "Bathroom", "Basement", "Home Renovation", "Home Addition"];
 
-const TYPE_FILTERS = ["All", "Kitchen", "Bathroom", "Exterior", "Basement", "Full Renovation"];
-
-
-export default function PortfolioClient() {
-  const [videoModal, setVideoModal]     = useState(null);
+export default function PortfolioClient({ photos = [] }) {
+  const [videoModal, setVideoModal]       = useState(null);
   const [lightboxIndex, setLightboxIndex] = useState(null);
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeFilter, setActiveFilter]   = useState("All");
 
-  const filtered = activeFilter === "All" ? photos : photos.filter((p) => p.type === activeFilter);
+  const filtered =
+    activeFilter === "All" ? photos : photos.filter((p) => p.type === activeFilter);
 
   return (
     <section className="bg-white pb-20 font-sans">
@@ -156,7 +88,7 @@ export default function PortfolioClient() {
             </h2>
           </div>
           <p className="text-gray-500 text-sm max-w-xs">
-            {photos.length} photos from real renovation projects.
+            {filtered.length}{activeFilter !== "All" ? ` ${activeFilter}` : ""} photos from real renovation projects.
           </p>
         </div>
 
@@ -173,13 +105,9 @@ export default function PortfolioClient() {
               }`}
             >
               {f}
-              {f === "All" ? (
-                <span className="ml-1.5 opacity-60">({photos.length})</span>
-              ) : (
-                <span className="ml-1.5 opacity-60">
-                  ({photos.filter((p) => p.type === f).length})
-                </span>
-              )}
+              <span className="ml-1.5 opacity-60">
+                ({f === "All" ? photos.length : photos.filter((p) => p.type === f).length})
+              </span>
             </button>
           ))}
         </div>

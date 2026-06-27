@@ -1,3 +1,5 @@
+import fs from "fs";
+import path from "path";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -5,6 +7,26 @@ import PageHero from "@/components/PageHero";
 import GoogleReviews from "@/components/GoogleReviews";
 import { blogs, getBlogBySlug } from "@/data/blogs";
 import JsonLd from "@/components/JsonLd";
+
+const CATEGORY_FOLDER = {
+  "Kitchen Remodeling": "kitchen",
+  "Bathroom Renovation": "bathroom",
+  "Basement Remodeling": "basement-remodeling",
+  "Home Renovation": "home-renovation",
+  "Home Addition": "home-addition",
+};
+
+function getGalleryPhotos(category) {
+  const folder = CATEGORY_FOLDER[category];
+  if (!folder) return [];
+  const dir = path.join(process.cwd(), "public", "img", "gallery", folder);
+  if (!fs.existsSync(dir)) return [];
+  return fs
+    .readdirSync(dir)
+    .filter((f) => /\.(jpe?g|png|webp)$/i.test(f))
+    .sort((a, b) => parseInt(a) - parseInt(b))
+    .map((f) => ({ src: `/img/gallery/${folder}/${f}`, alt: `${category} project - NZ Home Improvement Stamford CT` }));
+}
 
 export async function generateStaticParams() {
   return blogs.map((post) => ({ slug: post.slug }));
@@ -35,6 +57,8 @@ export default async function BlogPostPage({ params }) {
   if (!post) notFound();
 
   const otherPosts = blogs.filter((b) => b.slug !== post.slug);
+  const galleryPhotos = getGalleryPhotos(post.category);
+  const heroImage = galleryPhotos[0]?.src ?? post.image;
 
   const isoDate = new Date(post.date).toISOString().split("T")[0];
 
@@ -99,7 +123,7 @@ export default async function BlogPostPage({ params }) {
               {/* Hero image */}
               <div className="relative w-full h-[300px] md:h-[420px] rounded-[2rem] overflow-hidden mb-10">
                 <Image
-                  src={post.image}
+                  src={heroImage}
                   alt={post.title}
                   fill
                   priority
@@ -159,6 +183,29 @@ export default async function BlogPostPage({ params }) {
                         </summary>
                         <p className="text-gray-700 text-sm leading-relaxed mt-4">{faq.a}</p>
                       </details>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* ── Photo Gallery ── */}
+              {galleryPhotos.length > 0 && (
+                <div className="mt-14">
+                  <h2 className="text-xl md:text-2xl font-bold text-black tracking-tight leading-tight mb-6">
+                    {post.category} Project Photos
+                  </h2>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    {galleryPhotos.slice(0, 12).map((photo) => (
+                      <div key={photo.src} className="group relative overflow-hidden rounded-xl bg-gray-100 aspect-video">
+                        <Image
+                          src={photo.src}
+                          alt={photo.alt}
+                          fill
+                          sizes="(max-width: 640px) 50vw, 33vw"
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                      </div>
                     ))}
                   </div>
                 </div>

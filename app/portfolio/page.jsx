@@ -1,3 +1,5 @@
+import fs from "fs";
+import path from "path";
 import PortfolioClient from "@/components/PortfolioClient";
 import PageHero from "@/components/PageHero";
 
@@ -14,7 +16,45 @@ export const metadata = {
   },
 };
 
+const CATEGORY_MAP = {
+  kitchen: { label: "Kitchen", title: "Kitchen Remodel" },
+  bathroom: { label: "Bathroom", title: "Bathroom Renovation" },
+  "basement-remodeling": { label: "Basement", title: "Basement Remodel" },
+  "home-renovation": { label: "Home Renovation", title: "Home Renovation" },
+  "home-addition": { label: "Home Addition", title: "Home Addition" },
+};
+
+function buildPhotos() {
+  const galleryDir = path.join(process.cwd(), "public", "img", "gallery");
+  const photos = [];
+
+  for (const [folder, { label, title }] of Object.entries(CATEGORY_MAP)) {
+    const folderPath = path.join(galleryDir, folder);
+    if (!fs.existsSync(folderPath)) continue;
+
+    const files = fs
+      .readdirSync(folderPath)
+      .filter((f) => /\.(jpe?g|png|webp)$/i.test(f))
+      .sort((a, b) => {
+        const n = (s) => parseInt(s) || 0;
+        return n(a) - n(b);
+      });
+
+    for (const file of files) {
+      photos.push({
+        src: `/img/gallery/${folder}/${file}`,
+        type: label,
+        title,
+      });
+    }
+  }
+
+  return photos;
+}
+
 export default function PortfolioPage() {
+  const photos = buildPhotos();
+
   return (
     <>
       <PageHero title="Our Portfolio" bgImage="/img/full/20.jpg" crumb="Portfolio" />
@@ -37,7 +77,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* ── Video + Photo Gallery ── */}
-      <PortfolioClient />
+      <PortfolioClient photos={photos} />
     </>
   );
 }

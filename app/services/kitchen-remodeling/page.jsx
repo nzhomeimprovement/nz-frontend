@@ -1,3 +1,5 @@
+import fs from "fs";
+import path from "path";
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
@@ -92,7 +94,19 @@ const faqSchema = {
   }))
 };
 
+function getKitchenPhotos() {
+  const dir = path.join(process.cwd(), "public", "img", "gallery", "kitchen");
+  return fs
+    .readdirSync(dir)
+    .filter((f) => /\.(jpe?g|png|webp)$/i.test(f))
+    .sort((a, b) => parseInt(a) - parseInt(b))
+    .map((f) => ({ src: `/img/gallery/kitchen/${f}`, alt: "Kitchen remodeling project - NZ Home Improvement Stamford CT" }));
+}
+
 export default function KitchenRemodelingPage() {
+  const kitchenPhotos = getKitchenPhotos();
+  const [introImg1, introImg2] = kitchenPhotos;
+
   return (
     <>
       <JsonLd data={serviceSchema} />
@@ -109,22 +123,26 @@ export default function KitchenRemodelingPage() {
 
           <div className="relative w-full h-[380px] md:h-[500px] mx-auto md:max-w-2xl lg:max-w-none isolate flex items-center justify-center pt-8 pr-12 lg:pr-16">
             <div className="absolute top-0 right-0 w-[55%] h-[85%] rounded-[3rem] overflow-hidden shadow-sm bg-gray-100 z-0">
-              <Image
-                src="/img/full/11.jpg"
-                alt="Kitchen renovation project"
-                fill
-                sizes="(max-width: 1024px) 55vw, 27vw"
-                className="object-cover object-center"
-              />
+              {introImg1 && (
+                <Image
+                  src={introImg1.src}
+                  alt="Kitchen renovation project"
+                  fill
+                  sizes="(max-width: 1024px) 55vw, 27vw"
+                  className="object-cover object-center"
+                />
+              )}
             </div>
             <div className="absolute bottom-[5%] left-[2%] w-[60%] h-[75%] rounded-[2.5rem] overflow-hidden shadow-[0_15px_30px_rgba(0,0,0,0.15)] bg-gray-200 z-10 border-4 border-white transition-transform duration-300 hover:scale-[1.02]">
-              <Image
-                src="/img/full/20.jpg"
-                alt="Modern kitchen remodeling Stamford CT"
-                fill
-                sizes="(max-width: 1024px) 60vw, 30vw"
-                className="object-cover object-center"
-              />
+              {introImg2 && (
+                <Image
+                  src={introImg2.src}
+                  alt="Modern kitchen remodeling Stamford CT"
+                  fill
+                  sizes="(max-width: 1024px) 60vw, 30vw"
+                  className="object-cover object-center"
+                />
+              )}
             </div>
           </div>
 
@@ -160,7 +178,7 @@ export default function KitchenRemodelingPage() {
       </section>
 
       {/* ── Portfolio Carousel ── */}
-      <PortfolioCarousel heading="Kitchen Remodeling Projects" />
+      <PortfolioCarousel heading="Kitchen Remodeling Projects" photos={kitchenPhotos} />
 
       {/* ── Services Detail ── */}
       <section className="py-16 lg:py-24 bg-zinc-900 px-4 sm:px-6 lg:px-8 font-sans">
@@ -363,6 +381,37 @@ export default function KitchenRemodelingPage() {
             >
               Get Free Estimate
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Kitchen Photo Grid ── */}
+      <section className="bg-white py-16 lg:py-24 px-4 sm:px-6 lg:px-8 font-sans">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-gray-400 font-semibold uppercase tracking-[0.2em] text-[11px] mb-3">
+              Photo Gallery
+            </p>
+            <h2 className="text-[28px] md:text-4xl lg:text-[2.75rem] font-bold text-black tracking-[-0.02em] leading-tight">
+              Kitchen Remodeling Photos
+            </h2>
+            <p className="text-gray-500 text-sm md:text-base mt-4 max-w-2xl mx-auto leading-relaxed">
+              Browse our completed kitchen remodeling projects across Stamford, CT and Fairfield County.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+            {kitchenPhotos.map((photo) => (
+              <div key={photo.src} className="group relative overflow-hidden rounded-xl bg-gray-100 aspect-video shadow-sm">
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+              </div>
+            ))}
           </div>
         </div>
       </section>
