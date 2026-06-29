@@ -68,20 +68,42 @@ const faqs = [
   },
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nzhomeimprovement.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://nzhomeimprovement.com/services/" },
+    { "@type": "ListItem", "position": 3, "name": "Home Renovation", "item": "https://nzhomeimprovement.com/services/home-renovation/" }
+  ]
+};
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
+  "@id": "https://nzhomeimprovement.com/services/home-renovation/#service",
   "serviceType": "Home Renovation",
   "name": "Home Renovation Stamford CT",
   "description": "Professional home renovation services in Stamford CT. Full home remodels, interior upgrades, structural improvements, and custom renovations.",
   "url": "https://nzhomeimprovement.com/services/home-renovation/",
-  "provider": {
-    "@type": "HomeAndConstructionBusiness",
-    "@id": "https://nzhomeimprovement.com/#business",
-    "name": "NZ Home Improvement"
-  },
-  "areaServed": { "@type": "City", "name": "Stamford", "addressRegion": "CT" },
-  "image": "https://nzhomeimprovement.com/img/full/11.jpg"
+  "provider": { "@id": "https://nzhomeimprovement.com/#business" },
+  "areaServed": [
+    { "@type": "City", "name": "Stamford", "addressRegion": "CT" },
+    { "@type": "AdministrativeArea", "name": "Fairfield County", "addressRegion": "CT" }
+  ],
+  "image": "https://nzhomeimprovement.com/img/gallery/home-renovation/1.jpeg",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Home Renovation Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Home Remodeling" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitchen & Bathroom Upgrades" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Flooring & Structural Improvements" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Redesign & Painting" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Roofing & Exterior Updates" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Energy Efficiency Improvements" } }
+    ]
+  }
 };
 
 const faqSchema = {
@@ -109,6 +131,7 @@ export default function HomeRenovationPage() {
 
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
       <JsonLd data={serviceSchema} />
       <JsonLd data={faqSchema} />
       <PageHero

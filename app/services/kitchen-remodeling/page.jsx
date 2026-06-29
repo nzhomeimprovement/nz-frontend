@@ -68,20 +68,42 @@ const faqs = [
   },
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nzhomeimprovement.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://nzhomeimprovement.com/services/" },
+    { "@type": "ListItem", "position": 3, "name": "Kitchen Remodeling", "item": "https://nzhomeimprovement.com/services/kitchen-remodeling/" }
+  ]
+};
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
+  "@id": "https://nzhomeimprovement.com/services/kitchen-remodeling/#service",
   "serviceType": "Kitchen Remodeling",
   "name": "Kitchen Remodeling Stamford CT",
   "description": "Professional kitchen remodeling services in Stamford CT. Modern designs, custom cabinets, countertops, and full kitchen renovations.",
   "url": "https://nzhomeimprovement.com/services/kitchen-remodeling/",
-  "provider": {
-    "@type": "HomeAndConstructionBusiness",
-    "@id": "https://nzhomeimprovement.com/#business",
-    "name": "NZ Home Improvement"
-  },
-  "areaServed": { "@type": "City", "name": "Stamford", "addressRegion": "CT" },
-  "image": "https://nzhomeimprovement.com/img/full/09.jpg"
+  "provider": { "@id": "https://nzhomeimprovement.com/#business" },
+  "areaServed": [
+    { "@type": "City", "name": "Stamford", "addressRegion": "CT" },
+    { "@type": "AdministrativeArea", "name": "Fairfield County", "addressRegion": "CT" }
+  ],
+  "image": "https://nzhomeimprovement.com/img/gallery/kitchen/1.jpeg",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Kitchen Remodeling Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Cabinet Design & Installation" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Countertop Replacement" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitchen Layout Redesign" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Flooring & Tile Work" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lighting & Plumbing Upgrades" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Small Kitchen Remodel Solutions" } }
+    ]
+  }
 };
 
 const faqSchema = {
@@ -109,6 +131,7 @@ export default function KitchenRemodelingPage() {
 
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
       <JsonLd data={serviceSchema} />
       <JsonLd data={faqSchema} />
       <PageHero

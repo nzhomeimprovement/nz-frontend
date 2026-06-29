@@ -68,20 +68,42 @@ const faqs = [
   },
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nzhomeimprovement.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://nzhomeimprovement.com/services/" },
+    { "@type": "ListItem", "position": 3, "name": "Bathroom Renovation", "item": "https://nzhomeimprovement.com/services/bathroom-renovation/" }
+  ]
+};
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
+  "@id": "https://nzhomeimprovement.com/services/bathroom-renovation/#service",
   "serviceType": "Bathroom Renovation",
   "name": "Bathroom Renovation Stamford CT",
   "description": "Professional bathroom renovation services in Stamford CT. Modern designs, tile work, fixtures, and full bathroom remodels.",
   "url": "https://nzhomeimprovement.com/services/bathroom-renovation/",
-  "provider": {
-    "@type": "HomeAndConstructionBusiness",
-    "@id": "https://nzhomeimprovement.com/#business",
-    "name": "NZ Home Improvement"
-  },
-  "areaServed": { "@type": "City", "name": "Stamford", "addressRegion": "CT" },
-  "image": "https://nzhomeimprovement.com/img/full/20.jpg"
+  "provider": { "@id": "https://nzhomeimprovement.com/#business" },
+  "areaServed": [
+    { "@type": "City", "name": "Stamford", "addressRegion": "CT" },
+    { "@type": "AdministrativeArea", "name": "Fairfield County", "addressRegion": "CT" }
+  ],
+  "image": "https://nzhomeimprovement.com/img/gallery/bathroom/1.jpeg",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Bathroom Renovation Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Bathroom Remodeling" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Walk-in Shower Installation" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tile & Flooring Installation" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Vanity & Cabinet Upgrades" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Plumbing & Fixture Replacement" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Small Bathroom Renovation" } }
+    ]
+  }
 };
 
 const faqSchema = {
@@ -109,6 +131,7 @@ export default function BathroomRenovationPage() {
 
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
       <JsonLd data={serviceSchema} />
       <JsonLd data={faqSchema} />
       <PageHero

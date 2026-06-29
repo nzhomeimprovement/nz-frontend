@@ -15,10 +15,162 @@ const websiteSchema = {
   "name": "NZ Home Improvement",
   "url": "https://nzhomeimprovement.com",
   "description": "NZ Home Improvements is a trusted general contractor Stamford CT offering kitchen remodeling, bathroom renovation, basement finishing & commercial construction services.",
-  "publisher": {
-    "@type": "HomeAndConstructionBusiness",
-    "@id": "https://nzhomeimprovement.com/#business"
+  "publisher": { "@id": "https://nzhomeimprovement.com/#business" },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": { "@type": "EntryPoint", "urlTemplate": "https://nzhomeimprovement.com/?s={search_term_string}" },
+    "query-input": "required name=search_term_string"
   }
+};
+
+const businessSchema = {
+  "@context": "https://schema.org",
+  "@type": ["GeneralContractor", "HomeAndConstructionBusiness"],
+  "@id": "https://nzhomeimprovement.com/#business",
+  "name": "NZ Home Improvement",
+  "alternateName": "NZ Home Improvements",
+  "url": "https://nzhomeimprovement.com",
+  "telephone": "+12035247974",
+  "email": "build@nzhomeimprovement.net",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://nzhomeimprovement.com/img/logo-color.png",
+    "width": 180,
+    "height": 55
+  },
+  "image": "https://nzhomeimprovement.com/img/full/09.jpg",
+  "description": "NZ Home Improvements is a trusted general contractor in Stamford CT specializing in kitchen remodeling, bathroom renovation, basement finishing, home addition, and full home renovation services.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1372 Summer St",
+    "addressLocality": "Stamford",
+    "addressRegion": "CT",
+    "postalCode": "06905",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Stamford", "addressRegion": "CT" },
+    { "@type": "City", "name": "Greenwich", "addressRegion": "CT" },
+    { "@type": "City", "name": "Norwalk", "addressRegion": "CT" },
+    { "@type": "City", "name": "Westport", "addressRegion": "CT" },
+    { "@type": "City", "name": "Darien", "addressRegion": "CT" },
+    { "@type": "AdministrativeArea", "name": "Fairfield County", "addressRegion": "CT" },
+    { "@type": "AdministrativeArea", "name": "Westchester County", "addressRegion": "NY" }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "16:00"
+    }
+  ],
+  "priceRange": "$$",
+  "currenciesAccepted": "USD",
+  "paymentAccepted": "Cash, Credit Card, Check",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Home Remodeling Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitchen Remodeling", "@id": "https://nzhomeimprovement.com/services/kitchen-remodeling/#service" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bathroom Renovation", "@id": "https://nzhomeimprovement.com/services/bathroom-renovation/#service" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Renovation", "@id": "https://nzhomeimprovement.com/services/home-renovation/#service" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Basement Remodeling", "@id": "https://nzhomeimprovement.com/services/basement-remodeling/#service" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Addition", "@id": "https://nzhomeimprovement.com/services/home-addition/#service" } }
+    ]
+  },
+  "sameAs": [
+    "https://www.instagram.com/n.z_homeimprovement",
+    "https://www.facebook.com/NZHOMEIMPROVEMENT"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "6",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Robert Kerrigan" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "I highly recommend NZ Home Improvements. I hired NZ to do some major roof repair work. All was done with no problems, and the whole crew was amazing to work with."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Alexander Theroux" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "We hired NZ home improvements for our home remodelling project. They were very organized and extremely responsive to all of our questions. Highly recommended."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Carlos Carlin" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Nazar, you did a great job. My family really appreciates it — the house looks awesome. NZ home improvement is the best remodelling company in Greenwich."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Donald W." },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "We had the pleasure of working with the NZ Home Improvement team to remodel our kitchen and we couldn't be happier. Thank you for exceeding our expectations!"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Patricia M." },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Our bathroom renovation turned out absolutely stunning. NZ Home Improvement handled every detail professionally and completed the project on schedule."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "James R." },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Outstanding work on our basement remodel. The crew was professional, clean, and communicated every step of the way. Our basement is now our favorite room in the house!"
+    }
+  ]
+};
+
+const homepageFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How can I prepare for my remodeling consultation?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Make a list of your goals, budget range, and any inspiration photos. Think about your timeline and which areas are most important. The more prepared you are, the more productive our consultation will be." }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I expect during the initial consultation?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We'll discuss your vision, assess your space, understand your budget, and provide professional recommendations. We'll also explain our process, timelines, and answer all your questions." }
+    },
+    {
+      "@type": "Question",
+      "name": "What services does NZ Home Improvement offer?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We offer comprehensive home remodeling services including kitchen remodeling, bathroom renovation, basement finishing, home additions, and full home renovation throughout Stamford, CT and surrounding areas." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer free consultations and estimates?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes! We provide free initial consultations and written estimates. Contact us today to schedule your free consultation." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you licensed and insured remodeling contractors?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, we are fully licensed and insured remodeling contractors. We carry all necessary certifications and policies to safely operate in our service areas." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a typical remodel take?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Project duration varies by scope. A bathroom remodel typically takes 1–3 weeks, kitchen remodels 3–6 weeks, and larger projects like basement finishing or home additions can take 6–12 weeks." }
+    }
+  ]
 };
 
 export const metadata = {
@@ -183,6 +335,8 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={websiteSchema} />
+      <JsonLd data={businessSchema} />
+      <JsonLd data={homepageFaqSchema} />
 
       {/* ── Hero ── */}
       <HeroSlider />

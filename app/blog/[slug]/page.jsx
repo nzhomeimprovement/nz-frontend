@@ -62,30 +62,49 @@ export default async function BlogPostPage({ params }) {
 
   const isoDate = new Date(post.date).toISOString().split("T")[0];
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nzhomeimprovement.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://nzhomeimprovement.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://nzhomeimprovement.com/blog/${post.slug}/` }
+    ]
+  };
+
   const blogSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
+    "@id": `https://nzhomeimprovement.com/blog/${post.slug}/#article`,
     "headline": post.title,
     "description": post.metaDescription,
-    "image": `https://nzhomeimprovement.com${post.image}`,
+    "image": {
+      "@type": "ImageObject",
+      "url": `https://nzhomeimprovement.com${post.image}`,
+      "width": 1200,
+      "height": 630
+    },
     "datePublished": isoDate,
     "dateModified": isoDate,
+    "inLanguage": "en-US",
     "author": {
       "@type": "Organization",
+      "@id": "https://nzhomeimprovement.com/#business",
       "name": "NZ Home Improvement",
       "url": "https://nzhomeimprovement.com"
     },
     "publisher": {
-      "@type": "Organization",
-      "name": "NZ Home Improvement",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://nzhomeimprovement.com/img/logo-color.png"
-      }
+      "@id": "https://nzhomeimprovement.com/#business"
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": `https://nzhomeimprovement.com/blog/${post.slug}/`
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://nzhomeimprovement.com/blog/",
+      "name": "NZ Home Improvement Blog",
+      "publisher": { "@id": "https://nzhomeimprovement.com/#business" }
     }
   };
 
@@ -101,6 +120,7 @@ export default async function BlogPostPage({ params }) {
 
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
       <JsonLd data={blogSchema} />
       {faqSchema && <JsonLd data={faqSchema} />}
       <PageHero title={post.title} bgImage={post.image} crumb={post.category} />

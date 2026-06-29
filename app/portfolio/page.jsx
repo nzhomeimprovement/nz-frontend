@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import PortfolioClient from "@/components/PortfolioClient";
 import PageHero from "@/components/PageHero";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata = {
   title: "Our Portfolio - NZ Home Improvement | Renovation Projects CT",
@@ -52,11 +53,58 @@ function buildPhotos() {
   return photos;
 }
 
+const PORTFOLIO_IMAGE_DESCRIPTIONS = {
+  kitchen: "Kitchen remodeling project by NZ Home Improvement in Stamford, CT",
+  bathroom: "Bathroom renovation project by NZ Home Improvement in Stamford, CT",
+  "basement-remodeling": "Basement remodeling project by NZ Home Improvement in Stamford, CT",
+  "home-renovation": "Home renovation project by NZ Home Improvement in Stamford, CT",
+  "home-addition": "Home addition project by NZ Home Improvement in Stamford, CT",
+};
+
 export default function PortfolioPage() {
   const photos = buildPhotos();
 
+  const portfolioSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://nzhomeimprovement.com/portfolio/",
+    "name": "Portfolio – NZ Home Improvement Renovation Projects",
+    "description": "Browse NZ Home Improvement's portfolio of completed kitchen, bathroom, basement, and home renovation projects in Stamford, CT and Fairfield County.",
+    "url": "https://nzhomeimprovement.com/portfolio/",
+    "provider": { "@id": "https://nzhomeimprovement.com/#business" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nzhomeimprovement.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://nzhomeimprovement.com/portfolio/" }
+      ]
+    },
+    "hasPart": (() => {
+      const seen = {};
+      return photos
+        .filter((p) => {
+          const folder = p.src.split("/img/gallery/")[1]?.split("/")[0];
+          if (!folder) return false;
+          seen[folder] = (seen[folder] || 0) + 1;
+          return seen[folder] <= 5;
+        })
+        .map((p) => {
+          const folder = p.src.split("/img/gallery/")[1]?.split("/")[0] ?? "";
+          return {
+            "@type": "ImageObject",
+            "contentUrl": `https://nzhomeimprovement.com${p.src}`,
+            "name": p.title,
+            "description": PORTFOLIO_IMAGE_DESCRIPTIONS[folder] ?? `${p.title} by NZ Home Improvement`,
+            "creator": { "@id": "https://nzhomeimprovement.com/#business" },
+            "copyrightHolder": { "@id": "https://nzhomeimprovement.com/#business" }
+          };
+        })
+    })()
+  };
+
   return (
     <>
+      <JsonLd data={portfolioSchema} />
       <PageHero title="Our Portfolio" bgImage="/img/full/20.jpg" crumb="Portfolio" />
 
       {/* ── Intro header ── */}

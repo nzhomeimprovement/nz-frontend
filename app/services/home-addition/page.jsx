@@ -68,20 +68,42 @@ const faqs = [
   },
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nzhomeimprovement.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://nzhomeimprovement.com/services/" },
+    { "@type": "ListItem", "position": 3, "name": "Home Addition", "item": "https://nzhomeimprovement.com/services/home-addition/" }
+  ]
+};
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
+  "@id": "https://nzhomeimprovement.com/services/home-addition/#service",
   "serviceType": "Home Addition",
   "name": "Home Addition Stamford CT",
   "description": "Professional home addition services in Stamford CT. Room additions, second-story additions, garage conversions, and custom home expansions.",
   "url": "https://nzhomeimprovement.com/services/home-addition/",
-  "provider": {
-    "@type": "HomeAndConstructionBusiness",
-    "@id": "https://nzhomeimprovement.com/#business",
-    "name": "NZ Home Improvement"
-  },
-  "areaServed": { "@type": "City", "name": "Stamford", "addressRegion": "CT" },
-  "image": "https://nzhomeimprovement.com/img/full/25.jpg"
+  "provider": { "@id": "https://nzhomeimprovement.com/#business" },
+  "areaServed": [
+    { "@type": "City", "name": "Stamford", "addressRegion": "CT" },
+    { "@type": "AdministrativeArea", "name": "Fairfield County", "addressRegion": "CT" }
+  ],
+  "image": "https://nzhomeimprovement.com/img/gallery/home-addition/1.jpeg",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Home Addition Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Room Additions" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Second-Story Additions" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Garage Conversions" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sunroom Construction" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Extended Kitchen & Living Spaces" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Home Addition Design" } }
+    ]
+  }
 };
 
 const faqSchema = {
@@ -109,6 +131,7 @@ export default function HomeAdditionPage() {
 
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
       <JsonLd data={serviceSchema} />
       <JsonLd data={faqSchema} />
       <PageHero

@@ -68,20 +68,42 @@ const faqs = [
   },
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nzhomeimprovement.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://nzhomeimprovement.com/services/" },
+    { "@type": "ListItem", "position": 3, "name": "Basement Remodeling", "item": "https://nzhomeimprovement.com/services/basement-remodeling/" }
+  ]
+};
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
+  "@id": "https://nzhomeimprovement.com/services/basement-remodeling/#service",
   "serviceType": "Basement Remodeling",
   "name": "Basement Remodeling Stamford CT",
   "description": "Professional basement remodeling and finishing services in Stamford CT. Transform your basement into a living space, home office, gym, or entertainment area.",
   "url": "https://nzhomeimprovement.com/services/basement-remodeling/",
-  "provider": {
-    "@type": "HomeAndConstructionBusiness",
-    "@id": "https://nzhomeimprovement.com/#business",
-    "name": "NZ Home Improvement"
-  },
-  "areaServed": { "@type": "City", "name": "Stamford", "addressRegion": "CT" },
-  "image": "https://nzhomeimprovement.com/img/full/21.jpg"
+  "provider": { "@id": "https://nzhomeimprovement.com/#business" },
+  "areaServed": [
+    { "@type": "City", "name": "Stamford", "addressRegion": "CT" },
+    { "@type": "AdministrativeArea", "name": "Fairfield County", "addressRegion": "CT" }
+  ],
+  "image": "https://nzhomeimprovement.com/img/gallery/basement-remodeling/1.jpeg",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Basement Remodeling Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Basement Finishing & Framing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Theater Setup" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Guest Suite & Bedroom Conversion" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Office Design" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gym & Recreation Rooms" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lighting, Flooring & Insulation" } }
+    ]
+  }
 };
 
 const faqSchema = {
@@ -109,6 +131,7 @@ export default function BasementRemodelingPage() {
 
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
       <JsonLd data={serviceSchema} />
       <JsonLd data={faqSchema} />
       <PageHero
