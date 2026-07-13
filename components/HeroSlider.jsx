@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { CheckCircle, AlertCircle, Loader } from "lucide-react";
 
-const INITIAL = { name: "", phone: "", zip: "", interest: "", referral: "" };
+const INITIAL = { name: "", phone: "", email: "", zip: "", interest: "", referral: "" };
 
 export default function HeroSection() {
   const [form, setForm]     = useState(INITIAL);
@@ -119,6 +119,23 @@ export default function HeroSection() {
                 placeholder="+1"
                 required
                 value={form.phone}
+                onChange={handleChange}
+                className="w-full bg-zinc-50 border-none rounded-full px-4 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#D0956B]/50"
+              />
+            </div>
+
+            {/* Email */}
+            <div className="flex-1 w-full flex flex-col px-2">
+              <label htmlFor="hero-email" className="text-xs font-semibold text-zinc-800 mb-1.5 px-1">
+                Email
+              </label>
+              <input
+                id="hero-email"
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                required
+                value={form.email}
                 onChange={handleChange}
                 className="w-full bg-zinc-50 border-none rounded-full px-4 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#D0956B]/50"
               />

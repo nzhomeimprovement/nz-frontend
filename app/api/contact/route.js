@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req) {
   try {
@@ -15,20 +17,11 @@ export async function POST(req) {
       return NextResponse.json({ error: "Invalid email address" }, { status: 400 });
     }
 
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || "smtp.gmail.com",
-      port: Number(process.env.SMTP_PORT) || 587,
-      secure: false,
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    });
-
-    await transporter.sendMail({
-      from: `"${name}" <${process.env.SMTP_USER}>`,
+    const fromEmail = process.env.FROM_EMAIL;
+    const { error } = await resend.emails.send({
+      from: `${process.env.FROM_NAME || "NZ Home Improvement"} <${fromEmail}>`,
       replyTo: email,
-      to: process.env.CONTACT_EMAIL || "build@nzhomeimprovement.net",
+      to: process.env.CONTACT_EMAIL || fromEmail,
       subject: subject || `New message from ${name} via NZ Home Improvement website`,
       text: `Subject: ${subject || "N/A"}\n\nFrom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
       html: `
@@ -41,6 +34,11 @@ export async function POST(req) {
         <p style="white-space:pre-wrap">${message}</p>
       `,
     });
+
+    if (error) {
+      console.error("Email error:", error);
+      return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {
