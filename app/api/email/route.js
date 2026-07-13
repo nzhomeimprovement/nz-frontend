@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
 // ─── Email template ───────────────────────────────────────────────────────────
 
@@ -131,19 +131,100 @@ function buildEmailHtml({ type, title, fields }) {
 </html>`;
 }
 
-// ─── Nodemailer transporter ───────────────────────────────────────────────────
+// ─── Thank-you email (sent to the customer) ───────────────────────────────────
 
-function createTransporter() {
-  return nodemailer.createTransport({
-    host: process.env.SMTP_HOST || "smtp.gmail.com",
-    port: Number(process.env.SMTP_PORT) || 587,
-    secure: false,
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
-    },
-  });
+function buildThankYouHtml({ name }) {
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Thank You for Contacting NZ Home Improvement</title>
+</head>
+<body style="margin:0;padding:0;background-color:#eeeeee;
+             font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" role="presentation"
+         style="background-color:#eeeeee;padding:48px 16px;">
+    <tr>
+      <td align="center">
+        <table width="600" cellpadding="0" cellspacing="0" role="presentation"
+               style="max-width:600px;width:100%;">
+
+          <tr>
+            <td style="background-color:#111111;padding:38px 44px 34px;
+                       border-radius:20px 20px 0 0;text-align:center;">
+              <p style="margin:0 0 10px;color:#D0956B;font-size:10px;font-weight:700;
+                        letter-spacing:0.3em;text-transform:uppercase;">
+                NZ Home Improvement
+              </p>
+              <h1 style="margin:0;color:#ffffff;font-size:26px;font-weight:700;
+                         letter-spacing:-0.02em;line-height:1.2;">
+                Thank You, ${name}!
+              </h1>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="background-color:#D0956B;height:4px;font-size:1px;line-height:1px;">&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td style="background-color:#ffffff;padding:36px 44px 28px;">
+              <p style="margin:0 0 16px;color:#111111;font-size:15px;line-height:1.6;
+                        font-family:Helvetica,Arial,sans-serif;">
+                We've received your message and appreciate you reaching out to NZ Home Improvement.
+                A member of our team will review your request and get back to you within one business day.
+              </p>
+              <p style="margin:0;color:#111111;font-size:15px;line-height:1.6;
+                        font-family:Helvetica,Arial,sans-serif;">
+                If your project is time-sensitive, feel free to call us directly at
+                <a href="tel:+12035247974" style="color:#D0956B;text-decoration:none;font-weight:700;">+1 203-524-7974</a>.
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="background-color:#111111;padding:26px 44px;
+                       border-radius:0 0 20px 20px;text-align:center;">
+              <p style="margin:0 0 6px;color:#666666;font-size:11px;line-height:1.7;">
+                1372 Summer St, Stamford, CT 06905, USA
+              </p>
+              <p style="margin:0;font-size:11px;line-height:1.7;">
+                <a href="mailto:build@nzhomeimprovement.net"
+                   style="color:#D0956B;text-decoration:none;">
+                  build@nzhomeimprovement.net
+                </a>
+                &nbsp;&nbsp;·&nbsp;&nbsp;
+                <a href="tel:+12035247974"
+                   style="color:#D0956B;text-decoration:none;">
+                  +1 203-524-7974
+                </a>
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>`;
 }
+
+function buildThankYouText({ name }) {
+  return `Hi ${name},
+
+Thanks for reaching out to NZ Home Improvement. We've received your message and a member of our team will get back to you within one business day.
+
+If your project is time-sensitive, call us at +1 203-524-7974.
+
+NZ Home Improvement
+1372 Summer St, Stamford, CT 06905, USA`;
+}
+
+// ─── Resend client ─────────────────────────────────────────────────────────────
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 // ─── Route handler ────────────────────────────────────────────────────────────
 
@@ -152,21 +233,29 @@ export async function POST(req) {
     const body = await req.json();
     const { type } = body;
 
-    let title, subject, replyTo, fields;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let title, subject, replyTo, fields, customerEmail, customerName;
 
     if (type === "lead") {
-      const { name, phone, zip, interest, referral } = body;
+      const { name, phone, email, zip, interest, referral } = body;
 
-      if (!name || !phone) {
-        return NextResponse.json({ error: "Name and phone are required." }, { status: 400 });
+      if (!name || !phone || !email) {
+        return NextResponse.json({ error: "Name, phone, and email are required." }, { status: 400 });
+      }
+
+      if (!emailRegex.test(email)) {
+        return NextResponse.json({ error: "Invalid email address." }, { status: 400 });
       }
 
       title   = "New Lead Received";
       subject = `New Lead: ${name}${interest ? ` — ${interest}` : ""}`;
-      replyTo = process.env.SMTP_USER;
+      replyTo = email;
+      customerEmail = email;
+      customerName  = name;
       fields  = [
         { key: "name",     label: "Full Name",           value: name },
         { key: "phone",    label: "Phone Number",         value: phone },
+        { key: "email",    label: "Email",                value: email },
         { key: "zip",      label: "Zip Code",             value: zip },
         { key: "interest", label: "Remodeling Interest",  value: interest },
         { key: "referral", label: "How They Found Us",    value: referral },
@@ -179,7 +268,6 @@ export async function POST(req) {
         return NextResponse.json({ error: "Name, email, and message are required." }, { status: 400 });
       }
 
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(email)) {
         return NextResponse.json({ error: "Invalid email address." }, { status: 400 });
       }
@@ -187,6 +275,8 @@ export async function POST(req) {
       title   = "New Contact Message";
       subject = msgSubject || `New message from ${name}`;
       replyTo = email;
+      customerEmail = email;
+      customerName  = name;
       fields  = [
         { key: "name",    label: "Name",    value: name },
         { key: "email",   label: "Email",   value: email },
@@ -198,15 +288,35 @@ export async function POST(req) {
       return NextResponse.json({ error: "Invalid form type." }, { status: 400 });
     }
 
-    const transporter = createTransporter();
+    const fromName = process.env.FROM_NAME || "NZ Home Improvement";
+    const fromEmail = process.env.FROM_EMAIL;
+    const from = `${fromName} <${fromEmail}>`;
 
-    await transporter.sendMail({
-      from: `"NZ Home Improvement" <${process.env.SMTP_USER}>`,
+    const { error: sendError } = await resend.emails.send({
+      from,
       replyTo,
-      to: process.env.CONTACT_EMAIL || "build@nzhomeimprovement.net",
+      to: process.env.CONTACT_EMAIL || fromEmail,
       subject,
       html: buildEmailHtml({ type, title, fields }),
     });
+
+    if (sendError) {
+      console.error("[/api/email] Resend error:", sendError);
+      return NextResponse.json({ error: "Failed to send email." }, { status: 500 });
+    }
+
+    if (customerEmail) {
+      const { error: thankYouError } = await resend.emails.send({
+        from,
+        to: customerEmail,
+        subject: "Thank you for contacting NZ Home Improvement",
+        html: buildThankYouHtml({ name: customerName }),
+        text: buildThankYouText({ name: customerName }),
+      });
+      if (thankYouError) {
+        console.error("[/api/email] Thank-you email failed:", thankYouError);
+      }
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {

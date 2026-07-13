@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 function buildQuoteHtml({ name, email, phone, service, address, details, timeline, budget }) {
   const field = (label, value) =>
@@ -143,23 +145,19 @@ export async function POST(req) {
       return NextResponse.json({ error: "Invalid email address." }, { status: 400 });
     }
 
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || "smtp.gmail.com",
-      port: Number(process.env.SMTP_PORT) || 587,
-      secure: false,
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    });
-
-    await transporter.sendMail({
-      from: `"NZ Home Improvement" <${process.env.SMTP_USER}>`,
+    const fromEmail = process.env.FROM_EMAIL;
+    const { error } = await resend.emails.send({
+      from: `${process.env.FROM_NAME || "NZ Home Improvement"} <${fromEmail}>`,
       replyTo: email,
-      to: process.env.CONTACT_EMAIL || "build@nzhomeimprovement.net",
+      to: process.env.CONTACT_EMAIL || fromEmail,
       subject: `New Quote Request: ${name}${service ? ` — ${service}` : ""}`,
       html: buildQuoteHtml({ name, email, phone, service, address, details, timeline, budget }),
     });
+
+    if (error) {
+      console.error("[/api/quote] Error:", error);
+      return NextResponse.json({ error: "Failed to send quote request." }, { status: 500 });
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {
