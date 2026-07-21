@@ -2686,6 +2686,7 @@ export const blogs = [
       },
       {
         heading: "1. Open Concept Living Spaces",
+        level: 3,
         paragraphs: [
           `One of the biggest <strong>home remodeling trends in Stamford CT</strong> is the shift toward open floor plans. Traditional layouts with separate rooms are being replaced by open, flowing spaces.`,
           `<strong>Benefits of open layouts</strong> include:<ul class="list-disc pl-5 space-y-1 mt-2"><li>Better natural light</li><li>Improved family interaction</li><li>Modern and spacious feel</li><li>Increased property value</li></ul>`,
@@ -2694,6 +2695,7 @@ export const blogs = [
       },
       {
         heading: "2. Modern Kitchen Remodeling Trends in Stamford CT",
+        level: 3,
         paragraphs: [
           `The kitchen is the heart of the home, and modern upgrades are a top priority for homeowners. Popular kitchen trends include:<ul class="list-disc pl-5 space-y-1 mt-2"><li>Minimalist cabinet designs</li><li>Quartz countertops</li><li>Smart kitchen appliances</li><li>Large kitchen islands</li><li>Matte black and gold fixtures</li></ul>`,
           `<a href="/services/kitchen-remodeling" class="text-[#D0956B] font-semibold hover:underline">Kitchen remodeling in Stamford CT</a> now focuses on both aesthetics and functionality. Smart storage solutions and multi-purpose islands are especially in demand.`,
@@ -2701,6 +2703,7 @@ export const blogs = [
       },
       {
         heading: "3. Bathroom Renovation Trends",
+        level: 3,
         paragraphs: [
           `Bathrooms are no longer just functional spaces—they are becoming personal relaxation zones. Trending bathroom features include:<ul class="list-disc pl-5 space-y-1 mt-2"><li>Walk-in showers with glass enclosures</li><li>Freestanding bathtubs</li><li>LED mirrors</li><li>Heated flooring</li><li>Natural stone finishes</li></ul>`,
           `<a href="/services/bathroom-renovation" class="text-[#D0956B] font-semibold hover:underline">Bathroom remodeling in Stamford CT</a> is shifting towards spa-like designs that offer comfort and luxury.`,
@@ -2708,6 +2711,7 @@ export const blogs = [
       },
       {
         heading: "4. Energy-Efficient Home Upgrades",
+        level: 3,
         paragraphs: [
           `Energy efficiency is a major concern for homeowners in Stamford. With rising utility costs, people are investing in eco-friendly solutions such as:<ul class="list-disc pl-5 space-y-1 mt-2"><li>Energy-efficient windows</li><li>Solar panels</li><li>Smart thermostats</li><li>LED lighting systems</li><li>Insulated walls and roofs</li></ul>`,
           `These upgrades not only reduce energy bills but also increase home value, making them a key part of <a href="/services/home-renovation" class="text-[#D0956B] font-semibold hover:underline">home renovation trends in Stamford CT</a>.`,
@@ -2715,6 +2719,7 @@ export const blogs = [
       },
       {
         heading: "5. Smart Home Technology Integration",
+        level: 3,
         paragraphs: [
           `Technology is transforming modern homes. Many homeowners are integrating smart systems during remodeling projects, including:<ul class="list-disc pl-5 space-y-1 mt-2"><li>Voice-controlled lighting</li><li>Smart security systems</li><li>Automated blinds</li><li>Smart locks</li><li>Home automation hubs</li></ul>`,
           `Adding smart technology is becoming a standard feature in <strong>modern home remodeling in Stamford CT</strong>.`,
@@ -2722,6 +2727,7 @@ export const blogs = [
       },
       {
         heading: "6. Basement Remodeling for Extra Space",
+        level: 3,
         paragraphs: [
           `Basement remodeling is another growing trend, especially for families needing extra living space. Popular basement uses include:<ul class="list-disc pl-5 space-y-1 mt-2"><li>Home offices</li><li>Entertainment rooms</li><li>Guest suites</li><li>Home gyms</li></ul>`,
           `With remote work becoming common, homeowners are converting basements into productive and comfortable spaces. Learn more about our <a href="/services/basement-remodeling" class="text-[#D0956B] font-semibold hover:underline">basement remodeling services in Stamford CT</a>.`,
@@ -2729,6 +2735,7 @@ export const blogs = [
       },
       {
         heading: "7. Outdoor Living Space Upgrades",
+        level: 3,
         paragraphs: [
           `Outdoor areas are getting as much attention as indoor spaces. Popular outdoor remodeling trends include:<ul class="list-disc pl-5 space-y-1 mt-2"><li>Patios and decks</li><li>Outdoor kitchens</li><li>Fire pits</li><li>Landscaping upgrades</li></ul>`,
           `Creating functional outdoor spaces is a major part of <strong>home improvement trends in Stamford CT</strong>, especially for entertaining guests.`,
@@ -2736,6 +2743,7 @@ export const blogs = [
       },
       {
         heading: "8. Sustainable and Eco-Friendly Materials",
+        level: 3,
         paragraphs: [
           `Sustainability is influencing remodeling decisions more than ever. Popular eco-friendly options include:<ul class="list-disc pl-5 space-y-1 mt-2"><li>Recycled materials</li><li>Bamboo flooring</li><li>Low-VOC paints</li><li>Sustainable wood</li></ul>`,
           `Homeowners are choosing materials that are both stylish and environmentally friendly.`,
@@ -2743,6 +2751,7 @@ export const blogs = [
       },
       {
         heading: "9. Home Office Renovations",
+        level: 3,
         paragraphs: [
           `With remote work becoming a norm, dedicated home offices are now essential. Key features homeowners are prioritizing include:<ul class="list-disc pl-5 space-y-1 mt-2"><li>Soundproofing</li><li>Built-in storage</li><li>Ergonomic furniture</li><li>Natural lighting</li></ul>`,
           `<strong>Home office remodeling in Stamford CT</strong> is focused on productivity and comfort.`,
@@ -2750,6 +2759,7 @@ export const blogs = [
       },
       {
         heading: "10. Neutral and Minimalist Interior Designs",
+        level: 3,
         paragraphs: [
           `Minimalism is dominating interior design trends. Popular design choices include:<ul class="list-disc pl-5 space-y-1 mt-2"><li>Neutral color palettes (white, beige, gray)</li><li>Clean lines</li><li>Clutter-free spaces</li><li>Functional furniture</li></ul>`,
           `This trend creates a calm and modern living environment.`,
@@ -2764,6 +2774,7 @@ export const blogs = [
       },
       {
         heading: "Tips for Successful Home Remodeling",
+        level: 3,
         paragraphs: [
           `To get the best results, follow these expert tips:<ul class="list-disc pl-5 space-y-1 mt-2"><li>Plan your budget in advance</li><li>Hire experienced contractors</li><li>Focus on quality materials</li><li>Avoid over-customization</li><li>Prioritize energy efficiency</li><li>Ensure proper permits and approvals</li></ul>`,
         ],

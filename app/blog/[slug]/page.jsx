@@ -165,22 +165,29 @@ export default async function BlogPostPage({ params }) {
 
               {/* Sections */}
               <div className="space-y-10">
-                {post.sections.map((section, si) => (
-                  <div key={si}>
-                    <h2 className="text-xl md:text-2xl lg:text-[1.6rem] font-bold text-black tracking-tight leading-tight mb-4">
-                      {section.heading}
-                    </h2>
-                    <div className="space-y-3">
-                      {section.paragraphs.map((p, pi) => (
-                        <p
-                          key={pi}
-                          className="text-gray-600 text-sm md:text-base leading-relaxed"
-                          dangerouslySetInnerHTML={{ __html: p }}
-                        />
-                      ))}
+                {post.sections.map((section, si) => {
+                  const HeadingTag = section.level === 3 ? "h3" : "h2";
+                  const headingClass =
+                    section.level === 3
+                      ? "text-lg md:text-xl font-bold text-black tracking-tight leading-tight mb-3"
+                      : "text-xl md:text-2xl lg:text-[1.6rem] font-bold text-black tracking-tight leading-tight mb-4";
+                  return (
+                    <div key={si}>
+                      <HeadingTag className={headingClass}>
+                        {section.heading}
+                      </HeadingTag>
+                      <div className="space-y-3">
+                        {section.paragraphs.map((p, pi) => (
+                          <p
+                            key={pi}
+                            className="text-gray-600 text-sm md:text-base leading-relaxed"
+                            dangerouslySetInnerHTML={{ __html: p }}
+                          />
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
 
               {/* ── FAQ ── */}
