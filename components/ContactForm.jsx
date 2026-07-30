@@ -2,33 +2,54 @@
 
 import { useState } from "react";
 import { CheckCircle, AlertCircle } from "lucide-react";
+import ReCaptchaField from "./ReCaptchaField";
 
 const inputCls =
   "w-full bg-white border border-gray-200 text-gray-800 text-sm px-5 py-3.5 rounded-xl outline-none transition-colors duration-200 focus:border-zinc-900 focus:ring-2 focus:ring-zinc-900/10 appearance-none";
 
 export default function ContactForm() {
   const [status, setStatus] = useState("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [captchaToken, setCaptchaToken] = useState("");
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
 
   const handleChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!form.name || !form.email || !form.message) return;
+    if (!form.name || !form.email || !form.message) {
+      setErrorMessage("Please fill in your name, email, and message.");
+      setStatus("error");
+      return;
+    }
+
+    if (!captchaToken) {
+      setErrorMessage("Please complete the reCAPTCHA challenge.");
+      setStatus("error");
+      return;
+    }
+
     setStatus("loading");
+    setErrorMessage("");
+
     try {
       const res = await fetch("/api/email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type: "contact", ...form }),
+        body: JSON.stringify({ type: "contact", captchaToken, ...form }),
       });
+      const data = await res.json().catch(() => ({}));
+
       if (res.ok) {
         setStatus("success");
         setForm({ name: "", email: "", subject: "", message: "" });
+        setCaptchaToken("");
       } else {
+        setErrorMessage(data.error || "There was a problem sending your message. Please try again.");
         setStatus("error");
       }
     } catch {
+      setErrorMessage("There was a problem sending your message. Please try again.");
       setStatus("error");
     }
   };
@@ -44,7 +65,7 @@ export default function ContactForm() {
       {status === "error" && (
         <p className="text-red-500 text-sm flex items-center gap-2">
           <AlertCircle size={15} />
-          There was a problem sending your message. Please try again.
+          {errorMessage || "There was a problem sending your message. Please try again."}
         </p>
       )}
 
@@ -82,6 +103,8 @@ export default function ContactForm() {
         onChange={handleChange}
         required
       />
+
+      <ReCaptchaField onChange={setCaptchaToken} onExpired={() => setCaptchaToken("")} />
 
       <button
         type="submit"

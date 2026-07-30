@@ -3,32 +3,49 @@
 import { useState } from "react";
 import Image from "next/image";
 import { CheckCircle, AlertCircle, Loader } from "lucide-react";
+import ReCaptchaField from "./ReCaptchaField";
 
 const INITIAL = { name: "", phone: "", email: "", zip: "", interest: "", referral: "" };
 
 export default function HeroSection() {
-  const [form, setForm]     = useState(INITIAL);
+  const [form, setForm] = useState(INITIAL);
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
+  const [errorMessage, setErrorMessage] = useState("");
+  const [captchaToken, setCaptchaToken] = useState("");
 
   const handleChange = (e) =>
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!form.name || !form.phone || !form.email || !form.interest || !captchaToken) {
+      setErrorMessage(captchaToken ? "Please fill in the required fields." : "Please complete the reCAPTCHA challenge.");
+      setStatus("error");
+      return;
+    }
+
     setStatus("loading");
+    setErrorMessage("");
+
     try {
       const res = await fetch("/api/email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type: "lead", ...form }),
+        body: JSON.stringify({ type: "lead", captchaToken, ...form }),
       });
+      const data = await res.json().catch(() => ({}));
+
       if (res.ok) {
         setStatus("success");
         setForm(INITIAL);
+        setCaptchaToken("");
       } else {
+        setErrorMessage(data.error || "Something went wrong. Please try again or call us directly.");
         setStatus("error");
       }
     } catch {
+      setErrorMessage("Something went wrong. Please try again or call us directly.");
       setStatus("error");
     }
   };
@@ -197,7 +214,8 @@ export default function HeroSection() {
             </div>
 
             {/* Submit */}
-            <div className="w-full lg:w-auto px-2 mt-4 lg:mt-0 lg:mb-[1px]">
+            <div className="w-full lg:w-auto px-2 mt-4 lg:mt-0 lg:mb-[1px] flex flex-col items-start gap-3">
+              <ReCaptchaField onChange={setCaptchaToken} onExpired={() => setCaptchaToken("")} />
               <button
                 type="submit"
                 disabled={status === "loading"}
@@ -218,7 +236,7 @@ export default function HeroSection() {
           {status === "error" && (
             <p className="flex items-center gap-2 text-red-500 text-xs font-medium mt-3 px-3">
               <AlertCircle size={13} />
-              Something went wrong. Please try again or call us directly.
+              {errorMessage || "Something went wrong. Please try again or call us directly."}
             </p>
           )}
         </div>

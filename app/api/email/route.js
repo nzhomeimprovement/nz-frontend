@@ -226,12 +226,36 @@ NZ Home Improvement
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+async function verifyCaptcha(token) {
+  if (!token) return false;
+
+  const secret = process.env.RECAPTCHA_SECRET_KEY;
+  if (!secret) {
+    console.error("[reCAPTCHA] Missing RECAPTCHA_SECRET_KEY");
+    return false;
+  }
+
+  const response = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({ secret, response: token }),
+  });
+
+  const data = await response.json();
+  return Boolean(data.success);
+}
+
 // ─── Route handler ────────────────────────────────────────────────────────────
 
 export async function POST(req) {
   try {
     const body = await req.json();
-    const { type } = body;
+    const { type, captchaToken } = body;
+
+    const isCaptchaValid = await verifyCaptcha(captchaToken);
+    if (!isCaptchaValid) {
+      return NextResponse.json({ error: "Please complete the reCAPTCHA challenge." }, { status: 400 });
+    }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     let title, subject, replyTo, fields, customerEmail, customerName;
