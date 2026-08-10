@@ -53,6 +53,10 @@ const sections = [
     body: "NZ Home Improvement reserves the right to update these Terms of Service at any time. Changes will be posted on our website and take effect immediately upon posting. Continued use of our services constitutes acceptance of updated terms.",
   },
   {
+    title: "Image Copyright",
+    body: "All photographs of completed projects displayed on this website, including those in our portfolio gallery, are the property of NZ Home Improvement and are protected by copyright. These images may not be copied, reproduced, or used for any purpose without prior written permission. To request permission to use an image, please contact us.",
+  },
+  {
     title: "Contact Us",
     body: "If you have any questions about these Terms of Service, please contact us at info@nzhomeimprovement.com or call us at (203) 524-7974.",
   },
