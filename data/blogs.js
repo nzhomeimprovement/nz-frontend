@@ -3244,6 +3244,7 @@ export const blogs = [
     intro: [
       `A successful renovation starts with a realistic number, not a wish list. Building a solid <strong>home renovation budget Stamford CT</strong> homeowners can actually stick to requires more than adding up material costs — it means accounting for labor, permits, contingencies, and the realities of working in Connecticut's older housing stock. Here is how to approach remodeling cost planning the right way, before you ever pick up a paintbrush.`,
       `Don't forget line items like <a href="/blog/energy-efficient-windows-stamford-ct" class="text-[#D0956B] font-semibold hover:underline">energy-efficient window replacement</a> — they're easy to overlook but add up quickly if planned in late.`,
+      `Budget and schedule go hand in hand — see our <a href="/blog/home-renovation-timeline-stamford-ct" class="text-[#D0956B] font-semibold hover:underline">home renovation timeline guide</a> to plan both together.`,
     ],
     sections: [
       {
@@ -5724,6 +5725,14 @@ export const blogs = [
         level: 3,
         paragraphs: [
           `A whole-house renovation covering multiple rooms, systems, and finishes typically takes <strong>4&ndash;9 months or longer</strong>, particularly in older Stamford homes where electrical, plumbing, and structural updates are often bundled in alongside cosmetic work. Our <a href="/blog/whole-house-renovation-cost-stamford-ct" class="text-[#D0956B] font-semibold hover:underline">whole-house renovation cost guide</a> walks through how scope and sequencing affect the overall timeline.`,
+        ],
+      },
+      {
+        heading: "Timeline for Smaller Home Improvement Projects",
+        paragraphs: [
+          `Not every project is a full remodel. Smaller, single-trade projects generally move faster, though several still depend heavily on material lead times:`,
+          `<ul class="list-disc pl-5 space-y-1"><li><strong>Flooring installation:</strong> 2&ndash;5 days per room, see our <a href="/blog/flooring-stamford-ct-options-2026" class="text-[#D0956B] font-semibold hover:underline">flooring options guide</a> for material-specific timing</li><li><strong>Window replacement:</strong> 1&ndash;3 days for standard installs, though see our <a href="/blog/energy-efficient-windows-stamford-ct" class="text-[#D0956B] font-semibold hover:underline">energy-efficient windows guide</a> since custom sizes can extend lead time to several weeks</li><li><strong>Roof replacement:</strong> typically 1&ndash;3 days once materials arrive, detailed in our <a href="/blog/roof-replacement-stamford-ct" class="text-[#D0956B] font-semibold hover:underline">roof replacement guide</a></li><li><strong>Siding replacement:</strong> 1&ndash;2 weeks for an average home, covered in our <a href="/blog/siding-replacement-stamford-ct" class="text-[#D0956B] font-semibold hover:underline">siding replacement guide</a></li><li><strong>Interior or exterior painting:</strong> 2&ndash;5 days per project, weather and prep time permitting, as outlined in our <a href="/blog/interior-vs-exterior-painting-stamford-ct" class="text-[#D0956B] font-semibold hover:underline">painting timing guide</a></li></ul>`,
+          `These smaller projects are often bundled into a larger renovation timeline rather than scheduled separately, especially when they touch the same rooms or systems already under construction.`,
         ],
       },
       {
