@@ -54,10 +54,6 @@ const localBusinessSchema = {
 
 export const metadata = {
   metadataBase: new URL("https://nzhomeimprovement.com"),
-  title: {
-    default: "NZ Home Improvement | Renovation & Remodeling Stamford CT",
-    template: "%s | NZ Home Improvement",
-  },
   description:
     "NZ Home Improvement offers professional home renovation and remodeling services in Stamford, CT. Kitchen, bathroom, basement remodeling. Get free estimates.",
   keywords: [

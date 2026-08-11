@@ -1381,9 +1381,9 @@ export const blogs = [
     category: "Kitchen Remodeling",
     image: "/img/gallery/kitchen/12.jpeg",
     excerpt:
-      "Planning a kitchen renovation is exciting, but one of the most important questions homeowners ask is about the kitchen remodelling cost Stamford CT. Understanding costs helps you make informed decisions.",
+      "Planning a kitchen renovation is exciting, but one of the most important questions homeowners ask is about kitchen remodeling services in Stamford CT.. Understanding costs helps you make informed decisions.",
     intro: [
-      `Planning a kitchen renovation is exciting, but one of the most important questions homeowners ask is about the <a href="/services/kitchen-remodeling" class="text-[#D0956B] font-semibold hover:underline">kitchen remodelling cost Stamford CT</a>. Whether you are upgrading a small kitchen or planning a full transformation, understanding costs helps you make informed decisions.`,
+      `Planning a kitchen renovation is exciting, but one of the most important questions homeowners ask is about <a href="https://nzhomeimprovement.com/services/kitchen-remodeling/" class="text-[#D0956B] font-semibold hover:underline">kitchen remodeling services in Stamford CT</a>. Whether you are upgrading a small kitchen or planning a full transformation, understanding costs helps you make informed decisions.`,
       `At <strong>NZ Home Improvements</strong>, we provide a complete kitchen remodel cost guide to help homeowners in Stamford CT plan their renovation with confidence. From budgeting to design choices, every factor plays a role in determining the final cost.`,
     ],
     sections: [
