@@ -95,8 +95,20 @@ export default function PortfolioPage() {
             "contentUrl": `https://nzhomeimprovement.com${p.src}`,
             "name": p.title,
             "description": PORTFOLIO_IMAGE_DESCRIPTIONS[folder] ?? `${p.title} by NZ Home Improvement`,
-            "creator": { "@id": "https://nzhomeimprovement.com/#business" },
-            "copyrightHolder": { "@id": "https://nzhomeimprovement.com/#business" }
+            "creator": {
+              "@type": "Organization",
+              "@id": "https://nzhomeimprovement.com/#business",
+              "name": "NZ Home Improvement"
+            },
+            "copyrightHolder": {
+              "@type": "Organization",
+              "@id": "https://nzhomeimprovement.com/#business",
+              "name": "NZ Home Improvement"
+            },
+            "creditText": "NZ Home Improvement",
+            "copyrightNotice": `© ${new Date().getFullYear()} NZ Home Improvement. All rights reserved.`,
+            "license": "https://nzhomeimprovement.com/terms/",
+            "acquireLicensePage": "https://nzhomeimprovement.com/contact/"
           };
         })
     })()
