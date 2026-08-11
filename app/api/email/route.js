@@ -222,6 +222,19 @@ NZ Home Improvement
 1372 Summer St, Stamford, CT 06905, USA`;
 }
 
+// ─── reCAPTCHA verification ────────────────────────────────────────────────────
+
+async function verifyRecaptcha(token) {
+  if (!token) return false;
+  const res = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({ secret: process.env.RECAPTCHA_SECRET_KEY, response: token }),
+  });
+  const data = await res.json();
+  return data.success === true;
+}
+
 // ─── Resend client ─────────────────────────────────────────────────────────────
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -231,7 +244,14 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(req) {
   try {
     const body = await req.json();
-    const { type } = body;
+    const { type, recaptchaToken } = body;
+
+    if (type === "contact") {
+      const recaptchaOk = await verifyRecaptcha(recaptchaToken);
+      if (!recaptchaOk) {
+        return NextResponse.json({ error: "reCAPTCHA verification failed." }, { status: 400 });
+      }
+    }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     let title, subject, replyTo, fields, customerEmail, customerName;
