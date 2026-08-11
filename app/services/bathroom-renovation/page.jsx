@@ -8,9 +8,9 @@ import GoogleReviews from "@/components/GoogleReviews";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata = {
-  title: "Bathroom Renovation in Stamford CT | Affordable Bathroom Remodel Experts",
+  title: "Bathroom Renovation Stamford CT | NZ Home Improvement",
   description:
-    "Get expert bathroom renovation in Stamford CT with modern designs, cost estimates, and affordable remodeling services. Free consultation available.",
+    "Bathroom renovation in Stamford CT by NZ Home Improvement. Get custom designs, expert remodeling, and a free consultation for your bathroom project.",
   alternates: { canonical: "https://nzhomeimprovement.com/services/bathroom-renovation/" },
   openGraph: {
     url: "https://nzhomeimprovement.com/services/bathroom-renovation/",
@@ -47,24 +47,24 @@ const processSteps = [
 
 const faqs = [
   {
-    q: "How much does a small bathroom renovation cost in Stamford CT?",
-    a: "A small bathroom renovation cost typically ranges between $5,000 and $15,000 depending on materials and design.",
+    q: "How much does a bathroom renovation cost in Stamford CT?",
+    a: "Bathroom renovation costs in Stamford CT vary based on the bathroom size, materials, fixtures, layout changes, and overall project scope. NZ Home Improvement provides personalized estimates based on your project.",
   },
   {
-    q: "What is the average bathroom renovation cost?",
-    a: "The average cost of bathroom renovation in Stamford CT is between $8,000 and $25,000.",
+    q: "How much does a small bathroom remodel cost in Stamford CT?",
+    a: "A small bathroom remodel can cost less than a full renovation, depending on the materials, fixtures, and changes required. We can provide a project-specific estimate based on your bathroom and budget.",
   },
   {
-    q: "Can I renovate my bathroom on a budget?",
-    a: "Yes, we offer affordable bathroom renovation services with cost-effective solutions.",
+    q: "Can I remodel my bathroom on a budget?",
+    a: "Yes. A bathroom can be updated on a budget by choosing cost-effective materials, updating fixtures, improving storage, and focusing on the areas that need the most improvement.",
   },
   {
     q: "How long does a bathroom remodel take?",
-    a: "Most bathroom renovations take 2 to 4 weeks.",
+    a: "Most bathroom remodeling projects take around 2 to 4 weeks, although the timeline can vary depending on the size of the bathroom and whether plumbing, electrical, or structural work is required.",
   },
   {
-    q: "Do bathroom renovations increase home value?",
-    a: "Yes, they significantly improve resale value and buyer appeal.",
+    q: "Does bathroom remodeling increase home value?",
+    a: "A professionally remodeled bathroom can improve your home's appearance, functionality, and buyer appeal. The value added depends on the quality and scope of the renovation and the local market.",
   },
 ];
 
@@ -173,14 +173,11 @@ export default function BathroomRenovationPage() {
             <p className="text-gray-400 font-semibold uppercase tracking-[0.2em] text-[11px] mb-3">
               Service Detail
             </p>
-            <h2 className="text-[28px] leading-tight md:text-4xl lg:text-[2.75rem] font-bold text-black tracking-[-0.02em] mb-6">
-              Bathroom Renovation in Stamford CT – Modern, Stylish & Affordable Solutions
-            </h2>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4 lg:w-11/12">
-              If you are looking for <strong className="text-gray-800"><a href="https://nzhomeimprovement.com/services/">bathroom renovation Stamford CT</a></strong>, NZ Home Improvement provides professional and customized remodeling services designed to upgrade your space with style and functionality. Our experienced team of bathroom remodelers near you specializes in transforming old and outdated bathrooms into modern, comfortable, and visually appealing spaces.
+              If you are planning a bathroom renovation in Stamford, CT, NZ Home Improvement provides professional and customized remodeling services designed to improve your space, comfort, and functionality. Our experienced bathroom remodeling team helps homeowners transform outdated bathrooms into modern, practical, and visually appealing spaces with designs tailored to their needs and budget.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-8 lg:w-11/12">
-              Whether you are planning a full renovation or a <strong className="text-gray-800">small bathroom remodel</strong>, we focus on delivering high-quality craftsmanship tailored to your needs. A well-designed bathroom not only improves daily comfort but also increases your home&apos;s overall value and appeal. From modern fixtures to elegant tile work and smart storage solutions, we ensure every detail is carefully planned and executed to perfection.
+              Whether you are planning a complete bathroom renovation or a smaller bathroom remodel, we focus on quality craftsmanship and thoughtful design from start to finish. From modern fixtures and elegant tile work to practical layouts and smart storage solutions, every detail is carefully planned around your goals. A well-designed bathroom can improve everyday comfort, enhance your home's appeal, and add long-term value to your Stamford property.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
@@ -214,7 +211,7 @@ export default function BathroomRenovationPage() {
               Our Bathroom Renovation Services
             </h2>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed mt-4 max-w-2xl mx-auto">
-              We offer complete bathroom remodeling services in Stamford CT. From walk-in showers to floating vanities, we ensure every detail is completed with precision and high-quality craftsmanship.
+              Get expert bathroom remodeling guidance from NZ Home Improvement. Contact us today to discuss your project and receive a personalized estimate.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -284,76 +281,154 @@ export default function BathroomRenovationPage() {
 
       {/* ── Rich SEO Content ── */}
       <section className="bg-zinc-50 py-16 lg:py-20 px-4 sm:px-6 lg:px-8 font-sans">
-        <div className="max-w-4xl mx-auto space-y-12">
+  <div className="max-w-4xl mx-auto space-y-12">
 
-          <div>
-            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
-              Bathroom Renovation Cost in Stamford CT
-            </h2>
-            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
-              One of the most important factors homeowners consider is the bathroom renovation cost. If you are wondering, <strong className="text-gray-800">how much does it cost to renovate a bathroom in Stamford CT?</strong> the answer depends on several factors such as bathroom size, materials, layout changes, and design complexity.
-            </p>
-            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
-              On average, the <strong className="text-gray-800">cost of bathroom renovation in Stamford CT</strong> ranges from $8,000 to $25,000 or more for luxury upgrades. A basic small bathroom renovation cost may be lower, while high-end remodels with premium finishes can cost significantly more.
-            </p>
-            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-              We also provide <strong className="text-gray-800">affordable bathroom renovation services</strong> that are designed for homeowners who want quality upgrades within a reasonable budget. Our team provides transparent <strong className="text-gray-800">bathroom renovation cost estimates</strong> so you can plan your project without surprises.
-            </p>
-          </div>
+    {/* Bathroom Renovation Cost */}
+    <div>
+      <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
+        Bathroom Renovation Cost in Stamford CT
+      </h2>
 
-          <div>
-            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
-              Modern Bathroom Design Ideas &amp; Trends
-            </h2>
-            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
-              Design plays a key role in any successful renovation. We help homeowners explore the latest bathroom renovation ideas that combine style, comfort, and functionality. Popular trends include walk-in showers, floating vanities, LED mirrors, and minimalist designs.
-            </p>
-            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
-              For compact spaces, we offer creative <strong className="text-gray-800"><a href="http://localhost:3000/portfolio">small bathroom renovation ideas on a budget</a></strong> that maximize space efficiency without compromising on style. Smart storage solutions, light color schemes, and modern fittings can completely transform even the smallest bathrooms.
-            </p>
-            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-              Whether you prefer a luxury spa-like bathroom or a simple and modern design, our team ensures your vision becomes a reality.
-            </p>
-          </div>
+      <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+        One of the most important factors homeowners consider is the bathroom renovation cost. If you are wondering,{" "}
+        <strong className="text-gray-800">
+          how much does it cost to renovate a bathroom in Stamford CT?
+        </strong>{" "}
+        the answer depends on several factors such as bathroom size, materials, layout changes, and design complexity.
+      </p>
 
-          <div>
-            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
-              How Long Does a Bathroom Renovation Take?
-            </h2>
-            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
-              A common question homeowners ask is, <strong className="text-gray-800">how long does a bathroom renovation take?</strong> The timeline depends on the size and complexity of the project. On average, a <strong className="text-gray-800">bathroom remodel in Stamford CT</strong> takes between 2 to 4 weeks.
-            </p>
-            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-              Smaller projects may be completed faster, while larger renovations involving plumbing or structural changes may take longer. We always focus on efficient project management to minimize disruption in your home.
-            </p>
-          </div>
+      <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+        On average, the{" "}
+        <strong className="text-gray-800">
+          cost of bathroom renovation in Stamford CT
+        </strong>{" "}
+        ranges from $8,000 to $25,000 or more for luxury upgrades. A basic small bathroom renovation cost may be lower, while high-end remodels with premium finishes can cost significantly more.
+      </p>
 
-          <div>
-            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
-              Why Choose Our Bathroom Renovation Services?
-            </h2>
-            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
-              Choosing the right contractor for <strong className="text-gray-800">bathroom renovation in Stamford CT</strong> is essential for achieving long-lasting results. At <strong className="text-gray-800"><a href="https://nzhomeimprovement.com/">NZ Home Improvement</a></strong>, we are committed to delivering top-quality workmanship, reliable service, and customer satisfaction.
-            </p>
-            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-              We use high-quality materials, modern techniques, and expert craftsmanship to ensure your bathroom is not only beautiful but also durable. Whether you are searching for <strong className="text-gray-800">bathroom remodel near you</strong> or a complete renovation solution, we are your trusted local experts.
-            </p>
-          </div>
+      <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+        We also provide{" "}
+        <strong className="text-gray-800">
+          affordable bathroom renovation services
+        </strong>{" "}
+        that are designed for homeowners who want quality upgrades within a reasonable budget. Our team provides transparent{" "}
+        <strong className="text-gray-800">
+          bathroom renovation cost estimates
+        </strong>{" "}
+        so you can plan your project without surprises.
+      </p>
+    </div>
 
-          <div>
-            <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
-              Increase Your Home Value with Bathroom Remodeling
-            </h2>
-            <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
-              A professionally renovated bathroom is one of the best investments you can make in your home. A modern and functional bathroom significantly increases property value and improves buyer interest.
-            </p>
-            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-              Even small upgrades such as new tiles, updated fixtures, or improved lighting can make a big difference. Our <strong className="text-gray-800">bathroom renovation services</strong> are designed to deliver maximum value and long-term benefits.
-            </p>
-          </div>
+    {/* Bathroom Design Ideas */}
+    <div>
+      <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
+        Modern Bathroom Design Ideas &amp; Trends
+      </h2>
 
-        </div>
-      </section>
+      <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+        Design plays a key role in any successful renovation. We help homeowners explore the latest{" "}
+        <strong className="text-gray-800">
+          bathroom renovation ideas
+        </strong>{" "}
+        that combine style, comfort, and functionality. Popular trends include walk-in showers, floating vanities, LED mirrors, and minimalist designs.
+      </p>
+
+      <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+        For compact spaces, we offer creative{" "}
+        <strong className="text-gray-800">
+          <a
+            href="/blog/bathroom-remodel-ideas-small-bathrooms-stamford-ct/"
+            className="hover:underline"
+          >
+            small bathroom renovation ideas on a budget
+          </a>
+        </strong>{" "}
+        that maximize space efficiency without compromising on style. Smart storage solutions, light color schemes, and modern fittings can completely transform even the smallest bathrooms.
+      </p>
+
+      <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+        Whether you prefer a luxury spa-like bathroom or a simple and modern design, our team ensures your vision becomes a reality.
+      </p>
+    </div>
+
+    {/* Bathroom Renovation Timeline */}
+    <div>
+      <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
+        How Long Does a Bathroom Renovation Take?
+      </h2>
+
+      <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+        A common question homeowners ask is,{" "}
+        <strong className="text-gray-800">
+          how long does a bathroom renovation take?
+        </strong>{" "}
+        The timeline depends on the size and complexity of the project. On average, a{" "}
+        <strong className="text-gray-800">
+          bathroom remodel in Stamford CT
+        </strong>{" "}
+        takes between 2 to 4 weeks.
+      </p>
+
+      <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+        Smaller projects may be completed faster, while larger renovations involving plumbing or structural changes may take longer. We always focus on efficient project management to minimize disruption in your home.
+      </p>
+    </div>
+
+    {/* Why Choose NZ Home Improvement */}
+    <div>
+      <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
+        Why Choose NZ Home Improvement for Bathroom Remodeling in Stamford CT?
+      </h2>
+
+      <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+        Choosing the right contractor for{" "}
+        <strong className="text-gray-800">
+          bathroom renovation in Stamford CT
+        </strong>{" "}
+        is essential for achieving long-lasting results. At{" "}
+        <strong className="text-gray-800">
+          <a href="/" className="hover:underline">
+            NZ Home Improvement
+          </a>
+        </strong>
+        , we are committed to delivering top-quality workmanship, reliable service, and customer satisfaction.
+      </p>
+
+      <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+        We use high-quality materials, modern techniques, and expert craftsmanship to ensure your bathroom is not only beautiful but also durable. Explore our{" "}
+        <strong className="text-gray-800">
+          <a href="/services/" className="hover:underline">
+            home remodeling services
+          </a>
+        </strong>{" "}
+        to see how we can help improve your bathroom and other areas of your home. Whether you are searching for{" "}
+        <strong className="text-gray-800">
+          bathroom remodeling near you
+        </strong>{" "}
+        or a complete renovation solution, we are your trusted local experts.
+      </p>
+    </div>
+
+    {/* Home Value */}
+    <div>
+      <h2 className="text-2xl md:text-[28px] font-bold text-black tracking-tight leading-tight mb-4">
+        How Bathroom Remodeling Can Increase Your Stamford CT Home Value
+      </h2>
+
+      <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
+        A professionally renovated bathroom is one of the best investments you can make in your home. A modern and functional bathroom can improve everyday comfort, enhance your home's appeal, and increase buyer interest.
+      </p>
+
+      <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+        Even small upgrades such as new tiles, updated fixtures, or improved lighting can make a big difference. Our{" "}
+        <strong className="text-gray-800">
+          bathroom renovation services
+        </strong>{" "}
+        are designed to deliver lasting value and practical benefits for Stamford homeowners.
+      </p>
+    </div>
+
+  </div>
+</section>
 
       {/* ── FAQ ── */}
       <section className="bg-white py-16 lg:py-24 px-4 sm:px-6 lg:px-8 font-sans">
