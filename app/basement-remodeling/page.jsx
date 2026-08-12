@@ -345,7 +345,7 @@ export default function BasementRemodelingPage() {
               Why Choose Our Basement Remodeling Services?
             </h2>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
-              Choosing the right contractor is important for a successful renovation. At NZ Home Improvement, we are trusted experts in <strong className="text-gray-800">basement remodeling Stamford CT</strong>, known for quality work, reliable service, and customer satisfaction.
+              Choosing the right contractor is important for a successful renovation. At <strong className="text-gray-800"><a href="https://nzhomeimprovement.com/">NZ Home Improvement</a></strong>, we are trusted experts in <strong className="text-gray-800">basement remodeling Stamford CT</strong>, known for quality work, reliable service, and customer satisfaction.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed">
               We use high-quality materials, modern techniques, and skilled craftsmanship to ensure long-lasting results. Whether you are searching for <strong className="text-gray-800">basement remodelers near you</strong> or a complete renovation solution, we are your trusted local experts.
@@ -360,7 +360,7 @@ export default function BasementRemodelingPage() {
               A finished basement is one of the best ways to increase property value. It adds functional square footage and makes your home more attractive to buyers.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-              Even small improvements like better lighting, flooring, and layout changes can significantly enhance the space. Our <strong className="text-gray-800">basement remodeling services</strong> are designed to deliver maximum return on investment.
+              Even small improvements like better lighting, flooring, and layout changes can significantly enhance the space. Our <strong className="text-gray-800"><a href="https://nzhomeimprovement.com/services/">basement remodeling services</a></strong> are designed to deliver maximum return on investment.
             </p>
           </div>
 
