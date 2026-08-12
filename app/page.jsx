@@ -78,11 +78,11 @@ const businessSchema = {
     "@type": "OfferCatalog",
     "name": "Home Remodeling Services",
     "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitchen Remodeling", "@id": "https://nzhomeimprovement.com/services/kitchen-remodeling/#service" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bathroom Renovation", "@id": "https://nzhomeimprovement.com/services/bathroom-renovation/#service" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Renovation", "@id": "https://nzhomeimprovement.com/services/home-renovation/#service" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Basement Remodeling", "@id": "https://nzhomeimprovement.com/services/basement-remodeling/#service" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Addition", "@id": "https://nzhomeimprovement.com/services/home-addition/#service" } }
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitchen Remodeling", "@id": "https://nzhomeimprovement.com/kitchen-remodeling/#service" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bathroom Renovation", "@id": "https://nzhomeimprovement.com/bathroom-renovation/#service" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Renovation", "@id": "https://nzhomeimprovement.com/home-renovation/#service" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Basement Remodeling", "@id": "https://nzhomeimprovement.com/basement-remodeling/#service" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Addition", "@id": "https://nzhomeimprovement.com/home-addition/#service" } }
     ]
   },
   "sameAs": [
@@ -285,7 +285,7 @@ const services = [
     title: "Basement Remodeling",
     subtitle: "Transform Unused Space",
     img: "/img/full/21.jpg",
-    href: "/services/basement-remodeling",
+    href: "/basement-remodeling",
     sizeClasses: "w-[180px] lg:w-[240px] xl:w-[280px] h-[340px] lg:h-[440px] xl:h-[480px] hidden md:block rounded-xl lg:rounded-2xl opacity-60 hover:opacity-100 transition-opacity",
   },
   {
@@ -293,7 +293,7 @@ const services = [
     title: "Bathroom Renovation",
     subtitle: "Elegant Upgrade",
     img: "/img/portfolio/28.jpg",
-    href: "/services/bathroom-renovation",
+    href: "/bathroom-renovation",
     sizeClasses: "w-[240px] lg:w-[300px] xl:w-[340px] h-[400px] lg:h-[500px] xl:h-[540px] hidden sm:block rounded-2xl lg:rounded-3xl shrink-0 z-10",
   },
   {
@@ -301,7 +301,7 @@ const services = [
     title: "Kitchen Remodeling",
     subtitle: "Gather Together",
     img: "/img/portfolio/2.jpg",
-    href: "/services/kitchen-remodeling",
+    href: "/kitchen-remodeling",
     sizeClasses: "w-[300px] sm:w-[340px] lg:w-[400px] xl:w-[460px] h-[480px] lg:h-[600px] xl:h-[640px] rounded-[32px] lg:rounded-[40px] shrink-0 z-20 shadow-2xl relative bottom-1",
     isCenter: true,
   },
@@ -310,7 +310,7 @@ const services = [
     title: "Home Renovation",
     subtitle: "Full Home Transformation",
     img: "/img/full/11.jpg",
-    href: "/services/home-renovation",
+    href: "/home-renovation",
     sizeClasses: "w-[240px] lg:w-[300px] xl:w-[340px] h-[400px] lg:h-[500px] xl:h-[540px] hidden sm:block rounded-2xl lg:rounded-3xl shrink-0 z-10",
   },
   {
@@ -318,7 +318,7 @@ const services = [
     title: "Home Addition",
     subtitle: "Custom Expansion",
     img: "/img/full/25.jpg",
-    href: "/services/home-addition",
+    href: "/home-addition",
     sizeClasses: "w-[180px] lg:w-[240px] xl:w-[280px] h-[340px] lg:h-[440px] xl:h-[480px] hidden md:block rounded-xl lg:rounded-2xl opacity-60 hover:opacity-100 transition-opacity",
   },
 ];
@@ -523,7 +523,7 @@ export default function HomePage() {
               If you are searching for a dependable <strong className="text-gray-800">general contractor Stamford CT</strong>, <strong className="text-gray-800">NZ Home Improvements</strong> is your trusted partner for high-quality residential and commercial construction services. We specialize in delivering customized solutions for homeowners and businesses looking to upgrade, expand, or completely transform their spaces.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-              As one of the <Link href="/services/home-renovation" className="text-[#D0956B] font-semibold hover:underline">best home renovation general contractors</Link>, we understand that every project requires attention to detail, proper planning, and expert execution. Whether you need a full home remodel, a kitchen upgrade, or commercial construction services, our experienced team ensures exceptional results tailored to your needs.
+              As one of the <Link href="/home-renovation" className="text-[#D0956B] font-semibold hover:underline">best home renovation general contractors</Link>, we understand that every project requires attention to detail, proper planning, and expert execution. Whether you need a full home remodel, a kitchen upgrade, or commercial construction services, our experienced team ensures exceptional results tailored to your needs.
             </p>
           </div>
 
@@ -551,7 +551,7 @@ export default function HomePage() {
                 Your home should be a reflection of your lifestyle, and our <strong className="text-gray-800">general contractor home remodel</strong> services are designed to create spaces that are both functional and visually appealing. NZ Home Improvements works closely with homeowners to transform outdated spaces into modern environments that enhance comfort and usability.
               </p>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-                As one of the <Link href="/services/home-renovation" className="text-[#D0956B] font-semibold hover:underline">best Home Renovation general contractors</Link>, we focus on improving layout, maximizing space, and using high-quality materials that ensure durability and long-term value. Whether you want to renovate a single room or your entire home, our team delivers results that exceed expectations.
+                As one of the <Link href="/home-renovation" className="text-[#D0956B] font-semibold hover:underline">best Home Renovation general contractors</Link>, we focus on improving layout, maximizing space, and using high-quality materials that ensure durability and long-term value. Whether you want to renovate a single room or your entire home, our team delivers results that exceed expectations.
               </p>
             </div>
           </div>
@@ -563,7 +563,7 @@ export default function HomePage() {
                 Professional General Contractor Kitchen Remodel and Kitchen General Contractor Services
               </h2>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-3">
-                The kitchen is the heart of any home, and upgrading it requires expertise and careful planning. NZ Home Improvements offers <Link href="/services/kitchen-remodeling" className="text-[#D0956B] font-semibold hover:underline">general contractor kitchen remodel</Link> services that transform kitchens into stylish and functional spaces.
+                The kitchen is the heart of any home, and upgrading it requires expertise and careful planning. NZ Home Improvements offers <Link href="/kitchen-remodeling" className="text-[#D0956B] font-semibold hover:underline">general contractor kitchen remodel</Link> services that transform kitchens into stylish and functional spaces.
               </p>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-3">
                 As a dedicated <strong className="text-gray-800">kitchen general contractor</strong>, we handle everything from custom cabinetry and countertops to lighting and flooring. Our goal is to create kitchens that are not only beautiful but also practical for everyday use.
@@ -577,7 +577,7 @@ export default function HomePage() {
                 Best Bathroom Renovation General Contractors for Modern and Luxury Bathrooms
               </h2>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-3">
-                Bathrooms play a vital role in daily comfort, and upgrading them can significantly improve your home&apos;s value. NZ Home Improvements is proud to be among the <Link href="/services/bathroom-renovation" className="text-[#D0956B] font-semibold hover:underline">best Bathroom Renovation general contractors</Link>, delivering high-quality bathroom remodeling solutions.
+                Bathrooms play a vital role in daily comfort, and upgrading them can significantly improve your home&apos;s value. NZ Home Improvements is proud to be among the <Link href="/bathroom-renovation" className="text-[#D0956B] font-semibold hover:underline">best Bathroom Renovation general contractors</Link>, delivering high-quality bathroom remodeling solutions.
               </p>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-3">
                 Our team focuses on creating modern and functional bathrooms with efficient layouts, stylish fixtures, and high-quality finishes. Whether you want a simple update or a complete transformation, we ensure that every detail is handled professionally.
@@ -595,7 +595,7 @@ export default function HomePage() {
                 Best Basement Remodeling General Contractors for Functional Living Spaces
               </h2>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-3">
-                Basements are often underutilized, but with the right design, they can become one of the most valuable areas of your home. NZ Home Improvements is recognized as one of the <Link href="/services/basement-remodeling" className="text-[#D0956B] font-semibold hover:underline">best Basement Remodeling general contractors</Link>, offering innovative solutions for basement transformation.
+                Basements are often underutilized, but with the right design, they can become one of the most valuable areas of your home. NZ Home Improvements is recognized as one of the <Link href="/basement-remodeling" className="text-[#D0956B] font-semibold hover:underline">best Basement Remodeling general contractors</Link>, offering innovative solutions for basement transformation.
               </p>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-3">
                 Our services include converting basements into home offices, entertainment rooms, gyms, or guest suites. We focus on proper insulation, lighting, and ventilation to create comfortable and usable spaces.
@@ -609,7 +609,7 @@ export default function HomePage() {
                 General Contractors for Home Additions Near Me to Expand Your Living Space
               </h2>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-3">
-                If your current home no longer meets your needs, expanding it can be a practical solution. NZ Home Improvements is among the most trusted <Link href="/services/home-addition" className="text-[#D0956B] font-semibold hover:underline">general contractors for home additions near me</Link>, providing customized solutions for homeowners in Stamford CT.
+                If your current home no longer meets your needs, expanding it can be a practical solution. NZ Home Improvements is among the most trusted <Link href="/home-addition" className="text-[#D0956B] font-semibold hover:underline">general contractors for home additions near me</Link>, providing customized solutions for homeowners in Stamford CT.
               </p>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-3">
                 We specialize in building additional rooms, second-story extensions, and other structural upgrades that blend seamlessly with your existing home. Our team ensures that every addition is designed with both functionality and aesthetics in mind.

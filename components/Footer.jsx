@@ -23,11 +23,11 @@ const quickLinks = [
 ];
 
 const serviceLinks = [
-  { href: "/services/kitchen-remodeling",  label: "Kitchen Remodeling" },
-  { href: "/services/bathroom-renovation", label: "Bathroom Renovation" },
-  { href: "/services/home-renovation",     label: "Home Renovation" },
-  { href: "/services/basement-remodeling", label: "Basement Remodeling" },
-  { href: "/services/home-addition",       label: "Home Addition" },
+  { href: "/kitchen-remodeling",  label: "Kitchen Remodeling" },
+  { href: "/bathroom-renovation", label: "Bathroom Renovation" },
+  { href: "/home-renovation",     label: "Home Renovation" },
+  { href: "/basement-remodeling", label: "Basement Remodeling" },
+  { href: "/home-addition",       label: "Home Addition" },
 ];
 
 export default function Footer() {

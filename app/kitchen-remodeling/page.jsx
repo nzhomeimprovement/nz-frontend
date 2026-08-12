@@ -11,9 +11,9 @@ export const metadata = {
   title: "Kitchen Remodeling Stamford CT | NZ Home Improvement",
   description:
     "Kitchen remodeling in Stamford CT by NZ Home Improvement. Get custom designs, expert remodeling, and a free consultation for your kitchen project",
-  alternates: { canonical: "https://nzhomeimprovement.com/services/kitchen-remodeling/" },
+  alternates: { canonical: "https://nzhomeimprovement.com/kitchen-remodeling/" },
   openGraph: {
-    url: "https://nzhomeimprovement.com/services/kitchen-remodeling/",
+    url: "https://nzhomeimprovement.com/kitchen-remodeling/",
     title: "Kitchen Remodeling in Stamford CT | Affordable Kitchen Remodel Experts",
     description:
       "Looking for kitchen remodeling in Stamford CT? Get expert remodelers, modern design ideas, and accurate kitchen remodel cost estimates. Free consultation available.",
@@ -78,18 +78,18 @@ const breadcrumbSchema = {
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nzhomeimprovement.com/" },
     { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://nzhomeimprovement.com/services/" },
-    { "@type": "ListItem", "position": 3, "name": "Kitchen Remodeling", "item": "https://nzhomeimprovement.com/services/kitchen-remodeling/" }
+    { "@type": "ListItem", "position": 3, "name": "Kitchen Remodeling", "item": "https://nzhomeimprovement.com/kitchen-remodeling/" }
   ]
 };
 
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://nzhomeimprovement.com/services/kitchen-remodeling/#service",
+  "@id": "https://nzhomeimprovement.com/kitchen-remodeling/#service",
   "serviceType": "Kitchen Remodeling",
   "name": "Kitchen Remodeling Stamford CT",
   "description": "Professional kitchen remodeling services in Stamford CT. Modern designs, custom cabinets, countertops, and full kitchen renovations.",
-  "url": "https://nzhomeimprovement.com/services/kitchen-remodeling/",
+  "url": "https://nzhomeimprovement.com/kitchen-remodeling/",
   "provider": { "@id": "https://nzhomeimprovement.com/#business" },
   "areaServed": [
     { "@type": "City", "name": "Stamford", "addressRegion": "CT" },
@@ -331,7 +331,14 @@ export default function KitchenRemodelingPage() {
             kitchen remodeling ideas in Stamford CT
           </a>
         </strong>{" "}
-        to create spaces that are both functional and visually appealing. Popular trends include open-concept layouts, smart storage solutions, quartz countertops, and energy-efficient appliances.
+        to create spaces that are both functional and visually appealing. Popular trends include open-concept layouts, smart storage solutions, quartz countertops, and energy-efficient appliances. For help weighing materials, see our{" "}
+        <a
+          href="/blog/kitchen-countertop-materials-stamford-ct/"
+          className="hover:underline"
+        >
+          kitchen countertop materials guide
+        </a>
+        .
       </p>
 
       <p className="text-gray-500 text-sm md:text-base leading-relaxed">
@@ -404,7 +411,14 @@ export default function KitchenRemodelingPage() {
         <strong className="text-gray-800">
           kitchen remodeling near you
         </strong>
-        .
+        . Not sure what to look for in a contractor? Our{" "}
+        <a
+          href="/blog/how-to-choose-kitchen-remodeling-contractor-stamford-ct/"
+          className="text-gray-800 font-semibold hover:underline"
+        >
+          guide to choosing a kitchen remodeling contractor
+        </a>{" "}
+        walks through exactly what to ask before you sign.
       </p>
     </div>
 

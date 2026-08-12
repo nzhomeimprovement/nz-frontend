@@ -11,9 +11,9 @@ export const metadata = {
   title: "Bathroom Renovation Stamford CT | NZ Home Improvement",
   description:
     "Bathroom renovation in Stamford CT by NZ Home Improvement. Get custom designs, expert remodeling, and a free consultation for your bathroom project.",
-  alternates: { canonical: "https://nzhomeimprovement.com/services/bathroom-renovation/" },
+  alternates: { canonical: "https://nzhomeimprovement.com/bathroom-renovation/" },
   openGraph: {
-    url: "https://nzhomeimprovement.com/services/bathroom-renovation/",
+    url: "https://nzhomeimprovement.com/bathroom-renovation/",
     title: "Bathroom Renovation in Stamford CT | Affordable Bathroom Remodel Experts",
     description:
       "Get expert bathroom renovation in Stamford CT with modern designs, cost estimates, and affordable remodeling services. Free consultation available.",
@@ -74,18 +74,18 @@ const breadcrumbSchema = {
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nzhomeimprovement.com/" },
     { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://nzhomeimprovement.com/services/" },
-    { "@type": "ListItem", "position": 3, "name": "Bathroom Renovation", "item": "https://nzhomeimprovement.com/services/bathroom-renovation/" }
+    { "@type": "ListItem", "position": 3, "name": "Bathroom Renovation", "item": "https://nzhomeimprovement.com/bathroom-renovation/" }
   ]
 };
 
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://nzhomeimprovement.com/services/bathroom-renovation/#service",
+  "@id": "https://nzhomeimprovement.com/bathroom-renovation/#service",
   "serviceType": "Bathroom Renovation",
   "name": "Bathroom Renovation Stamford CT",
   "description": "Professional bathroom renovation services in Stamford CT. Modern designs, tile work, fixtures, and full bathroom remodels.",
-  "url": "https://nzhomeimprovement.com/services/bathroom-renovation/",
+  "url": "https://nzhomeimprovement.com/bathroom-renovation/",
   "provider": { "@id": "https://nzhomeimprovement.com/#business" },
   "areaServed": [
     { "@type": "City", "name": "Stamford", "addressRegion": "CT" },
@@ -314,7 +314,14 @@ export default function BathroomRenovationPage() {
         <strong className="text-gray-800">
           bathroom renovation cost estimates
         </strong>{" "}
-        so you can plan your project without surprises.
+        so you can plan your project without surprises. For a complete pricing breakdown, see our{" "}
+        <a
+          href="/blog/bathroom-remodeling-cost-stamford-ct/"
+          className="hover:underline"
+        >
+          bathroom remodeling cost guide
+        </a>
+        .
       </p>
     </div>
 
@@ -329,7 +336,14 @@ export default function BathroomRenovationPage() {
         <strong className="text-gray-800">
           bathroom renovation ideas
         </strong>{" "}
-        that combine style, comfort, and functionality. Popular trends include walk-in showers, floating vanities, LED mirrors, and minimalist designs.
+        that combine style, comfort, and functionality. Popular trends include{" "}
+        <a
+          href="/blog/walk-in-shower-vs-bathtub-stamford-ct/"
+          className="hover:underline"
+        >
+          walk-in showers
+        </a>
+        , floating vanities, LED mirrors, and minimalist designs.
       </p>
 
       <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
@@ -423,7 +437,14 @@ export default function BathroomRenovationPage() {
         <strong className="text-gray-800">
           bathroom renovation services
         </strong>{" "}
-        are designed to deliver lasting value and practical benefits for Stamford homeowners.
+        are designed to deliver lasting value and practical benefits for Stamford homeowners. Learn more about{" "}
+        <a
+          href="/blog/home-remodeling-roi-stamford-ct-2026/"
+          className="hover:underline"
+        >
+          home remodeling ROI in Stamford CT
+        </a>
+        .
       </p>
     </div>
 

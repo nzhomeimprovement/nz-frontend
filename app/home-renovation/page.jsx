@@ -11,9 +11,9 @@ export const metadata = {
   title: "Home Renovation in Stamford CT | Trusted Home Remodeling Contractor",
   description:
     "Get professional home renovation in Stamford CT with expert contractors, modern designs, and affordable remodeling services. Free estimate available.",
-  alternates: { canonical: "https://nzhomeimprovement.com/services/home-renovation/" },
+  alternates: { canonical: "https://nzhomeimprovement.com/home-renovation/" },
   openGraph: {
-    url: "https://nzhomeimprovement.com/services/home-renovation/",
+    url: "https://nzhomeimprovement.com/home-renovation/",
     title: "Home Renovation in Stamford CT | Trusted Home Remodeling Contractor",
     description:
       "Get professional home renovation in Stamford CT with expert contractors, modern designs, and affordable remodeling services. Free estimate available.",
@@ -74,18 +74,18 @@ const breadcrumbSchema = {
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nzhomeimprovement.com/" },
     { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://nzhomeimprovement.com/services/" },
-    { "@type": "ListItem", "position": 3, "name": "Home Renovation", "item": "https://nzhomeimprovement.com/services/home-renovation/" }
+    { "@type": "ListItem", "position": 3, "name": "Home Renovation", "item": "https://nzhomeimprovement.com/home-renovation/" }
   ]
 };
 
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://nzhomeimprovement.com/services/home-renovation/#service",
+  "@id": "https://nzhomeimprovement.com/home-renovation/#service",
   "serviceType": "Home Renovation",
   "name": "Home Renovation Stamford CT",
   "description": "Professional home renovation services in Stamford CT. Full home remodels, interior upgrades, structural improvements, and custom renovations.",
-  "url": "https://nzhomeimprovement.com/services/home-renovation/",
+  "url": "https://nzhomeimprovement.com/home-renovation/",
   "provider": { "@id": "https://nzhomeimprovement.com/#business" },
   "areaServed": [
     { "@type": "City", "name": "Stamford", "addressRegion": "CT" },
@@ -177,7 +177,7 @@ export default function HomeRenovationPage() {
               Home Renovation in Stamford CT – Full Service Remodeling Solutions
             </h2>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4 lg:w-11/12">
-              If you are looking for home renovation Stamford CT, <strong className="text-gray-800"><a href="https://nzhomeimprovement.com/">NZ Home Improvement</a></strong> provides complete remodeling solutions designed to upgrade your entire living space. As an experienced home renovation contractor near you, we handle everything from small upgrades to full home transformations with a focus on quality, functionality, and modern design.
+              If you are looking for home renovation Stamford CT, <strong className="text-gray-800"><a href="/">NZ Home Improvement</a></strong> provides complete remodeling solutions designed to upgrade your entire living space. As an experienced home renovation contractor near you, we handle everything from small upgrades to full home transformations with a focus on quality, functionality, and modern design.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-8 lg:w-11/12">
               <strong className="text-gray-800">Home renovation</strong> is not just about improving appearance, it is about creating a more comfortable, efficient, and valuable living environment. Whether you want to update a single room or renovate your whole house, our team ensures every project is completed with precision and care.
@@ -294,7 +294,7 @@ export default function HomeRenovationPage() {
               One of the most important questions homeowners ask is about the <strong className="text-gray-800">home renovation cost in Stamford CT</strong>. The cost depends on the size of the home, materials used, and the level of renovation required.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
-              On average, a basic renovation may start from $20,000, while a full <strong className="text-gray-800"><a href="https://nzhomeimprovement.com/portfolio">home renovation project</a></strong> can go above $100,000 depending on customization and upgrades. We provide clear and detailed home renovation cost estimate so you can plan your project without confusion or hidden charges.
+              On average, a basic renovation may start from $20,000, while a full <strong className="text-gray-800"><a href="/portfolio">home renovation project</a></strong> can go above $100,000 depending on customization and upgrades. We provide clear and detailed home renovation cost estimate so you can plan your project without confusion or hidden charges. For a complete 2026 cost breakdown, see our <a href="/blog/home-remodeling-cost-stamford-ct" className="text-gray-800 font-semibold hover:underline">home remodeling cost guide</a>.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed">
               We also offer <strong className="text-gray-800">affordable home renovation options</strong> for homeowners who want to upgrade their space while staying within budget.
@@ -321,7 +321,7 @@ export default function HomeRenovationPage() {
               Modern home renovation focuses on open spaces, natural lighting, energy efficiency, and smart storage solutions. Popular <strong className="text-gray-800">home renovation ideas</strong> include open-concept living rooms, modern kitchens, upgraded bathrooms, and finished basements.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-              We also follow the latest design trends to ensure your home looks modern and stylish while remaining practical for everyday use. Whether you prefer a luxury design or a simple modern upgrade, we tailor everything to your vision.
+              We also follow the latest design trends to ensure your home looks modern and stylish while remaining practical for everyday use. Whether you prefer a luxury design or a simple modern upgrade, we tailor everything to your vision. For more inspiration, see our <a href="/blog/home-remodeling-trends-stamford-ct" className="text-gray-800 font-semibold hover:underline">home remodeling trends guide</a>.
             </p>
           </div>
 
@@ -330,7 +330,7 @@ export default function HomeRenovationPage() {
               Why Choose Our Home Renovation Services?
             </h2>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
-              Choosing the right contractor is essential for a successful renovation. We are trusted experts in <strong className="text-gray-800"><a href="https://nzhomeimprovement.com/services">home renovation Stamford CT</a></strong> with years of experience in delivering high-quality residential projects.
+              Choosing the right contractor is essential for a successful renovation. We are trusted experts in <strong className="text-gray-800"><a href="/services">home renovation Stamford CT</a></strong> with years of experience in delivering high-quality residential projects.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed">
               We focus on quality workmanship, transparent pricing, and customer satisfaction. Our team uses durable materials and modern techniques to ensure long-lasting results. Every project is handled professionally from start to finish.
@@ -345,7 +345,7 @@ export default function HomeRenovationPage() {
               <strong className="text-gray-800">Home renovation</strong> is one of the best ways to increase property value. Updated kitchens, modern bathrooms, and improved layouts significantly increase resale potential. Even small upgrades can make a big difference in market appeal.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-              If you are planning to sell your home in the future, renovation is a smart investment that can deliver strong returns.
+              If you are planning to sell your home in the future, renovation is a smart investment that can deliver strong returns. Read our full <a href="/blog/home-remodeling-roi-stamford-ct-2026" className="text-gray-800 font-semibold hover:underline">home remodeling ROI guide</a> to see the numbers by project type.
             </p>
           </div>
 

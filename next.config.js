@@ -5,11 +5,17 @@ const nextConfig = {
   async redirects() {
     return [
       // Old service canonical URLs
-      { source: "/services/kitchen-remodeling-stamford-ct",  destination: "/services/kitchen-remodeling",  permanent: true },
-      { source: "/services/bathroom-renovation-stamford-ct", destination: "/services/bathroom-renovation", permanent: true },
-      { source: "/services/basement-remodeling-stamford-ct", destination: "/services/basement-remodeling", permanent: true },
-      { source: "/services/home-renovation-stamford-ct",     destination: "/services/home-renovation",     permanent: true },
-      { source: "/services/home-addition-stamford-ct",       destination: "/services/home-addition",       permanent: true },
+      { source: "/services/kitchen-remodeling-stamford-ct",  destination: "/kitchen-remodeling",  permanent: true },
+      { source: "/services/bathroom-renovation-stamford-ct", destination: "/bathroom-renovation", permanent: true },
+      { source: "/services/basement-remodeling-stamford-ct", destination: "/basement-remodeling", permanent: true },
+      { source: "/services/home-renovation-stamford-ct",     destination: "/home-renovation",     permanent: true },
+      { source: "/services/home-addition-stamford-ct",       destination: "/home-addition",       permanent: true },
+      // Service pages moved out from under /services
+      { source: "/services/kitchen-remodeling",  destination: "/kitchen-remodeling",  permanent: true },
+      { source: "/services/bathroom-renovation", destination: "/bathroom-renovation", permanent: true },
+      { source: "/services/basement-remodeling", destination: "/basement-remodeling", permanent: true },
+      { source: "/services/home-renovation",     destination: "/home-renovation",     permanent: true },
+      { source: "/services/home-addition",       destination: "/home-addition",       permanent: true },
       // Old .html URLs
       { source: "/index.html",     destination: "/",          permanent: true },
       { source: "/home.html",      destination: "/",          permanent: true },

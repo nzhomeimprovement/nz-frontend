@@ -11,9 +11,9 @@ export const metadata = {
   title: "Basement Remodeling in Stamford CT | Expert Basement Finishing Services",
   description:
     "Get professional basement remodeling in Stamford CT with cost estimates, modern ideas, and affordable renovation services near you.",
-  alternates: { canonical: "https://nzhomeimprovement.com/services/basement-remodeling/" },
+  alternates: { canonical: "https://nzhomeimprovement.com/basement-remodeling/" },
   openGraph: {
-    url: "https://nzhomeimprovement.com/services/basement-remodeling/",
+    url: "https://nzhomeimprovement.com/basement-remodeling/",
     title: "Basement Remodeling in Stamford CT | Expert Basement Finishing Services",
     description:
       "Get professional basement remodeling in Stamford CT with cost estimates, modern ideas, and affordable renovation services near you.",
@@ -74,18 +74,18 @@ const breadcrumbSchema = {
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nzhomeimprovement.com/" },
     { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://nzhomeimprovement.com/services/" },
-    { "@type": "ListItem", "position": 3, "name": "Basement Remodeling", "item": "https://nzhomeimprovement.com/services/basement-remodeling/" }
+    { "@type": "ListItem", "position": 3, "name": "Basement Remodeling", "item": "https://nzhomeimprovement.com/basement-remodeling/" }
   ]
 };
 
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://nzhomeimprovement.com/services/basement-remodeling/#service",
+  "@id": "https://nzhomeimprovement.com/basement-remodeling/#service",
   "serviceType": "Basement Remodeling",
   "name": "Basement Remodeling Stamford CT",
   "description": "Professional basement remodeling and finishing services in Stamford CT. Transform your basement into a living space, home office, gym, or entertainment area.",
-  "url": "https://nzhomeimprovement.com/services/basement-remodeling/",
+  "url": "https://nzhomeimprovement.com/basement-remodeling/",
   "provider": { "@id": "https://nzhomeimprovement.com/#business" },
   "areaServed": [
     { "@type": "City", "name": "Stamford", "addressRegion": "CT" },
@@ -177,7 +177,7 @@ export default function BasementRemodelingPage() {
               Basement Remodeling in Stamford CT – Transform Unused Space into Living Area
             </h2>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4 lg:w-11/12">
-              If you are looking for <strong className="text-gray-800">basement remodeling in Stamford CT</strong>, NZ Home Improvement provides expert solutions to transform your unused basement into a functional and beautiful living space. Our experienced team of <strong className="text-gray-800"><a href="http://localhost:3000/services">basement remodel contractors</a></strong> specializes in designing and building customized basement areas that match your lifestyle and needs.
+              If you are looking for <strong className="text-gray-800">basement remodeling in Stamford CT</strong>, NZ Home Improvement provides expert solutions to transform your unused basement into a functional and beautiful living space. Our experienced team of <strong className="text-gray-800"><a href="/portfolio">basement remodel contractors</a></strong> specializes in designing and building customized basement areas that match your lifestyle and needs.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-8 lg:w-11/12">
               Whether you want a cozy family room, home office, guest bedroom, gym, or entertainment area, we turn your vision into reality. A well-designed basement remodel not only increases usable space but also adds significant value to your home. From planning to finishing, we ensure every detail is handled professionally with high-quality workmanship and modern design standards.
@@ -297,7 +297,7 @@ export default function BasementRemodelingPage() {
               On average, the <strong className="text-gray-800">basement remodeling cost in Stamford CT</strong> ranges between $10,000 and $40,000 or more. A basic finishing project may cost less, while a fully customized basement with bathrooms, kitchens, or entertainment setups may cost more.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-              We also provide <strong className="text-gray-800">affordable basement remodeling services</strong> and transparent basement remodeling cost estimates near you, helping you plan your project with confidence and no hidden charges.
+              We also provide <strong className="text-gray-800">affordable basement remodeling services</strong> and transparent basement remodeling cost estimates near you, helping you plan your project with confidence and no hidden charges. For a full pricing breakdown, see our <a href="/blog/basement-remodeling-cost-stamford-ct" className="hover:underline text-gray-800 font-semibold">basement remodeling cost guide</a>.
             </p>
           </div>
 
@@ -309,7 +309,7 @@ export default function BasementRemodelingPage() {
               Design plays a key role in basement transformation. We help homeowners explore creative <strong className="text-gray-800">basement remodeling ideas</strong> that maximize space and functionality.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
-              Popular options include home theaters, guest suites, playrooms, fitness areas, and home offices. For smaller spaces, we offer <strong className="text-gray-800"><a href="https://nzhomeimprovement.com/portfolio">small basement remodel ideas</a></strong> that focus on smart storage, lighting, and layout optimization.
+              Popular options include home theaters, guest suites, playrooms, fitness areas, and home offices. For smaller spaces, we offer <strong className="text-gray-800"><a href="/portfolio">small basement remodel ideas</a></strong> that focus on smart storage, lighting, and layout optimization.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed">
               Whether you prefer a luxury setup or a budget-friendly upgrade, we customize the design based on your goals and budget.
@@ -324,7 +324,7 @@ export default function BasementRemodelingPage() {
               Investing in <strong className="text-gray-800">basement remodeling in Stamford CT</strong> provides multiple benefits. It increases your home&apos;s usable space without the need for expansion, improves property value, and enhances lifestyle comfort.
             </p>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-              A finished basement can also generate extra income if converted into a rental unit or guest suite. Additionally, it improves energy efficiency and overall home organization.
+              A finished basement can also generate extra income if converted into a <a href="/blog/basement-rental-conversion-stamford-ct" className="hover:underline text-gray-800 font-semibold">rental unit</a> or guest suite. Additionally, it improves energy efficiency and overall home organization.
             </p>
           </div>
 

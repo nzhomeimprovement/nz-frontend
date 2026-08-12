@@ -275,11 +275,11 @@ export default async function BlogPostPage({ params }) {
                 <h3 className="font-bold text-gray-900 text-base mb-4">Our Services</h3>
                 <ul className="space-y-2">
                   {[
-                    { label: "Kitchen Remodeling", href: "/services/kitchen-remodeling" },
-                    { label: "Bathroom Renovation", href: "/services/bathroom-renovation" },
-                    { label: "Home Renovation", href: "/services/home-renovation" },
-                    { label: "Basement Remodeling", href: "/services/basement-remodeling" },
-                    { label: "Home Addition", href: "/services/home-addition" },
+                    { label: "Kitchen Remodeling", href: "/kitchen-remodeling" },
+                    { label: "Bathroom Renovation", href: "/bathroom-renovation" },
+                    { label: "Home Renovation", href: "/home-renovation" },
+                    { label: "Basement Remodeling", href: "/basement-remodeling" },
+                    { label: "Home Addition", href: "/home-addition" },
                   ].map((item) => (
                     <li key={item.href}>
                       <Link
