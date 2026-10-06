@@ -25,6 +25,8 @@ const CATEGORY_MAP = {
   "home-addition": { label: "Home Addition", title: "Home Addition" },
 };
 
+const EXTRA_PORTFOLIO_DIR = path.join(process.cwd(), "public", "img", "portfolio-unpacked");
+
 function buildPhotos() {
   const galleryDir = path.join(process.cwd(), "public", "img", "gallery");
   const photos = [];
@@ -46,6 +48,21 @@ function buildPhotos() {
         src: `/img/gallery/${folder}/${file}`,
         type: label,
         title,
+      });
+    }
+  }
+
+  if (fs.existsSync(EXTRA_PORTFOLIO_DIR)) {
+    const extraFiles = fs
+      .readdirSync(EXTRA_PORTFOLIO_DIR)
+      .filter((f) => /\.(jpe?g|png|webp)$/i.test(f))
+      .sort((a, b) => a.localeCompare(b));
+
+    for (const file of extraFiles) {
+      photos.push({
+        src: `/img/portfolio-unpacked/${file}`,
+        type: "Portfolio",
+        title: "Portfolio Project",
       });
     }
   }
@@ -117,7 +134,7 @@ export default function PortfolioPage() {
   return (
     <>
       <JsonLd data={portfolioSchema} />
-      <PageHero title="Our Portfolio" bgImage="/img/full/20.jpg" crumb="Portfolio" />
+      <PageHero title="Our Portfolio" bgImage="/img/portfolio-unpacked/WhatsApp Image 2026-10-06 at 17.30.19.jpeg" crumb="Portfolio" />
 
       {/* ── Intro header ── */}
       <section className="bg-white py-12 px-4 sm:px-6 lg:px-8 font-sans max-w-7xl mx-auto w-full">

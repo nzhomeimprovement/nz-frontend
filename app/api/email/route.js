@@ -222,35 +222,39 @@ NZ Home Improvement
 1372 Summer St, Stamford, CT 06905, USA`;
 }
 
-// ─── reCAPTCHA verification ────────────────────────────────────────────────────
-
-async function verifyRecaptcha(token) {
-  if (!token) return false;
-  const res = await fetch("https://www.google.com/recaptcha/api/siteverify", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams({ secret: process.env.RECAPTCHA_SECRET_KEY, response: token }),
-  });
-  const data = await res.json();
-  return data.success === true;
-}
-
 // ─── Resend client ─────────────────────────────────────────────────────────────
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+
+async function verifyCaptcha(token) {
+  if (!token) return false;
+
+  const secret = process.env.RECAPTCHA_SECRET_KEY;
+  if (!secret) {
+    console.error("[reCAPTCHA] Missing RECAPTCHA_SECRET_KEY");
+    return false;
+  }
+
+  const response = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({ secret, response: token }),
+  });
+
+  const data = await response.json();
+  return Boolean(data.success);
+}
 
 // ─── Route handler ────────────────────────────────────────────────────────────
 
 export async function POST(req) {
   try {
     const body = await req.json();
-    const { type, recaptchaToken } = body;
+    const { type, captchaToken } = body;
 
-    if (type === "contact") {
-      const recaptchaOk = await verifyRecaptcha(recaptchaToken);
-      if (!recaptchaOk) {
-        return NextResponse.json({ error: "reCAPTCHA verification failed." }, { status: 400 });
-      }
+    const isCaptchaValid = await verifyCaptcha(captchaToken);
+    if (!isCaptchaValid) {
+      return NextResponse.json({ error: "Please complete the reCAPTCHA challenge." }, { status: 400 });
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

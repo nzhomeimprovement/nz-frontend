@@ -18,7 +18,7 @@ const videoItems = [
   { title: "Exterior Remodel",           src: "/media/exterior.mp4",  thumb: "/img/portfolio/18.jpg" },
 ];
 
-const TYPE_FILTERS = ["All", "Kitchen", "Bathroom", "Basement", "Home Renovation", "Home Addition"];
+const TYPE_FILTERS = ["All", "Kitchen", "Bathroom", "Basement", "Home Renovation", "Home Addition", "Portfolio"];
 
 export default function PortfolioClient({ photos = [] }) {
   const [videoModal, setVideoModal]       = useState(null);
@@ -30,51 +30,6 @@ export default function PortfolioClient({ photos = [] }) {
 
   return (
     <section className="bg-white pb-20 font-sans">
-
-      {/* ── Video Gallery ── */}
-      <div className="px-4 sm:px-6 lg:px-8 py-12 max-w-7xl mx-auto">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 border-b border-gray-100 pb-6">
-          <div>
-            <p className="text-gray-400 font-semibold uppercase tracking-[0.2em] text-[11px] mb-2">
-              Watch Our Work
-            </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-black tracking-tight">
-              Video Gallery
-            </h2>
-          </div>
-          <p className="text-gray-500 text-sm max-w-xs">
-            {videoItems.length} project videos from our completed renovations.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {videoItems.map((v) => (
-            <div
-              key={v.title}
-              className="group cursor-pointer flex flex-col"
-              onClick={() => setVideoModal({ title: v.title, src: v.src })}
-            >
-              <div className="relative overflow-hidden rounded-2xl bg-gray-100 aspect-video mb-3 shadow-sm">
-                <Image
-                  src={v.thumb}
-                  alt={v.title}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/45 transition-colors duration-300 flex items-center justify-center">
-                  <div className="w-14 h-14 rounded-full bg-[#D0956B] flex items-center justify-center shadow-lg transform scale-90 group-hover:scale-100 transition-transform duration-300">
-                    <Play size={22} className="text-black ml-1" fill="currentColor" />
-                  </div>
-                </div>
-              </div>
-              <p className="text-[13px] font-semibold text-gray-900 group-hover:text-gray-500 transition-colors px-1">
-                {v.title}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
 
       {/* ── Photo Gallery ── */}
       <div className="px-4 sm:px-6 lg:px-8 py-12 max-w-7xl mx-auto">
@@ -134,6 +89,51 @@ export default function PortfolioClient({ photos = [] }) {
                   </div>
                 </div>
               </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ── Video Gallery ── */}
+      <div className="px-4 sm:px-6 lg:px-8 py-12 max-w-7xl mx-auto">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 border-b border-gray-100 pb-6">
+          <div>
+            <p className="text-gray-400 font-semibold uppercase tracking-[0.2em] text-[11px] mb-2">
+              Watch Our Work
+            </p>
+            <h2 className="text-2xl md:text-3xl font-bold text-black tracking-tight">
+              Video Gallery
+            </h2>
+          </div>
+          <p className="text-gray-500 text-sm max-w-xs">
+            {videoItems.length} project videos from our completed renovations.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {videoItems.map((v) => (
+            <div
+              key={v.title}
+              className="group cursor-pointer flex flex-col"
+              onClick={() => setVideoModal({ title: v.title, src: v.src })}
+            >
+              <div className="relative overflow-hidden rounded-2xl bg-gray-100 aspect-video mb-3 shadow-sm">
+                <Image
+                  src={v.thumb}
+                  alt={v.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/45 transition-colors duration-300 flex items-center justify-center">
+                  <div className="w-14 h-14 rounded-full bg-[#D0956B] flex items-center justify-center shadow-lg transform scale-90 group-hover:scale-100 transition-transform duration-300">
+                    <Play size={22} className="text-black ml-1" fill="currentColor" />
+                  </div>
+                </div>
+              </div>
+              <p className="text-[13px] font-semibold text-gray-900 group-hover:text-gray-500 transition-colors px-1">
+                {v.title}
+              </p>
             </div>
           ))}
         </div>

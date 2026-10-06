@@ -1,64 +1,61 @@
 "use client";
 
-import { useState, useRef } from "react";
-import Script from "next/script";
+import { useState } from "react";
 import { CheckCircle, AlertCircle } from "lucide-react";
+import ReCaptchaField from "./ReCaptchaField";
 
 const inputCls =
   "w-full bg-white border border-gray-200 text-gray-800 text-sm px-5 py-3.5 rounded-xl outline-none transition-colors duration-200 focus:border-zinc-900 focus:ring-2 focus:ring-zinc-900/10 appearance-none";
 
 export default function ContactForm() {
   const [status, setStatus] = useState("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [captchaToken, setCaptchaToken] = useState("");
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
-  const recaptchaContainerRef = useRef(null);
-  const recaptchaWidgetId = useRef(null);
 
   const handleChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
-  const renderRecaptcha = () => {
-    if (recaptchaWidgetId.current !== null || !window.grecaptcha || !recaptchaContainerRef.current) return;
-    recaptchaWidgetId.current = window.grecaptcha.render(recaptchaContainerRef.current, {
-      sitekey: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
-    });
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!form.name || !form.email || !form.message) return;
+    if (!form.name || !form.email || !form.message) {
+      setErrorMessage("Please fill in your name, email, and message.");
+      setStatus("error");
+      return;
+    }
 
-    const recaptchaToken = window.grecaptcha?.getResponse(recaptchaWidgetId.current ?? undefined);
-    if (!recaptchaToken) {
-      setStatus("recaptcha");
+    if (!captchaToken) {
+      setErrorMessage("Please complete the reCAPTCHA challenge.");
+      setStatus("error");
       return;
     }
 
     setStatus("loading");
+    setErrorMessage("");
+
     try {
       const res = await fetch("/api/email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type: "contact", recaptchaToken, ...form }),
+        body: JSON.stringify({ type: "contact", captchaToken, ...form }),
       });
+      const data = await res.json().catch(() => ({}));
+
       if (res.ok) {
         setStatus("success");
         setForm({ name: "", email: "", subject: "", message: "" });
+        setCaptchaToken("");
       } else {
+        setErrorMessage(data.error || "There was a problem sending your message. Please try again.");
         setStatus("error");
       }
     } catch {
+      setErrorMessage("There was a problem sending your message. Please try again.");
       setStatus("error");
-    } finally {
-      window.grecaptcha?.reset(recaptchaWidgetId.current ?? undefined);
     }
   };
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-4">
-      <Script
-        src="https://www.google.com/recaptcha/api.js"
-        strategy="afterInteractive"
-        onLoad={renderRecaptcha}
-      />
       {status === "success" && (
         <p className="text-green-600 text-sm flex items-center gap-2">
           <CheckCircle size={15} />
@@ -68,13 +65,7 @@ export default function ContactForm() {
       {status === "error" && (
         <p className="text-red-500 text-sm flex items-center gap-2">
           <AlertCircle size={15} />
-          There was a problem sending your message. Please try again.
-        </p>
-      )}
-      {status === "recaptcha" && (
-        <p className="text-red-500 text-sm flex items-center gap-2">
-          <AlertCircle size={15} />
-          Please confirm you&apos;re not a robot.
+          {errorMessage || "There was a problem sending your message. Please try again."}
         </p>
       )}
 
@@ -113,7 +104,7 @@ export default function ContactForm() {
         required
       />
 
-      <div ref={recaptchaContainerRef} />
+      <ReCaptchaField onChange={setCaptchaToken} onExpired={() => setCaptchaToken("")} />
 
       <button
         type="submit"
