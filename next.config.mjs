@@ -1,4 +1,4 @@
-﻿
+
 const nextConfig = {
   trailingSlash: true,
   reactCompiler: true,
