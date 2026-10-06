@@ -56,7 +56,7 @@ export default function HeroSection() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/img/portfolio-unpacked/WhatsApp Image 2026-10-06 at 17.34.07.jpeg"
+          src="/hero.jpeg"
           alt="Luxury Home Remodeling NZ Home Improvement"
           fill
           priority
