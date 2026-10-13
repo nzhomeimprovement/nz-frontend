@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { areaPages } from "@/data/areaPages";
 
 const GOOGLE_PROFILE_URL = "https://share.google/8TLXg5qiopuAwyCJN";
 
@@ -30,6 +31,8 @@ const serviceLinks = [
   { href: "/home-addition",       label: "Home Addition" },
 ];
 
+const areaLinks = areaPages.map((p) => ({ href: `/${p.slug}`, label: p.navLabel }));
+
 export default function Footer() {
   return (
     <footer className="bg-zinc-950 text-zinc-300 pt-20">
@@ -37,7 +40,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8">
 
           {/* Brand & Socials */}
-          <div className="md:col-span-12 lg:col-span-4">
+          <div className="md:col-span-12 lg:col-span-3">
             <Link href="/" className="inline-block mb-6">
               <Image
                 src="/img/logo-black.png"
@@ -77,7 +80,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="md:col-span-4 lg:col-span-2">
+          <div className="md:col-span-3 lg:col-span-2">
             <h6 className="text-white text-sm font-semibold uppercase tracking-wider mb-6">
               Quick Links
             </h6>
@@ -97,7 +100,7 @@ export default function Footer() {
           </div>
 
           {/* Our Services */}
-          <div className="md:col-span-4 lg:col-span-3">
+          <div className="md:col-span-3 lg:col-span-2">
             <h6 className="text-white text-sm font-semibold uppercase tracking-wider mb-6">
               Our Services
             </h6>
@@ -116,8 +119,28 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Service Areas */}
+          <div className="md:col-span-3 lg:col-span-2">
+            <h6 className="text-white text-sm font-semibold uppercase tracking-wider mb-6">
+              Greenwich, CT
+            </h6>
+            <ul className="space-y-3">
+              {areaLinks.map((l) => (
+                <li key={l.href}>
+                  <Link
+                    href={l.href}
+                    className="group flex items-center text-sm font-medium text-zinc-400 hover:text-white transition-colors duration-300"
+                  >
+                    <span className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 text-[#D0956B] transition-all duration-300 mr-2 text-sm">›</span>
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Contact Details */}
-          <div className="md:col-span-4 lg:col-span-3">
+          <div className="md:col-span-3 lg:col-span-3">
             <h6 className="text-white text-sm font-semibold uppercase tracking-wider mb-6">
               Get in Touch
             </h6>

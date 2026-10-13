@@ -1,4 +1,5 @@
 import { blogs } from "@/data/blogs";
+import { areaPages } from "@/data/areaPages";
 
 export default function sitemap() {
   const base = "https://nzhomeimprovement.com";
@@ -9,6 +10,13 @@ export default function sitemap() {
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.7,
+  }));
+
+  const areaEntries = areaPages.map((p) => ({
+    url: `${base}/${p.slug}/`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.9,
   }));
 
   return [
@@ -23,6 +31,7 @@ export default function sitemap() {
     { url: `${base}/home-renovation/`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/basement-remodeling/`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/home-addition/`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    ...areaEntries,
     { url: `${base}/blog/`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     ...blogEntries,
   ];
