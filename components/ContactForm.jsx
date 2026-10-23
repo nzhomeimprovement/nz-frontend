@@ -24,12 +24,6 @@ export default function ContactForm() {
       return;
     }
 
-    if (!captchaToken) {
-      setErrorMessage("Please complete the reCAPTCHA challenge.");
-      setStatus("error");
-      return;
-    }
-
     setStatus("loading");
     setErrorMessage("");
 

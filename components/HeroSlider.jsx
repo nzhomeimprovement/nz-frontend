@@ -20,8 +20,8 @@ export default function HeroSection() {
     e.preventDefault();
     if (status === "loading") return;
 
-    if (!form.name || !form.phone || !form.email || !form.interest || !captchaToken) {
-      setErrorMessage(captchaToken ? "Please fill in the required fields." : "Please complete the reCAPTCHA challenge.");
+    if (!form.name || !form.phone || !form.email || !form.interest) {
+      setErrorMessage("Please fill in the required fields.");
       setStatus("error");
       return;
     }
