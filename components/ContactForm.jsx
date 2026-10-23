@@ -17,6 +17,7 @@ export default function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (status === "loading") return;
     if (!form.name || !form.email || !form.message) {
       setErrorMessage("Please fill in your name, email, and message.");
       setStatus("error");

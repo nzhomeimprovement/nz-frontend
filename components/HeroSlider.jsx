@@ -18,6 +18,7 @@ export default function HeroSection() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (status === "loading") return;
 
     if (!form.name || !form.phone || !form.email || !form.interest || !captchaToken) {
       setErrorMessage(captchaToken ? "Please fill in the required fields." : "Please complete the reCAPTCHA challenge.");

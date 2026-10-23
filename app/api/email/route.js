@@ -242,6 +242,9 @@ async function verifyCaptcha(token) {
   });
 
   const data = await response.json();
+  if (!data.success) {
+    console.error("[reCAPTCHA] Verification failed:", data["error-codes"]);
+  }
   return Boolean(data.success);
 }
 
