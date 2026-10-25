@@ -3,7 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import { CheckCircle, AlertCircle, Loader } from "lucide-react";
-import ReCaptchaField from "./ReCaptchaField";
+import CaptchaModal from "./CaptchaModal";
+import HoneypotField from "./HoneypotField";
 
 const INITIAL = { name: "", phone: "", email: "", zip: "", interest: "", referral: "" };
 
@@ -11,12 +12,14 @@ export default function HeroSection() {
   const [form, setForm] = useState(INITIAL);
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
   const [errorMessage, setErrorMessage] = useState("");
-  const [captchaToken, setCaptchaToken] = useState("");
+  const [showCaptcha, setShowCaptcha] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
+  const [formRenderedAt] = useState(() => Date.now());
 
   const handleChange = (e) =>
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (status === "loading") return;
 
@@ -26,6 +29,12 @@ export default function HeroSection() {
       return;
     }
 
+    setErrorMessage("");
+    setShowCaptcha(true);
+  };
+
+  const sendForm = async (challenge) => {
+    setShowCaptcha(false);
     setStatus("loading");
     setErrorMessage("");
 
@@ -33,14 +42,13 @@ export default function HeroSection() {
       const res = await fetch("/api/email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type: "lead", captchaToken, ...form }),
+        body: JSON.stringify({ type: "lead", challenge, honeypot, formRenderedAt, ...form }),
       });
       const data = await res.json().catch(() => ({}));
 
       if (res.ok) {
         setStatus("success");
         setForm(INITIAL);
-        setCaptchaToken("");
       } else {
         setErrorMessage(data.error || "Something went wrong. Please try again or call us directly.");
         setStatus("error");
@@ -107,6 +115,8 @@ export default function HeroSection() {
           )}
 
           <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 lg:flex items-end gap-3 w-full">
+
+            <HoneypotField value={honeypot} onChange={(e) => setHoneypot(e.target.value)} />
 
             {/* Name */}
             <div className="flex-1 w-full flex flex-col px-2">
@@ -216,7 +226,6 @@ export default function HeroSection() {
 
             {/* Submit */}
             <div className="w-full lg:w-auto px-2 mt-4 lg:mt-0 lg:mb-[1px] flex flex-col items-start gap-3">
-              <ReCaptchaField onChange={setCaptchaToken} onExpired={() => setCaptchaToken("")} />
               <button
                 type="submit"
                 disabled={status === "loading"}
@@ -232,6 +241,12 @@ export default function HeroSection() {
             </div>
 
           </form>
+
+          <CaptchaModal
+            open={showCaptcha}
+            onClose={() => setShowCaptcha(false)}
+            onSolved={sendForm}
+          />
 
           {/* Inline error message */}
           {status === "error" && (

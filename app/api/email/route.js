@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { verifyChallenge } from "@/lib/challenge";
 
 // ─── Email template ───────────────────────────────────────────────────────────
 
@@ -226,26 +227,13 @@ NZ Home Improvement
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-async function verifyCaptcha(token) {
-  if (!token) return false;
+const MIN_SUBMIT_SECONDS = 3;
 
-  const secret = process.env.RECAPTCHA_SECRET_KEY;
-  if (!secret) {
-    console.error("[reCAPTCHA] Missing RECAPTCHA_SECRET_KEY");
-    return false;
-  }
-
-  const response = await fetch("https://www.google.com/recaptcha/api/siteverify", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams({ secret, response: token }),
-  });
-
-  const data = await response.json();
-  if (!data.success) {
-    console.error("[reCAPTCHA] Verification failed:", data["error-codes"]);
-  }
-  return Boolean(data.success);
+function isLikelyBot({ honeypot, formRenderedAt }) {
+  if (honeypot) return true;
+  const elapsed = Date.now() - Number(formRenderedAt);
+  if (!Number.isFinite(elapsed) || elapsed < MIN_SUBMIT_SECONDS * 1000) return true;
+  return false;
 }
 
 // ─── Route handler ────────────────────────────────────────────────────────────
@@ -253,11 +241,16 @@ async function verifyCaptcha(token) {
 export async function POST(req) {
   try {
     const body = await req.json();
-    const { type, captchaToken } = body;
+    const { type, challenge, honeypot, formRenderedAt } = body;
 
-    const isCaptchaValid = await verifyCaptcha(captchaToken);
-    if (!isCaptchaValid) {
-      console.error("[/api/email] reCAPTCHA failed, submitting anyway:", { type });
+    if (isLikelyBot({ honeypot, formRenderedAt })) {
+      console.error("[/api/email] Blocked likely bot submission:", { type, honeypot: Boolean(honeypot) });
+      return NextResponse.json({ success: true });
+    }
+
+    if (!verifyChallenge(challenge)) {
+      console.error("[/api/email] Security challenge failed, rejecting submission:", { type });
+      return NextResponse.json({ error: "Please answer the security question correctly." }, { status: 400 });
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

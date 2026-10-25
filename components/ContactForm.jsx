@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { CheckCircle, AlertCircle } from "lucide-react";
-import ReCaptchaField from "./ReCaptchaField";
+import CaptchaModal from "./CaptchaModal";
+import HoneypotField from "./HoneypotField";
 
 const inputCls =
   "w-full bg-white border border-gray-200 text-gray-800 text-sm px-5 py-3.5 rounded-xl outline-none transition-colors duration-200 focus:border-zinc-900 focus:ring-2 focus:ring-zinc-900/10 appearance-none";
@@ -10,12 +11,14 @@ const inputCls =
 export default function ContactForm() {
   const [status, setStatus] = useState("idle");
   const [errorMessage, setErrorMessage] = useState("");
-  const [captchaToken, setCaptchaToken] = useState("");
+  const [showCaptcha, setShowCaptcha] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
+  const [formRenderedAt] = useState(() => Date.now());
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
 
   const handleChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (status === "loading") return;
     if (!form.name || !form.email || !form.message) {
@@ -24,6 +27,12 @@ export default function ContactForm() {
       return;
     }
 
+    setErrorMessage("");
+    setShowCaptcha(true);
+  };
+
+  const sendForm = async (challenge) => {
+    setShowCaptcha(false);
     setStatus("loading");
     setErrorMessage("");
 
@@ -31,14 +40,13 @@ export default function ContactForm() {
       const res = await fetch("/api/email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type: "contact", captchaToken, ...form }),
+        body: JSON.stringify({ type: "contact", challenge, honeypot, formRenderedAt, ...form }),
       });
       const data = await res.json().catch(() => ({}));
 
       if (res.ok) {
         setStatus("success");
         setForm({ name: "", email: "", subject: "", message: "" });
-        setCaptchaToken("");
       } else {
         setErrorMessage(data.error || "There was a problem sending your message. Please try again.");
         setStatus("error");
@@ -99,7 +107,7 @@ export default function ContactForm() {
         required
       />
 
-      <ReCaptchaField onChange={setCaptchaToken} onExpired={() => setCaptchaToken("")} />
+      <HoneypotField value={honeypot} onChange={(e) => setHoneypot(e.target.value)} />
 
       <button
         type="submit"
@@ -108,6 +116,12 @@ export default function ContactForm() {
       >
         {status === "loading" ? "Sending..." : "Send Message"}
       </button>
+
+      <CaptchaModal
+        open={showCaptcha}
+        onClose={() => setShowCaptcha(false)}
+        onSolved={sendForm}
+      />
     </form>
   );
 }
